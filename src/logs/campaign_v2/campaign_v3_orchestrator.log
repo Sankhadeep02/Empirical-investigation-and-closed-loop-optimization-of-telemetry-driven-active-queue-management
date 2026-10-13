@@ -1,0 +1,1281 @@
+
+======================================================================
+[2026-10-11 23:47:22] Launching v3_cong_fixed20k_r1
+Stage: Stage 3 Heavy | Policy: fixed20k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed20k_r1 --policy fixed20k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-11 23:49:12] Completed v3_cong_fixed20k_r1 in 109.6s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed20k_r1
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 109051)
+[+] Video Simulator started (PID 109066)
+[+] iperf3 UDP Client started on h3 (PID 109067)
+[+] INT Sender started on h1 (PID 109070)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 24 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 48 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 72 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed20k_r1
+STATUS: INVALID_INT_CAPTURE
+  - INT probe count too low: 75 received, expected at least 76 (85.0% of 90).
+-------------------------
+
+[WARNING] Run v3_cong_fixed20k_r1 validation status: INVALID_INT_CAPTURE
+[+] Registry updated for v3_cong_fixed20k_r1 (Status: INVALID_INT_CAPTURE)
+[+] Experiment v3_cong_fixed20k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-11 23:49:17] Launching v3_cong_fixed20k_r1_retry1
+Stage: Stage 3 Heavy | Policy: fixed20k | Round: 1 | Retry: 1
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed20k_r1_retry1 --policy fixed20k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-11 23:51:06] Completed v3_cong_fixed20k_r1_retry1 in 109.2s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed20k_r1_retry1
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 109342)
+[+] Video Simulator started (PID 109357)
+[+] iperf3 UDP Client started on h3 (PID 109358)
+[+] INT Sender started on h1 (PID 109359)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 24 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 44 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 60 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed20k_r1_retry1
+STATUS: VALID
+  - Duration: 89.8s, INT probes: 62, DASH rows: 90, Max DASH gap: 1.45s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed20k_r1_retry1 is VALID!
+[+] Registry updated for v3_cong_fixed20k_r1_retry1 (Status: VALID)
+[+] Experiment v3_cong_fixed20k_r1_retry1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-11 23:51:09] Launching v3_cong_fixed50k_r1
+Stage: Stage 3 Heavy | Policy: fixed50k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed50k_r1 --policy fixed50k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-11 23:52:58] Completed v3_cong_fixed50k_r1 in 108.8s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed50k_r1
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 109673)
+[+] Video Simulator started (PID 109692)
+[+] iperf3 UDP Client started on h3 (PID 109693)
+[+] INT Sender started on h1 (PID 109695)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 23 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 49 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 67 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed50k_r1
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 68, DASH rows: 90, Max DASH gap: 1.93s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed50k_r1 is VALID!
+[+] Registry updated for v3_cong_fixed50k_r1 (Status: VALID)
+[+] Experiment v3_cong_fixed50k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-11 23:53:01] Launching v3_cong_fixed30k_r1
+Stage: Stage 3 Heavy | Policy: fixed30k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed30k_r1 --policy fixed30k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-11 23:54:50] Completed v3_cong_fixed30k_r1 in 109.3s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed30k_r1
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 109986)
+[+] Video Simulator started (PID 110001)
+[+] iperf3 UDP Client started on h3 (PID 110002)
+[+] INT Sender started on h1 (PID 110004)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 20 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 40 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 60 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed30k_r1
+STATUS: VALID
+  - Duration: 89.8s, INT probes: 62, DASH rows: 90, Max DASH gap: 1.69s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed30k_r1 is VALID!
+[+] Registry updated for v3_cong_fixed30k_r1 (Status: VALID)
+[+] Experiment v3_cong_fixed30k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-11 23:54:53] Launching v3_cong_fixed70k_r1
+Stage: Stage 3 Heavy | Policy: fixed70k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed70k_r1 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-11 23:56:44] Completed v3_cong_fixed70k_r1 in 110.8s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed70k_r1
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 110300)
+[+] Video Simulator started (PID 110314)
+[+] iperf3 UDP Client started on h3 (PID 110315)
+[+] INT Sender started on h1 (PID 110318)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 19 | DASH rows: 29 | iperf active: True
+  [t=61s / 90s] INT probes logged: 42 | DASH rows: 60 | iperf active: True
+  [t=91s / 90s] INT probes logged: 69 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed70k_r1
+STATUS: VALID
+  - Duration: 89.0s, INT probes: 73, DASH rows: 90, Max DASH gap: 1.96s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed70k_r1 is VALID!
+[+] Registry updated for v3_cong_fixed70k_r1 (Status: VALID)
+[+] Experiment v3_cong_fixed70k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-11 23:56:47] Launching v3_cong_fixed70k_r2
+Stage: Stage 3 Heavy | Policy: fixed70k | Round: 2 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed70k_r2 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-11 23:58:36] Completed v3_cong_fixed70k_r2 in 109.5s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed70k_r2
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 110617)
+[+] Video Simulator started (PID 110631)
+[+] iperf3 UDP Client started on h3 (PID 110632)
+[+] INT Sender started on h1 (PID 110633)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 17 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 35 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 55 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed70k_r2
+STATUS: VALID
+  - Duration: 89.8s, INT probes: 58, DASH rows: 90, Max DASH gap: 1.68s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed70k_r2 is VALID!
+[+] Registry updated for v3_cong_fixed70k_r2 (Status: VALID)
+[+] Experiment v3_cong_fixed70k_r2 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-11 23:58:39] Launching v3_cong_fixed30k_r2
+Stage: Stage 3 Heavy | Policy: fixed30k | Round: 2 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed30k_r2 --policy fixed30k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:00:30] Completed v3_cong_fixed30k_r2 in 111.2s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed30k_r2
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 110934)
+[+] Video Simulator started (PID 110948)
+[+] iperf3 UDP Client started on h3 (PID 110949)
+[+] INT Sender started on h1 (PID 110950)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 17 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 41 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 67 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed30k_r2
+STATUS: VALID
+  - Duration: 89.9s, INT probes: 72, DASH rows: 90, Max DASH gap: 1.88s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed30k_r2 is VALID!
+[+] Registry updated for v3_cong_fixed30k_r2 (Status: VALID)
+[+] Experiment v3_cong_fixed30k_r2 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:00:33] Launching v3_cong_fixed20k_r2
+Stage: Stage 3 Heavy | Policy: fixed20k | Round: 2 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed20k_r2 --policy fixed20k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:02:22] Completed v3_cong_fixed20k_r2 in 108.5s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed20k_r2
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 111435)
+[+] Video Simulator started (PID 111449)
+[+] iperf3 UDP Client started on h3 (PID 111450)
+[+] INT Sender started on h1 (PID 111451)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 23 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 52 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 74 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed20k_r2
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 76, DASH rows: 90, Max DASH gap: 1.60s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed20k_r2 is VALID!
+[+] Registry updated for v3_cong_fixed20k_r2 (Status: VALID)
+[+] Experiment v3_cong_fixed20k_r2 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:02:25] Launching v3_cong_fixed50k_r2
+Stage: Stage 3 Heavy | Policy: fixed50k | Round: 2 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed50k_r2 --policy fixed50k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:04:15] Completed v3_cong_fixed50k_r2 in 109.7s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed50k_r2
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 111711)
+[+] Video Simulator started (PID 111725)
+[+] iperf3 UDP Client started on h3 (PID 111726)
+[+] INT Sender started on h1 (PID 111728)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 20 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 40 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 60 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed50k_r2
+STATUS: VALID
+  - Duration: 89.7s, INT probes: 64, DASH rows: 90, Max DASH gap: 1.90s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed50k_r2 is VALID!
+[+] Registry updated for v3_cong_fixed50k_r2 (Status: VALID)
+[+] Experiment v3_cong_fixed50k_r2 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:04:18] Launching v3_cong_fixed30k_r3
+Stage: Stage 3 Heavy | Policy: fixed30k | Round: 3 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed30k_r3 --policy fixed30k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:06:07] Completed v3_cong_fixed30k_r3 in 109.2s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed30k_r3
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 112031)
+[+] Video Simulator started (PID 112045)
+[+] iperf3 UDP Client started on h3 (PID 112046)
+[+] INT Sender started on h1 (PID 112048)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 20 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 42 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 64 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed30k_r3
+STATUS: VALID
+  - Duration: 89.5s, INT probes: 65, DASH rows: 90, Max DASH gap: 1.89s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed30k_r3 is VALID!
+[+] Registry updated for v3_cong_fixed30k_r3 (Status: VALID)
+[+] Experiment v3_cong_fixed30k_r3 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:06:10] Launching v3_cong_fixed20k_r3
+Stage: Stage 3 Heavy | Policy: fixed20k | Round: 3 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed20k_r3 --policy fixed20k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:08:00] Completed v3_cong_fixed20k_r3 in 110.4s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed20k_r3
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 112346)
+[+] Video Simulator started (PID 112365)
+[+] iperf3 UDP Client started on h3 (PID 112366)
+[+] INT Sender started on h1 (PID 112368)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 24 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 49 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 72 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed20k_r3
+STATUS: VALID
+  - Duration: 89.7s, INT probes: 74, DASH rows: 90, Max DASH gap: 2.44s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed20k_r3 is VALID!
+[+] Registry updated for v3_cong_fixed20k_r3 (Status: VALID)
+[+] Experiment v3_cong_fixed20k_r3 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:08:03] Launching v3_cong_fixed70k_r3
+Stage: Stage 3 Heavy | Policy: fixed70k | Round: 3 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed70k_r3 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:09:52] Completed v3_cong_fixed70k_r3 in 108.6s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed70k_r3
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 112618)
+[+] Video Simulator started (PID 112637)
+[+] iperf3 UDP Client started on h3 (PID 112638)
+[+] INT Sender started on h1 (PID 112639)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 26 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 51 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 77 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed70k_r3
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 78, DASH rows: 90, Max DASH gap: 1.83s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed70k_r3 is VALID!
+[+] Registry updated for v3_cong_fixed70k_r3 (Status: VALID)
+[+] Experiment v3_cong_fixed70k_r3 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:09:55] Launching v3_cong_fixed50k_r3
+Stage: Stage 3 Heavy | Policy: fixed50k | Round: 3 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed50k_r3 --policy fixed50k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:11:46] Completed v3_cong_fixed50k_r3 in 111.3s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed50k_r3
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 112929)
+[+] Video Simulator started (PID 112946)
+[+] iperf3 UDP Client started on h3 (PID 112947)
+[+] INT Sender started on h1 (PID 112950)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 19 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 42 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 62 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed50k_r3
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 65, DASH rows: 90, Max DASH gap: 1.58s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed50k_r3 is VALID!
+[+] Registry updated for v3_cong_fixed50k_r3 (Status: VALID)
+[+] Experiment v3_cong_fixed50k_r3 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:11:49] Launching v3_cong_fixed50k_r4
+Stage: Stage 3 Heavy | Policy: fixed50k | Round: 4 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed50k_r4 --policy fixed50k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:13:39] Completed v3_cong_fixed50k_r4 in 109.8s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed50k_r4
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 113254)
+[+] Video Simulator started (PID 113269)
+[+] iperf3 UDP Client started on h3 (PID 113270)
+[+] INT Sender started on h1 (PID 113271)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=31s / 90s] INT probes logged: 25 | DASH rows: 30 | iperf active: True
+  [t=61s / 90s] INT probes logged: 53 | DASH rows: 61 | iperf active: True
+  [t=91s / 90s] INT probes logged: 76 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed50k_r4
+STATUS: VALID
+  - Duration: 89.7s, INT probes: 77, DASH rows: 90, Max DASH gap: 2.20s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed50k_r4 is VALID!
+[+] Registry updated for v3_cong_fixed50k_r4 (Status: VALID)
+[+] Experiment v3_cong_fixed50k_r4 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:13:42] Launching v3_cong_fixed70k_r4
+Stage: Stage 3 Heavy | Policy: fixed70k | Round: 4 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed70k_r4 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:15:32] Completed v3_cong_fixed70k_r4 in 109.9s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed70k_r4
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 113557)
+[+] Video Simulator started (PID 113572)
+[+] iperf3 UDP Client started on h3 (PID 113573)
+[+] INT Sender started on h1 (PID 113575)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 11 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 32 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 52 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed70k_r4
+STATUS: INVALID_INT_CAPTURE
+  - INT probe count too low: 56 received, expected at least 58 (65.0% of 90).
+-------------------------
+
+[WARNING] Run v3_cong_fixed70k_r4 validation status: INVALID_INT_CAPTURE
+[+] Registry updated for v3_cong_fixed70k_r4 (Status: INVALID_INT_CAPTURE)
+[+] Experiment v3_cong_fixed70k_r4 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:15:37] Launching v3_cong_fixed70k_r4_retry1
+Stage: Stage 3 Heavy | Policy: fixed70k | Round: 4 | Retry: 1
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed70k_r4_retry1 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:17:26] Completed v3_cong_fixed70k_r4_retry1 in 109.6s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed70k_r4_retry1
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 113868)
+[+] Video Simulator started (PID 113883)
+[+] iperf3 UDP Client started on h3 (PID 113884)
+[+] INT Sender started on h1 (PID 113885)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 26 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 55 | DASH rows: 60 | iperf active: True
+  [t=91s / 90s] INT probes logged: 79 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed70k_r4_retry1
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 80, DASH rows: 90, Max DASH gap: 1.94s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed70k_r4_retry1 is VALID!
+[+] Registry updated for v3_cong_fixed70k_r4_retry1 (Status: VALID)
+[+] Experiment v3_cong_fixed70k_r4_retry1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:17:29] Launching v3_cong_fixed30k_r4
+Stage: Stage 3 Heavy | Policy: fixed30k | Round: 4 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed30k_r4 --policy fixed30k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:19:19] Completed v3_cong_fixed30k_r4 in 109.8s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed30k_r4
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 114170)
+[+] Video Simulator started (PID 114184)
+[+] iperf3 UDP Client started on h3 (PID 114185)
+[+] INT Sender started on h1 (PID 114188)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 17 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 33 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 55 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed30k_r4
+STATUS: VALID
+  - Duration: 90.1s, INT probes: 60, DASH rows: 90, Max DASH gap: 1.67s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed30k_r4 is VALID!
+[+] Registry updated for v3_cong_fixed30k_r4 (Status: VALID)
+[+] Experiment v3_cong_fixed30k_r4 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:19:22] Launching v3_cong_fixed20k_r4
+Stage: Stage 3 Heavy | Policy: fixed20k | Round: 4 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed20k_r4 --policy fixed20k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:21:13] Completed v3_cong_fixed20k_r4 in 110.3s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed20k_r4
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 114484)
+[+] Video Simulator started (PID 114498)
+[+] iperf3 UDP Client started on h3 (PID 114499)
+[+] INT Sender started on h1 (PID 114502)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 23 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 50 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 74 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed20k_r4
+STATUS: VALID
+  - Duration: 89.5s, INT probes: 76, DASH rows: 90, Max DASH gap: 2.29s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed20k_r4 is VALID!
+[+] Registry updated for v3_cong_fixed20k_r4 (Status: VALID)
+[+] Experiment v3_cong_fixed20k_r4 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:21:16] Launching v3_cong_fixed20k_r5
+Stage: Stage 3 Heavy | Policy: fixed20k | Round: 5 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed20k_r5 --policy fixed20k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:23:07] Completed v3_cong_fixed20k_r5 in 111.6s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed20k_r5
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 114798)
+[+] Video Simulator started (PID 114812)
+[+] iperf3 UDP Client started on h3 (PID 114813)
+[+] INT Sender started on h1 (PID 114814)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 17 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 36 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 58 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed20k_r5
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 60, DASH rows: 90, Max DASH gap: 4.16s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed20k_r5 is VALID!
+[+] Registry updated for v3_cong_fixed20k_r5 (Status: VALID)
+[+] Experiment v3_cong_fixed20k_r5 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:23:10] Launching v3_cong_fixed30k_r5
+Stage: Stage 3 Heavy | Policy: fixed30k | Round: 5 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed30k_r5 --policy fixed30k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:25:05] Completed v3_cong_fixed30k_r5 in 114.4s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed30k_r5
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 115107)
+[+] Video Simulator started (PID 115121)
+[+] iperf3 UDP Client started on h3 (PID 115122)
+[+] INT Sender started on h1 (PID 115130)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 19 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 46 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 66 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed30k_r5
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 71, DASH rows: 90, Max DASH gap: 2.21s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed30k_r5 is VALID!
+[+] Registry updated for v3_cong_fixed30k_r5 (Status: VALID)
+[+] Experiment v3_cong_fixed30k_r5 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:25:08] Launching v3_cong_fixed50k_r5
+Stage: Stage 3 Heavy | Policy: fixed50k | Round: 5 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed50k_r5 --policy fixed50k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:26:56] Completed v3_cong_fixed50k_r5 in 108.9s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed50k_r5
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 115441)
+[+] Video Simulator started (PID 115457)
+[+] iperf3 UDP Client started on h3 (PID 115458)
+[+] INT Sender started on h1 (PID 115459)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 21 | DASH rows: 29 | iperf active: True
+  [t=60s / 90s] INT probes logged: 42 | DASH rows: 59 | iperf active: True
+  [t=90s / 90s] INT probes logged: 71 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed50k_r5
+STATUS: VALID
+  - Duration: 89.6s, INT probes: 74, DASH rows: 90, Max DASH gap: 1.70s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed50k_r5 is VALID!
+[+] Registry updated for v3_cong_fixed50k_r5 (Status: VALID)
+[+] Experiment v3_cong_fixed50k_r5 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:26:59] Launching v3_cong_fixed70k_r5
+Stage: Stage 3 Heavy | Policy: fixed70k | Round: 5 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_cong_fixed70k_r5 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 2600
+======================================================================
+[2026-10-12 00:28:51] Completed v3_cong_fixed70k_r5 in 111.1s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_cong_fixed70k_r5
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 2600 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 115706)
+[+] Video Simulator started (PID 115720)
+[+] iperf3 UDP Client started on h3 (PID 115721)
+[+] INT Sender started on h1 (PID 115724)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 25 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 50 | DASH rows: 59 | iperf active: True
+  [t=91s / 90s] INT probes logged: 77 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_cong_fixed70k_r5
+STATUS: VALID
+  - Duration: 89.9s, INT probes: 80, DASH rows: 90, Max DASH gap: 2.38s
+-------------------------
+
+[SUCCESS] Run v3_cong_fixed70k_r5 is VALID!
+[+] Registry updated for v3_cong_fixed70k_r5 (Status: VALID)
+[+] Experiment v3_cong_fixed70k_r5 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:28:54] Launching v3_low_fixed20k_r1
+Stage: Stage 3 Low | Policy: fixed20k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_low_fixed20k_r1 --policy fixed20k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 1500
+======================================================================
+[2026-10-12 00:30:43] Completed v3_low_fixed20k_r1 in 109.4s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_low_fixed20k_r1
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 90s | Load: 1500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 115973)
+[+] Video Simulator started (PID 115992)
+[+] iperf3 UDP Client started on h3 (PID 115993)
+[+] INT Sender started on h1 (PID 115994)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 27 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 57 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 87 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_low_fixed20k_r1
+STATUS: VALID
+  - Duration: 89.0s, INT probes: 90, DASH rows: 90, Max DASH gap: 2.52s
+-------------------------
+
+[SUCCESS] Run v3_low_fixed20k_r1 is VALID!
+[+] Registry updated for v3_low_fixed20k_r1 (Status: VALID)
+[+] Experiment v3_low_fixed20k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:30:46] Launching v3_low_fixed30k_r1
+Stage: Stage 3 Low | Policy: fixed30k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_low_fixed30k_r1 --policy fixed30k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 1500
+======================================================================
+[2026-10-12 00:32:34] Completed v3_low_fixed30k_r1 in 108.1s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_low_fixed30k_r1
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 90s | Load: 1500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 116234)
+[+] Video Simulator started (PID 116254)
+[+] iperf3 UDP Client started on h3 (PID 116256)
+[+] INT Sender started on h1 (PID 116257)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 28 | DASH rows: 31 | iperf active: True
+  [t=60s / 90s] INT probes logged: 58 | DASH rows: 61 | iperf active: True
+  [t=90s / 90s] INT probes logged: 85 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_low_fixed30k_r1
+STATUS: VALID
+  - Duration: 89.5s, INT probes: 87, DASH rows: 90, Max DASH gap: 2.07s
+-------------------------
+
+[SUCCESS] Run v3_low_fixed30k_r1 is VALID!
+[+] Registry updated for v3_low_fixed30k_r1 (Status: VALID)
+[+] Experiment v3_low_fixed30k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:32:37] Launching v3_low_fixed50k_r1
+Stage: Stage 3 Low | Policy: fixed50k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_low_fixed50k_r1 --policy fixed50k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 1500
+======================================================================
+[2026-10-12 00:34:25] Completed v3_low_fixed50k_r1 in 108.2s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_low_fixed50k_r1
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 90s | Load: 1500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 116520)
+[+] Video Simulator started (PID 116535)
+[+] iperf3 UDP Client started on h3 (PID 116536)
+[+] INT Sender started on h1 (PID 116537)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 28 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 58 | DASH rows: 60 | iperf active: True
+  [t=90s / 90s] INT probes logged: 88 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_low_fixed50k_r1
+STATUS: VALID
+  - Duration: 89.1s, INT probes: 89, DASH rows: 90, Max DASH gap: 1.91s
+-------------------------
+
+[SUCCESS] Run v3_low_fixed50k_r1 is VALID!
+[+] Registry updated for v3_low_fixed50k_r1 (Status: VALID)
+[+] Experiment v3_low_fixed50k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:34:28] Launching v3_low_fixed70k_r1
+Stage: Stage 3 Low | Policy: fixed70k | Round: 1 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_low_fixed70k_r1 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 1500
+======================================================================
+[2026-10-12 00:36:16] Completed v3_low_fixed70k_r1 in 107.7s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_low_fixed70k_r1
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 1500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 116810)
+[+] Video Simulator started (PID 116827)
+[+] iperf3 UDP Client started on h3 (PID 116828)
+[+] INT Sender started on h1 (PID 116829)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 29 | DASH rows: 31 | iperf active: True
+  [t=60s / 90s] INT probes logged: 59 | DASH rows: 61 | iperf active: True
+  [t=90s / 90s] INT probes logged: 88 | DASH rows: 90 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_low_fixed70k_r1
+STATUS: VALID
+  - Duration: 89.2s, INT probes: 90, DASH rows: 90, Max DASH gap: 2.02s
+-------------------------
+
+[SUCCESS] Run v3_low_fixed70k_r1 is VALID!
+[+] Registry updated for v3_low_fixed70k_r1 (Status: VALID)
+[+] Experiment v3_low_fixed70k_r1 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:36:19] Launching v3_low_fixed70k_r2
+Stage: Stage 3 Low | Policy: fixed70k | Round: 2 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_low_fixed70k_r2 --policy fixed70k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 1500
+======================================================================
+[2026-10-12 00:38:08] Completed v3_low_fixed70k_r2 in 109.1s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_low_fixed70k_r2
+ Policy: fixed70k | Target Delay: 70000 us | Duration: 90s | Load: 1500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 70000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 70000 us.
+[+] INT Receiver started (PID 117086)
+[+] Video Simulator started (PID 117105)
+[+] iperf3 UDP Client started on h3 (PID 117106)
+[+] INT Sender started on h1 (PID 117107)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 28 | DASH rows: 30 | iperf active: True
+  [t=60s / 90s] INT probes logged: 57 | DASH rows: 60 | iperf active: True
+  [t=91s / 90s] INT probes logged: 87 | DASH rows: 89 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_low_fixed70k_r2
+STATUS: VALID
+  - Duration: 90.2s, INT probes: 89, DASH rows: 90, Max DASH gap: 2.15s
+-------------------------
+
+[SUCCESS] Run v3_low_fixed70k_r2 is VALID!
+[+] Registry updated for v3_low_fixed70k_r2 (Status: VALID)
+[+] Experiment v3_low_fixed70k_r2 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:38:11] Launching v3_low_fixed50k_r2
+Stage: Stage 3 Low | Policy: fixed50k | Round: 2 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_low_fixed50k_r2 --policy fixed50k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 1500
+======================================================================
+[2026-10-12 00:40:00] Completed v3_low_fixed50k_r2 in 109.0s (Exit code: 0)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_low_fixed50k_r2
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 90s | Load: 1500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 117375)
+[+] Video Simulator started (PID 117395)
+[+] iperf3 UDP Client started on h3 (PID 117396)
+[+] INT Sender started on h1 (PID 117397)
+
+[*] Experiment running for 90 seconds... Monitoring progress:
+  [t=30s / 90s] INT probes logged: 29 | DASH rows: 31 | iperf active: True
+  [t=60s / 90s] INT probes logged: 59 | DASH rows: 61 | iperf active: True
+  [t=90s / 90s] INT probes logged: 90 | DASH rows: 90 | iperf active: False
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v3_low_fixed50k_r2
+STATUS: VALID
+  - Duration: 89.2s, INT probes: 90, DASH rows: 90, Max DASH gap: 2.08s
+-------------------------
+
+[SUCCESS] Run v3_low_fixed50k_r2 is VALID!
+[+] Registry updated for v3_low_fixed50k_r2 (Status: VALID)
+[+] Experiment v3_low_fixed50k_r2 finished.
+
+
+--- STDERR ---
+
+
+======================================================================
+[2026-10-12 00:40:03] Launching v3_low_fixed30k_r2
+Stage: Stage 3 Low | Policy: fixed30k | Round: 2 | Retry: 0
+Command: /home/p4/src/p4dev-python-venv/bin/python3 /home/p4/DESiRED/scripts/run_experiment.py --run-id v3_low_fixed30k_r2 --policy fixed30k --duration 90 --iperf-host h3 --queue-rate 200 --queue-depth 32 --video-target-ms 60.0 --load-kbps 1500
+======================================================================
+[2026-10-12 00:41:52] Completed v3_low_fixed30k_r2 in 108.7s (Exit code: 1)
+--- STDOUT ---
+
+==================================================
+ Starting Experiment: v3_low_fixed30k_r2
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 90s | Load: 1500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[*] Setting bottleneck queue rate 200 pps on s2 port 2...
+[*] Setting bottleneck queue depth 32 pkts on s2 port 2...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 117649)
+[+] Video S

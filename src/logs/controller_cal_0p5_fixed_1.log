@@ -1,0 +1,82 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790830481.070657   86501 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790830482.644579   86501 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+E0000 00:00:1790830485.201182   86501 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+/home/p4/src/p4dev-python-venv/lib/python3.12/site-packages/keras/src/layers/core/dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Set default Target Delay in SW3
+Set default Target Delay in SW2
+Set default Target Delay in SW1
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 1,155 (4.51 KB)
+ Non-trainable params: 0 (0.00 B)
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 1,155 (4.51 KB)
+Exception in thread Thread-1 (getDashMetrics):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-2 (getINTMetrics):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/p4/DESiRED/local_controller/receiveMetrics.py", line 230, in getDashMetrics
+    t = tail.Tail(path)
+        ^^^^^^^^^^^^^^^
+  File "/home/p4/DESiRED/local_controller/tail.py", line 38, in __init__
+    self.check_file_validity(tailed_file)
+  File "/home/p4/DESiRED/local_controller/tail.py", line 68, in check_file_validity
+    raise TailError("File '%s' does not exist" % (file_))
+tail.TailError: File '/home/p4/DESiRED/src/logs/dash_cal_0p5_fixed_1.txt' does not exist
+    self._target(*self._args, **self._kwargs)
+  File "/home/p4/DESiRED/local_controller/receiveMetrics.py", line 238, in getINTMetrics
+    t = tail.Tail(path)
+        ^^^^^^^^^^^^^^^
+  File "/home/p4/DESiRED/local_controller/tail.py", line 38, in __init__
+    self.check_file_validity(tailed_file)
+  File "/home/p4/DESiRED/local_controller/tail.py", line 68, in check_file_validity
+    raise TailError("File '%s' does not exist" % (file_))
+tail.TailError: File '/home/p4/DESiRED/src/logs/log_INT_cal_0p5_fixed_1.txt' does not exist
+Traceback (most recent call last):
+  File "/home/p4/DESiRED/local_controller/receiveMetrics.py", line 391, in <module>
+    main()
+  File "/home/p4/DESiRED/local_controller/receiveMetrics.py", line 385, in main
+    time.sleep(600)
+KeyboardInterrupt

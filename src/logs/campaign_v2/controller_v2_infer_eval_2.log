@@ -1,0 +1,1864 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791121156.014723  179169 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791121162.562951  179169 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+E0000 00:00:1791121171.845824  179169 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+Set default Target Delay in SW3
+Set default Target Delay in SW2
+Set default Target Delay in SW1
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 1,155 (4.51 KB)
+ Non-trainable params: 0 (0.00 B)
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 1,155 (4.51 KB)
+/home/p4/DESiRED/local_controller/receiveMetrics.py:188: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  aggregatedDash = pd.concat([aggregatedDash, aggregatedSample], ignore_index=True)
+
+=================================================================
+
+freezing the q-network layers weights (All layers):
+
+Dense_1: False
+Dense_2: False
+Output: False
+
+=================================================================
+
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121173, 1791121174, 1791121175, 1791121176])
+Received state, entering in the loop steps: 2026-10-04 09:39:40.797896
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 157ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 186ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=10
+Exiting the loop steps: 2026-10-04 09:39:42.070627
+========================================
+last action: 1 | reward: 0 | fps: 0.0 | Target_Delay (sw1): 45000 | Target_Delay(sw2): 45000 | Target_Delay(sw3): 45000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121180, 1791121181, 1791121182, 1791121183])
+Received state, entering in the loop steps: 2026-10-04 09:39:44.790361
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 36ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 67ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  0.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:39:45.480835
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121188, 1791121189, 1791121190, 1791121191])
+Received state, entering in the loop steps: 2026-10-04 09:39:52.907004
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 26ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 44ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=10.5
+Exiting the loop steps: 2026-10-04 09:39:53.670103
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 35000 | Target_Delay(sw2): 35000 | Target_Delay(sw3): 35000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121192, 1791121193, 1791121194, 1791121195])
+Received state, entering in the loop steps: 2026-10-04 09:39:56.839958
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 23ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 38ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  24.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:39:57.347824
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 30000 | Target_Delay(sw2): 30000 | Target_Delay(sw3): 30000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121196, 1791121197, 1791121198, 1791121199])
+Received state, entering in the loop steps: 2026-10-04 09:40:01.283209
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 617ms/step[DEBUG INT] rows=1 unique_ts=1[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 882ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=2 unique_ts=21
+Exiting the loop steps: 2026-10-04 09:40:02.968320
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 25000 | Target_Delay(sw2): 25000 | Target_Delay(sw3): 25000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121205, 1791121206, 1791121207, 1791121208])
+Received state, entering in the loop steps: 2026-10-04 09:40:12.054574
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 51ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 75ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:40:12.967288
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121216, 1791121217, 1791121218, 1791121219])
+Received state, entering in the loop steps: 2026-10-04 09:40:24.046301
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 48ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 73ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+1
+Exiting the loop steps: 2026-10-04 09:40:25.505539
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121222, 1791121223, 1791121224, 1791121225])
+Received state, entering in the loop steps: 2026-10-04 09:40:30.101133
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 44ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 74ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=2 unique_ts=1
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:40:30.594907
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=4 unique_ts=2[DEBUG INT] rows=5 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121249, 1791121250, 1791121251, 1791121252])
+Received state, entering in the loop steps: 2026-10-04 09:40:57.043883
+[DEBUG INT] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 81ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 112ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=3 unique_ts=31
+Exiting the loop steps: 2026-10-04 09:40:57.635506
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=6 unique_ts=3[DEBUG DASH] rows=7 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=8 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121269, 1791121270, 1791121271, 1791121272])
+Received state, entering in the loop steps: 2026-10-04 09:41:14.741160
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 19ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 29ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:41:15.258772
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121278, 1791121279, 1791121280, 1791121281])
+Received state, entering in the loop steps: 2026-10-04 09:41:25.057284
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 44ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+2
+Exiting the loop steps: 2026-10-04 09:41:25.531270
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=5 unique_ts=3[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=2[DEBUG DASH] rows=5 unique_ts=2[DEBUG DASH] rows=6 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=7 unique_ts=3[DEBUG DASH] rows=8 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121298, 1791121299, 1791121300, 1791121301])
+Received state, entering in the loop steps: 2026-10-04 09:41:45.186938
+[DEBUG DASH] rows=3 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 76ms/step[DEBUG DASH] rows=4 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 137ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:41:46.395572
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121302, 1791121303, 1791121304, 1791121305])
+Received state, entering in the loop steps: 2026-10-04 09:41:49.380830
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 187ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 253ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+2
+Exiting the loop steps: 2026-10-04 09:41:50.731357
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=6 unique_ts=3[DEBUG DASH] rows=7 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=8 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121314, 1791121315, 1791121316, 1791121317])
+Received state, entering in the loop steps: 2026-10-04 09:42:00.386600
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 111ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 178ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:42:03.141501
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=6 unique_ts=3[DEBUG DASH] rows=7 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=8 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121333, 1791121334, 1791121335, 1791121336])
+Received state, entering in the loop steps: 2026-10-04 09:42:22.166770
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 28ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 49ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=2 unique_ts=12
+Exiting the loop steps: 2026-10-04 09:42:23.182551
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121341, 1791121342, 1791121343, 1791121344])
+Received state, entering in the loop steps: 2026-10-04 09:42:26.260302
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 33ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 51ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  18.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:42:26.771086
+========================================
+last action: 1 | reward: -2 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121345, 1791121346, 1791121347, 1791121348])
+Received state, entering in the loop steps: 2026-10-04 09:42:30.228451
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 86ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 141ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=1 unique_ts=1-2
+Exiting the loop steps: 2026-10-04 09:42:31.097801
+========================================
+last action: 1 | reward: -2 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121352, 1791121353, 1791121354, 1791121355])
+Received state, entering in the loop steps: 2026-10-04 09:42:39.155889
+[DEBUG DASH] rows=3 unique_ts=3[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 22ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 38ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+
+current state 4th second timestamp:  24.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:42:41.221210
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121364, 1791121365, 1791121366, 1791121367])
+Received state, entering in the loop steps: 2026-10-04 09:42:49.106391
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 17ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 35ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=11
+Exiting the loop steps: 2026-10-04 09:42:49.799471
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121375, 1791121376, 1791121377, 1791121378])
+Received state, entering in the loop steps: 2026-10-04 09:43:02.045950
+[DEBUG DASH] rows=3 unique_ts=3[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 29ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 47ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:43:02.491242
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121395, 1791121396, 1791121397, 1791121398])
+Received state, entering in the loop steps: 2026-10-04 09:43:23.053958
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 32ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 47ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=22
+Exiting the loop steps: 2026-10-04 09:43:23.471301
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=3[DEBUG DASH] rows=6 unique_ts=3[DEBUG DASH] rows=7 unique_ts=3[DEBUG DASH] rows=8 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=9 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121418, 1791121419, 1791121420, 1791121421])
+Received state, entering in the loop steps: 2026-10-04 09:43:43.908555
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 139ms/step[DEBUG DASH] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 171ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:43:44.856520
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121426, 1791121427, 1791121428, 1791121429])
+Received state, entering in the loop steps: 2026-10-04 09:43:52.847144
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 80ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 97ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=22
+Exiting the loop steps: 2026-10-04 09:43:53.910668
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121430, 1791121431, 1791121432, 1791121433])
+Received state, entering in the loop steps: 2026-10-04 09:43:58.058486
+[DEBUG DASH] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 27ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 43ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:43:58.663499
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121444, 1791121445, 1791121446, 1791121447])
+Received state, entering in the loop steps: 2026-10-04 09:44:10.932413
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 49ms/step[DEBUG DASH] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 107ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+2
+Exiting the loop steps: 2026-10-04 09:44:12.214485
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121448, 1791121449, 1791121450, 1791121451])
+Received state, entering in the loop steps: 2026-10-04 09:44:15.493177
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 75ms/step[DEBUG DASH] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 94ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:44:16.394931
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=3[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121472, 1791121473, 1791121474, 1791121475])
+Received state, entering in the loop steps: 2026-10-04 09:44:39.043914
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 16ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 31ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+2
+Exiting the loop steps: 2026-10-04 09:44:39.944251
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121484, 1791121485, 1791121486, 1791121487])
+Received state, entering in the loop steps: 2026-10-04 09:44:52.170655
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 71ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 207ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:44:54.584949
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=3[DEBUG DASH] rows=6 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=7 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=5 unique_ts=3[DEBUG INT] rows=6 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=7 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=2[DEBUG DASH] rows=5 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=6 unique_ts=3[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=7 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121521, 1791121522, 1791121523, 1791121524])
+Received state, entering in the loop steps: 2026-10-04 09:45:28.795429
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 130ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 173ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=32
+Exiting the loop steps: 2026-10-04 09:45:30.636572
+========================================
+last action: 1 | reward: 2 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121528, 1791121529, 1791121530, 1791121531])
+Received state, entering in the loop steps: 2026-10-04 09:45:34.112327
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 49ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 70ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  18.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:45:35.288176
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121534, 1791121535, 1791121536, 1791121537])
+Received state, entering in the loop steps: 2026-10-04 09:45:41.816959
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 60ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 117ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=20.5
+Exiting the loop steps: 2026-10-04 09:45:43.265350
+========================================
+last action: 1 | reward: 0.5 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121541, 1791121542, 1791121543, 1791121544])
+Received state, entering in the loop steps: 2026-10-04 09:45:45.860012
+[DEBUG DASH] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 548ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 637ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+
+current state 4th second timestamp:  0.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:45:49.276543
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121547, 1791121548, 1791121549, 1791121550])
+Received state, entering in the loop steps: 2026-10-04 09:45:54.961979
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 77ms/step[DEBUG DASH] rows=3 unique_ts=3[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 746ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+0.5
+Exiting the loop steps: 2026-10-04 09:45:57.339382
+========================================
+last action: 1 | reward: 0.5 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121551, 1791121552, 1791121553, 1791121554])
+Received state, entering in the loop steps: 2026-10-04 09:45:59.385369
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 145ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 279ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+
+current state 4th second timestamp:  0.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:46:03.694487
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121559, 1791121560, 1791121561, 1791121562])
+Received state, entering in the loop steps: 2026-10-04 09:46:05.239551
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 38ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 57ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=2 unique_ts=20.5
+Exiting the loop steps: 2026-10-04 09:46:06.010147
+========================================
+last action: 1 | reward: 0.5 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121563, 1791121564, 1791121565, 1791121566])
+Received state, entering in the loop steps: 2026-10-04 09:46:09.192871
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 42ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  0.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:46:09.672240
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121567, 1791121568, 1791121569, 1791121570])
+Received state, entering in the loop steps: 2026-10-04 09:46:13.266698
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 29ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 56ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=2 unique_ts=20.5
+Exiting the loop steps: 2026-10-04 09:46:14.296588
+========================================
+last action: 1 | reward: 0.5 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=2Sending timestamp-matched sample to RL (seconds=[1791121576, 1791121577, 1791121578, 1791121579])
+Received state, entering in the loop steps: 2026-10-04 09:46:24.241114
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 156ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 237ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=3
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:46:26.354823
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121583, 1791121584, 1791121585, 1791121586])
+Received state, entering in the loop steps: 2026-10-04 09:46:30.790945
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 139ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 186ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+1
+Exiting the loop steps: 2026-10-04 09:46:33.170218
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121587, 1791121588, 1791121589, 1791121590])
+Received state, entering in the loop steps: 2026-10-04 09:46:34.924163
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 124ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 169ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:46:36.632220
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121591, 1791121592, 1791121593, 1791121594])
+Received state, entering in the loop steps: 2026-10-04 09:46:39.109287
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 191ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 243ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+1
+Exiting the loop steps: 2026-10-04 09:46:41.179571
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121595, 1791121596, 1791121597, 1791121598])
+Received state, entering in the loop steps: 2026-10-04 09:46:42.967709
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 136ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 193ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:46:44.849424
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121599, 1791121600, 1791121601, 1791121602])
+Received state, entering in the loop steps: 2026-10-04 09:46:47.087492
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 219ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 369ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+1
+Exiting the loop steps: 2026-10-04 09:46:49.564759
+========================================
+last action: 1 | reward: 1 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121603, 1791121604, 1791121605, 1791121606])
+Received state, entering in the loop steps: 2026-10-04 09:46:52.167474
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 54ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 88ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+current state 4th second timestamp:  18.0next state 4th second timestamp:  18.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:46:54.343975
+========================================
+last action: 1 | reward: -2 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121612, 1791121613, 1791121614, 1791121615])
+Received state, entering in the loop steps: 2026-10-04 09:46:56.869691
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 23ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 72ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+-2
+Exiting the loop steps: 2026-10-04 09:46:59.666447
+========================================
+last action: 1 | reward: -2 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121616, 1791121617, 1791121618, 1791121619])
+Received state, entering in the loop steps: 2026-10-04 09:47:00.939840
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 52ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 93ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3
+current state 4th second timestamp:  18.0next state 4th second timestamp:  18.0
+
+0.1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:47:02.838168
+========================================
+last action: 1 | reward: 0.1 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121624, 1791121625, 1791121626, 1791121627])
+Received state, entering in the loop steps: 2026-10-04 09:47:09.796349
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 63ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 110ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=3 unique_ts=30.1
+Exiting the loop steps: 2026-10-04 09:47:10.578460
+========================================
+last action: 1 | reward: 0.1 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121632, 1791121633, 1791121634, 1791121635])
+Received state, entering in the loop steps: 2026-10-04 09:47:19.261770
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 112ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 187ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+
+current state 4th second timestamp:  24.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:47:20.566490
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121640, 1791121641, 1791121642, 1791121643])
+Received state, entering in the loop steps: 2026-10-04 09:47:27.808981
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 51ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=20.5
+Exiting the loop steps: 2026-10-04 09:47:29.659213
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121644, 1791121645, 1791121646, 1791121647])
+Received state, entering in the loop steps: 2026-10-04 09:47:31.793273
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 64ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 119ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+
+current state 4th second timestamp:  24.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:47:32.682181
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121658, 1791121659, 1791121660, 1791121661])
+Received state, entering in the loop steps: 2026-10-04 09:47:45.795758
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 42ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 71ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=10.5
+Exiting the loop steps: 2026-10-04 09:47:46.783119
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121664, 1791121665, 1791121666, 1791121667])
+Received state, entering in the loop steps: 2026-10-04 09:47:49.773160
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 42ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 77ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  24.0next state 4th second timestamp:  18.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:47:50.539321
+========================================
+last action: 1 | reward: -2 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121668, 1791121669, 1791121670, 1791121671])
+Received state, entering in the loop steps: 2026-10-04 09:47:53.895177
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 35ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 59ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2-2
+Exiting the loop steps: 2026-10-04 09:47:55.672126
+========================================
+last action: 1 | reward: -2 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121672, 1791121673, 1791121674, 1791121675])
+Received state, entering in the loop steps: 2026-10-04 09:47:57.803353
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 77ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 184ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2
+current state 4th second timestamp:  18.0next state 4th second timestamp:  0.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:47:59.725403
+========================================
+last action: 1 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121676, 1791121677, 1791121678, 1791121679])
+Received state, entering in the loop steps: 2026-10-04 09:48:01.811625
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 68ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 97ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2-2
+Exiting the loop steps: 2026-10-04 09:48:03.687610
+========================================
+last action: 1 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121681, 1791121682, 1791121683, 1791121684])
+Received state, entering in the loop steps: 2026-10-04 09:48:05.932601
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 112ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 150ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  0.0next state 4th second timestamp:  0.0
+
+0
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:48:07.295364
+========================================
+last action: 1 | reward: 0 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121693, 1791121694, 1791121695, 1791121696])
+Received state, entering in the loop steps: 2026-10-04 09:48:20.836142
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 131ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 159ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=20
+Exiting the loop steps: 2026-10-04 09:48:22.943215
+========================================
+last action: 1 | reward: 0 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121699, 1791121700, 1791121701, 1791121702])
+Received state, entering in the loop steps: 2026-10-04 09:48:24.803854
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 36ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 65ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  24.0next state 4th second timestamp:  0.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:48:25.818119
+========================================
+last action: 1 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121703, 1791121704, 1791121705, 1791121706])
+Received state, entering in the loop steps: 2026-10-04 09:48:28.995205
+[DEBUG DASH] rows=1 unique_ts=1[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 124ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 219ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+-2
+Exiting the loop steps: 2026-10-04 09:48:33.222835
+========================================
+last action: 1 | reward: -2 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121708, 1791121709, 1791121710, 1791121711])
+Received state, entering in the loop steps: 2026-10-04 09:48:33.348451
+[DEBUG DASH] rows=1 unique_ts=1[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 153ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 378ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3
+current state 4th second timestamp:  24.0next state 4th second timestamp:  0.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:48:36.415925
+========================================
+last action: 1 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121713, 1791121714, 1791121715, 1791121716])
+Received state, entering in the loop steps: 2026-10-04 09:48:37.812816
+[DEBUG DASH] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 261ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 337ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=3 unique_ts=3-2
+Exiting the loop steps: 2026-10-04 09:48:39.830242
+========================================
+last action: 1 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121717, 1791121718, 1791121719, 1791121720])
+Received state, entering in the loop steps: 2026-10-04 09:48:41.800515
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 29ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 56ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2
+current state 4th second timestamp:  0.0next state 4th second timestamp:  18.0
+
+0.1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:48:42.481588
+========================================
+last action: 1 | reward: 0.1 | fps: 18.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=7 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=8 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG DASH] rows=6 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=7 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121771, 1791121772, 1791121773, 1791121774])
+Received state, entering in the loop steps: 2026-10-04 09:49:38.083317
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 85ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 113ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=10.1
+Exiting the loop steps: 2026-10-04 09:49:38.701363
+========================================
+last action: 1 | reward: 0.1 | fps: 24.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=6 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=7 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121790, 1791121791, 1791121792, 1791121793])
+Received state, entering in the loop steps: 2026-10-04 09:49:54.774852
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 39ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 57ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=2
+current state 4th second timestamp:  24.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:49:55.353130
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121794, 1791121795, 1791121796, 1791121797])
+Received state, entering in the loop steps: 2026-10-04 09:49:58.848933
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 22ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 39ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=2 unique_ts=21
+Exiting the loop steps: 2026-10-04 09:49:59.334744
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121814, 1791121815, 1791121816, 1791121817])
+Received state, entering in the loop steps: 2026-10-04 09:50:20.338765
+[DEBUG DASH] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 36ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 59ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=2
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:50:20.727348
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=5 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121823, 1791121824, 1791121825, 1791121826])
+Received state, entering in the loop steps: 2026-10-04 09:50:29.159904
+[DEBUG INT] rows=2 unique_ts=2[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 38ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 65ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+1
+Exiting the loop steps: 2026-10-04 09:50:29.691123
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121828, 1791121829, 1791121830, 1791121831])
+Received state, entering in the loop steps: 2026-10-04 09:50:35.804661
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 22ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 37ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:50:36.299702
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121835, 1791121836, 1791121837, 1791121838])
+Received state, entering in the loop steps: 2026-10-04 09:50:40.241711
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 15ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 25ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=1 unique_ts=12
+Exiting the loop steps: 2026-10-04 09:50:41.022640
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending timestamp-matched sample to RL (seconds=[1791121839, 1791121840, 1791121841, 1791121842])
+Received state, entering in the loop steps: 2026-10-04 09:50:45.147398
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 53ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 81ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-04 09:50:45.637924
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 20000 | Target_Delay(sw2): 20000 | Target_Delay(sw3): 20000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+logs saved

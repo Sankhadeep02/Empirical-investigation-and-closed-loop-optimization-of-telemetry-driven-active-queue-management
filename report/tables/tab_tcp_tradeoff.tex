@@ -1,0 +1,32 @@
+\begin{table}[H]
+\centering
+\small
+\caption{Responsive TCP Cubic Within-Run Trade-off Evaluation Across Three Balanced Repetitions ($N=3$)}
+\label{tab:tcp_tradeoff}
+\begin{tabularx}{\textwidth}{lcccccccc}
+\toprule
+\textbf{Repetition} & \textbf{Segment} & \textbf{Target} & \textbf{Median Delay} & \textbf{Delay IQR} & \textbf{AQM Drops} & \textbf{Retrans.} & \textbf{Goodput} & \textbf{CWND} \\
+ & & ($\mu$s) & (ms) & (ms) & (pkts) & (pkts) & (Mbps) & (KB) \\
+\midrule
+Rep 1 & Seg A & 20 & 10.08 & 14.09 & 266 & 269 & 9.85 & 55.4 \\
+Rep 1 & Seg B & 70 & 28.44 & 30.77 & 94 & 96 & 13.24 & 133.5 \\
+Rep 1 & Seg C & 20 & 8.32 & 14.68 & 233 & 233 & 9.55 & 55.4 \\
+\midrule
+Rep 2 & Seg A & 20 & 7.98 & 13.39 & 204 & 208 & 9.07 & 55.4 \\
+Rep 2 & Seg B & 70 & 28.17 & 43.68 & 100 & 87 & 13.44 & 124.5 \\
+Rep 2 & Seg C & 20 & 6.47 & 10.23 & 252 & 262 & 10.02 & 55.4 \\
+\midrule
+Rep 3 & Seg A & 20 & 8.94 & 17.72 & 274 & 275 & 9.89 & 55.4 \\
+Rep 3 & Seg B & 70 & 29.43 & 40.02 & 105 & 111 & 13.28 & 138.0 \\
+Rep 3 & Seg C & 20 & 8.97 & 12.55 & 221 & 208 & 8.61 & 55.4 \\
+\midrule
+\multicolumn{9}{c}{\textbf{Summary Means Across $N=3$ Repeats}} \\
+\multicolumn{2}{l}{\textbf{Segment A (Target = 20k)}} & 20k & \textbf{9.00} & 15.06 & \textbf{248.0} & \textbf{250.7} & \textbf{9.60} & \textbf{55.4} \\
+\multicolumn{2}{l}{\textbf{Segment B (Target = 70k)}} & 70k & \textbf{28.68} & 38.16 & \textbf{99.7} & \textbf{98.0} & \textbf{13.32} & \textbf{132.0} \\
+\multicolumn{2}{l}{\textbf{Segment C (Target = 20k)}} & 20k & \textbf{7.92} & 12.49 & \textbf{235.3} & \textbf{234.3} & \textbf{9.39} & \textbf{55.4} \\
+\midrule
+\multicolumn{3}{l}{\textbf{Change $\Delta(B - A)$}} & \textbf{+19.68 ms} & --- & \textbf{-148.3 pkts} & \textbf{-152.7 pkts} & \textbf{+3.72 Mbps} & \textbf{+76.6 KB} \\
+\multicolumn{3}{l}{\textbf{Relative Shift}} & \textbf{+218.7\%} & --- & \textbf{-59.8\%} & \textbf{-60.9\%} & \textbf{+38.8\%} & \textbf{+138.3\%} \\
+\bottomrule
+\end{tabularx}
+\end{table}

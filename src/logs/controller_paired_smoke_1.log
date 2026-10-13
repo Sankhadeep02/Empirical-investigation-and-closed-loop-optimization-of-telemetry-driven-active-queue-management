@@ -1,0 +1,606 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790735512.704574   75056 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790735514.506750   75056 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+E0000 00:00:1790735516.696407   75056 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+/home/p4/src/p4dev-python-venv/lib/python3.12/site-packages/keras/src/layers/core/dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Set default Target Delay in SW3
+Set default Target Delay in SW2
+Set default Target Delay in SW1
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 1,155 (4.51 KB)
+ Non-trainable params: 0 (0.00 B)
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 1,155 (4.51 KB)
+/home/p4/DESiRED/local_controller/receiveMetrics.py:164: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  aggregatedDash = pd.concat([aggregatedDash, aggregatedSample], ignore_index=True)
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:01.139661
+0
+Exiting the loop steps: 2026-09-29 22:32:01.553622
+========================================
+last action: 0 | reward: 0 | fps: 30.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:05.203615
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:05.617854
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:09.186033
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:09.474223
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:13.150723
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:13.428390
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:17.187965
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:17.459588
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:21.133526
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:21.133658
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:25.171075
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:25.415382
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:29.180428
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:29.425236
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:33.150493
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:33.401828
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:37.187073
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:37.484582
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:41.148388
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:41.400084
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:45.231802
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:45.232241
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:49.146384
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:49.404157
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:53.174547
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:53.471186
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:32:57.129288
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:32:57.432748
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 50000 | Target_Delay(sw2): 50000 | Target_Delay(sw3): 50000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:01.179365
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:01.498719
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 45000 | Target_Delay(sw2): 45000 | Target_Delay(sw3): 45000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:05.186219
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:05.436460
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:09.150925
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:09.151012
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:13.248833
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:13.248919
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:17.239862
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:17.239949/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:21.127698
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 117ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 131ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:21.577520
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 35000 | Target_Delay(sw2): 35000 | Target_Delay(sw3): 35000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:25.145968
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:25.396498
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 45000 | Target_Delay(sw2): 45000 | Target_Delay(sw3): 45000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:29.181103
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:29.439830
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:33.207552
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:33.483973
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:37.183661
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:37.464922
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:33:41.133446
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:33:41.353673
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+logs saved

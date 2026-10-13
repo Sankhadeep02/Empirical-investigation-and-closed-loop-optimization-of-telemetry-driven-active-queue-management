@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Hypothesis testing on dynamic changing-load performance. Welch's t-test and Mann--Whitney U test with Benjamini--Hochberg FDR correction.}
+\label{tab:statistical_tests}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Comparison} & \textbf{Mean Diff (FPS)} & \textbf{Cohen's $d$} & \textbf{Welch $t$} & \textbf{Raw $p$} & \textbf{FDR $p$} \\
+\midrule
+infer20k vs infer & +3.70 & 1.46 & 1.79 & 0.195 & 0.672 \\
+infer20k vs rule & +2.48 & 0.72 & 0.88 & 0.466 & 0.672 \\
+infer20k vs fixed20k & +3.42 & 0.67 & 0.82 & 0.495 & 0.672 \\
+infer20k vs fixed30k & +3.46 & 0.60 & 0.73 & 0.537 & 0.672 \\
+fixed20k vs fixed30k & +0.04 & 0.01 & 0.01 & 0.995 & 0.995 \\
+\bottomrule
+\end{tabular}
+\end{table}

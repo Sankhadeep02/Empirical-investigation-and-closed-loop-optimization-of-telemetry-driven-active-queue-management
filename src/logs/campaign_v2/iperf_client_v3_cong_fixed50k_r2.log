@@ -1,0 +1,99 @@
+Connecting to host 10.0.0.4, port 5201
+[  8] local 10.0.0.3 port 37379 connected to 10.0.0.4 port 5201
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  8]   0.00-1.01   sec   316 KBytes  2.57 Mbits/sec  220  
+[  8]   1.01-2.02   sec   312 KBytes  2.52 Mbits/sec  217  
+[  8]   2.02-3.01   sec   324 KBytes  2.69 Mbits/sec  226  
+[  8]   3.01-4.01   sec   320 KBytes  2.62 Mbits/sec  223  
+[  8]   4.01-5.00   sec   310 KBytes  2.55 Mbits/sec  216  
+[  8]   5.00-6.01   sec   324 KBytes  2.64 Mbits/sec  226  
+[  8]   6.01-7.02   sec   316 KBytes  2.57 Mbits/sec  220  
+[  8]   7.02-8.01   sec   317 KBytes  2.63 Mbits/sec  221  
+[  8]   8.01-9.02   sec   320 KBytes  2.58 Mbits/sec  223  
+[  8]   9.02-10.01  sec   313 KBytes  2.59 Mbits/sec  218  
+[  8]  10.01-11.00  sec   309 KBytes  2.55 Mbits/sec  215  
+[  8]  11.00-12.01  sec   316 KBytes  2.57 Mbits/sec  220  
+[  8]  12.01-13.01  sec   330 KBytes  2.71 Mbits/sec  230  
+[  8]  13.01-14.00  sec   316 KBytes  2.60 Mbits/sec  220  
+[  8]  14.00-15.00  sec   316 KBytes  2.59 Mbits/sec  220  
+[  8]  15.00-16.00  sec   319 KBytes  2.61 Mbits/sec  222  
+[  8]  16.00-17.00  sec   316 KBytes  2.59 Mbits/sec  221  
+[  8]  17.00-18.01  sec   317 KBytes  2.59 Mbits/sec  220  
+[  8]  18.01-19.03  sec   317 KBytes  2.54 Mbits/sec  221  
+[  8]  19.03-20.00  sec   317 KBytes  2.68 Mbits/sec  221  
+[  8]  20.00-21.00  sec   319 KBytes  2.61 Mbits/sec  222  
+[  8]  21.00-22.00  sec   314 KBytes  2.57 Mbits/sec  219  
+[  8]  22.00-23.01  sec   322 KBytes  2.63 Mbits/sec  224  
+[  8]  23.01-24.01  sec   320 KBytes  2.62 Mbits/sec  223  
+[  8]  24.01-25.01  sec   310 KBytes  2.53 Mbits/sec  216  
+[  8]  25.01-26.02  sec   320 KBytes  2.61 Mbits/sec  223  
+[  8]  26.02-27.01  sec   313 KBytes  2.58 Mbits/sec  218  
+[  8]  27.01-28.01  sec   326 KBytes  2.67 Mbits/sec  227  
+[  8]  28.01-29.00  sec   314 KBytes  2.60 Mbits/sec  219  
+[  8]  29.00-30.01  sec   313 KBytes  2.55 Mbits/sec  221  
+[  8]  30.01-31.01  sec   320 KBytes  2.62 Mbits/sec  223  
+[  8]  31.01-32.01  sec   314 KBytes  2.58 Mbits/sec  219  
+[  8]  32.01-33.00  sec   313 KBytes  2.58 Mbits/sec  218  
+[  8]  33.00-34.00  sec   323 KBytes  2.64 Mbits/sec  225  
+[  8]  34.00-35.00  sec   312 KBytes  2.56 Mbits/sec  217  
+[  8]  35.00-36.00  sec   309 KBytes  2.52 Mbits/sec  215  
+[  8]  36.00-37.01  sec   332 KBytes  2.71 Mbits/sec  231  
+[  8]  37.01-38.01  sec   316 KBytes  2.58 Mbits/sec  220  
+[  8]  38.01-39.00  sec   314 KBytes  2.60 Mbits/sec  219  
+[  8]  39.00-40.01  sec   320 KBytes  2.61 Mbits/sec  223  
+[  8]  40.01-41.00  sec   317 KBytes  2.61 Mbits/sec  221  
+[  8]  41.00-42.00  sec   316 KBytes  2.58 Mbits/sec  220  
+[  8]  42.00-43.01  sec   316 KBytes  2.58 Mbits/sec  221  
+[  8]  43.01-44.01  sec   320 KBytes  2.60 Mbits/sec  222  
+[  8]  44.01-45.00  sec   319 KBytes  2.63 Mbits/sec  222  
+[  8]  45.00-46.00  sec   299 KBytes  2.45 Mbits/sec  208  
+[  8]  46.00-47.01  sec   337 KBytes  2.75 Mbits/sec  235  
+[  8]  47.01-48.00  sec   313 KBytes  2.58 Mbits/sec  218  
+[  8]  48.00-49.00  sec   314 KBytes  2.58 Mbits/sec  219  
+[  8]  49.00-50.00  sec   326 KBytes  2.67 Mbits/sec  227  
+[  8]  50.00-51.00  sec   317 KBytes  2.60 Mbits/sec  221  
+[  8]  51.00-52.01  sec   317 KBytes  2.58 Mbits/sec  221  
+[  8]  52.01-53.01  sec   313 KBytes  2.56 Mbits/sec  218  
+[  8]  53.01-54.01  sec   322 KBytes  2.64 Mbits/sec  224  
+[  8]  54.01-55.01  sec   303 KBytes  2.48 Mbits/sec  211  
+[  8]  55.01-56.02  sec   330 KBytes  2.68 Mbits/sec  230  
+[  8]  56.02-57.00  sec   316 KBytes  2.63 Mbits/sec  220  
+[  8]  57.00-58.01  sec   323 KBytes  2.63 Mbits/sec  225  
+[  8]  58.01-59.00  sec   314 KBytes  2.59 Mbits/sec  219  
+[  8]  59.00-60.00  sec   319 KBytes  2.61 Mbits/sec  222  
+[  8]  60.00-61.02  sec   314 KBytes  2.52 Mbits/sec  219  
+[  8]  61.02-62.94  sec   309 KBytes  1.32 Mbits/sec  215  
+[  8]  62.94-63.01  sec   327 KBytes  38.6 Mbits/sec  228  
+[  8]  63.01-64.00  sec   317 KBytes  2.61 Mbits/sec  221  
+[  8]  64.00-65.00  sec   313 KBytes  2.57 Mbits/sec  218  
+[  8]  65.00-66.01  sec   323 KBytes  2.62 Mbits/sec  225  
+[  8]  66.01-67.01  sec   317 KBytes  2.61 Mbits/sec  221  
+[  8]  67.01-68.00  sec   317 KBytes  2.61 Mbits/sec  221  
+[  8]  68.00-69.00  sec   317 KBytes  2.60 Mbits/sec  221  
+[  8]  69.00-70.00  sec   317 KBytes  2.60 Mbits/sec  221  
+[  8]  70.00-71.00  sec   319 KBytes  2.60 Mbits/sec  222  
+[  8]  71.00-72.00  sec   316 KBytes  2.60 Mbits/sec  221  
+[  8]  72.00-73.00  sec   316 KBytes  2.59 Mbits/sec  219  
+[  8]  73.00-74.01  sec   313 KBytes  2.55 Mbits/sec  218  
+[  8]  74.01-75.00  sec   324 KBytes  2.68 Mbits/sec  226  
+[  8]  75.00-76.00  sec   317 KBytes  2.59 Mbits/sec  221  
+[  8]  76.00-77.00  sec   309 KBytes  2.52 Mbits/sec  215  
+[  8]  77.00-78.00  sec   326 KBytes  2.68 Mbits/sec  227  
+[  8]  78.00-79.01  sec  45.9 KBytes   375 Kbits/sec  32  
+[  8]  79.01-80.02  sec   591 KBytes  4.78 Mbits/sec  412  
+[  8]  80.02-81.00  sec   316 KBytes  2.64 Mbits/sec  220  
+[  8]  81.00-82.00  sec   317 KBytes  2.60 Mbits/sec  221  
+[  8]  82.00-83.01  sec   314 KBytes  2.55 Mbits/sec  219  
+[  8]  83.01-84.00  sec   319 KBytes  2.64 Mbits/sec  222  
+[  8]  84.00-85.00  sec   296 KBytes  2.43 Mbits/sec  206  
+[  8]  85.00-86.01  sec   342 KBytes  2.78 Mbits/sec  238  
+[  8]  86.01-87.00  sec   316 KBytes  2.60 Mbits/sec  220  
+[  8]  87.00-88.00  sec   317 KBytes  2.60 Mbits/sec  221  
+[  8]  88.00-89.03  sec   299 KBytes  2.37 Mbits/sec  208  
+[  8]  89.03-90.02  sec   327 KBytes  2.72 Mbits/sec  228  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  8]   0.00-90.02  sec  27.9 MBytes  2.60 Mbits/sec  0.000 ms  0/19892 (0%)  sender
+[  8]   0.00-90.66  sec  18.3 MBytes  1.69 Mbits/sec  10.070 ms  6847/19890 (34%)  receiver
+
+iperf Done.

@@ -1,0 +1,10 @@
+test_id,load_kbps,rep,tot_A,tot_B,tot_C,dev_B_%,dev_C_%,del_A_ms,del_B_ms,del_C_ms,drp_A,drp_B,drp_C,drp_delta_B_minus_A,drp_ratio_B_over_A,status,exclusion_reason
+mech_1150k_rep1,1150,1,4024,3990,4178,0.8,3.8,9.23,7.97,7.86,182,11,215,-171,0.06,VALID (Strict 5%),
+mech_1150k_rep2,1150,2,4012,3666,4016,8.6,0.1,0.64,1.75,1.35,39,52,68,13,1.333,VALID (Relaxed 10%),
+mech_1150k_rep3,1150,3,4330,4074,4148,5.9,4.2,9.42,7.47,8.74,221,21,208,-200,0.095,VALID (Relaxed 10%),
+mech_1320k_rep1,1320,1,4214,3873,47,8.1,98.9,9.97,11.28,0.05,192,55,0,-137,0.286,EXCLUDED,"Segment C starved (47 pkts); Severe segment imbalance (devB=8.1%, devC=98.9% > 10%)"
+mech_1320k_rep2,1320,2,4799,4334,5211,9.7,8.6,17.86,10.01,37.01,366,67,577,-299,0.183,VALID (Relaxed 10%),
+mech_1320k_rep3,1320,3,2158,4059,3616,88.1,67.6,912.21,2.3,2.67,179,79,120,-100,0.441,EXCLUDED,"Exceeds physical ceiling of 210ms (delA=912.2, delB=2.3, delC=2.7 ms); Severe segment imbalance (devB=88.1%, devC=67.6% > 10%)"
+mech_1485k_rep1,1485,1,5737,5037,4791,12.2,16.5,27.63,12.9,20.23,603,114,302,-489,0.189,EXCLUDED,"Severe segment imbalance (devB=12.2%, devC=16.5% > 10%)"
+mech_1485k_rep2,1485,2,5060,3116,5581,38.4,10.3,2.07,24.16,21.57,174,153,626,-21,0.879,EXCLUDED,"Severe segment imbalance (devB=38.4%, devC=10.3% > 10%)"
+mech_1485k_rep3,1485,3,5962,3710,4167,37.8,30.1,36.81,54.43,37.26,789,170,411,-619,0.215,EXCLUDED,"Severe segment imbalance (devB=37.8%, devC=30.1% > 10%)"

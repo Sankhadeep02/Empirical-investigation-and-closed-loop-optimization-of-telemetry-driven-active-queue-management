@@ -1,0 +1,10 @@
+test_id,traffic_type,rep,segment,target_ms,qdelay_median_ms,qdelay_iqr_ms,qdepth_median,n_probes,red_drops,fwd_pkts,total_pkts
+mech_tcp_rep1,TCP,1,A,20,10.081,14.084999999999999,1.0,41,266,5577,5843
+mech_tcp_rep1,TCP,1,B,70,28.444000000000003,30.7665,6.0,40,94,7174,7268
+mech_tcp_rep1,TCP,1,C,20,8.324,14.68,1.0,41,233,5357,5590
+mech_tcp_rep2,TCP,2,A,20,7.9815,13.385499999999999,1.0,40,204,5098,5302
+mech_tcp_rep2,TCP,2,B,70,28.166,43.682,5.0,41,100,7335,7435
+mech_tcp_rep2,TCP,2,C,20,6.469,10.234,1.0,41,252,5546,5798
+mech_tcp_rep3,TCP,3,A,20,8.938500000000001,17.718249999999998,1.0,40,274,5586,5860
+mech_tcp_rep3,TCP,3,B,70,29.4295,40.02375,5.5,40,105,7221,7326
+mech_tcp_rep3,TCP,3,C,20,8.9655,12.55075,2.0,40,221,4978,5199

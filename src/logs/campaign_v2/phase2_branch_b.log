@@ -1,0 +1,110 @@
+[2026-10-11 14:12:52] ==================================================
+[2026-10-11 14:12:52]  Launching Phase 2 Control Batch & Branch B Study
+[2026-10-11 14:12:52]  Total slots: 23 runs (~4.6 hours)
+[2026-10-11 14:12:52] ==================================================
+[2026-10-11 14:12:52] 
+--- Processing Slot 1/23: v2_ctrl_fixed20k_500k_1 (Round 1) ---
+[2026-10-11 14:12:52] [*] Starting v2_ctrl_fixed20k_500k_1 (Policy: fixed20k, Static Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 14:24:56] [+] Slot v2_ctrl_fixed20k_500k_1 PASSED validation in 723.9s.
+[2026-10-11 14:25:11] 
+--- Processing Slot 2/23: v2_ctrl_fixed30k_500k_1 (Round 1) ---
+[2026-10-11 14:25:11] [*] Starting v2_ctrl_fixed30k_500k_1 (Policy: fixed30k, Static Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 14:37:17] [+] Slot v2_ctrl_fixed30k_500k_1 PASSED validation in 726.0s.
+[2026-10-11 14:37:32] 
+--- Processing Slot 3/23: v2_ctrl_fixed20k_200k_rep (Round 1) ---
+[2026-10-11 14:37:32] [*] Starting v2_ctrl_fixed20k_200k_rep (Policy: fixed20k, Static Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 14:49:35] [+] Slot v2_ctrl_fixed20k_200k_rep PASSED validation in 722.8s.
+[2026-10-11 14:49:50] 
+--- Processing Slot 4/23: v2_dyn_fixed20k_1 (Round 1) ---
+[2026-10-11 14:49:50] [*] Starting v2_dyn_fixed20k_1 (Policy: fixed20k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 15:01:55] [+] Slot v2_dyn_fixed20k_1 PASSED validation in 725.0s.
+[2026-10-11 15:02:10] 
+--- Processing Slot 5/23: v2_dyn_fixed30k_1 (Round 1) ---
+[2026-10-11 15:02:10] [*] Starting v2_dyn_fixed30k_1 (Policy: fixed30k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 15:14:17] [+] Slot v2_dyn_fixed30k_1 PASSED validation in 727.4s.
+[2026-10-11 15:14:32] 
+--- Processing Slot 6/23: v2_dyn_rule_1 (Round 1) ---
+[2026-10-11 15:14:32] [*] Starting v2_dyn_rule_1 (Policy: rule, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 15:26:57] [+] Slot v2_dyn_rule_1 PASSED validation in 744.0s.
+[2026-10-11 15:27:12] 
+--- Processing Slot 7/23: v2_dyn_infer50k_1 (Round 1) ---
+[2026-10-11 15:27:12] [*] Starting v2_dyn_infer50k_1 (Policy: infer, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 15:41:12] [+] Slot v2_dyn_infer50k_1 PASSED validation in 840.2s.
+[2026-10-11 15:41:27] 
+--- Processing Slot 8/23: v2_dyn_infer20k_1 (Round 1) ---
+[2026-10-11 15:41:27] [*] Starting v2_dyn_infer20k_1 (Policy: infer20k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 15:55:24] [+] Slot v2_dyn_infer20k_1 PASSED validation in 836.9s.
+[2026-10-11 15:55:39] 
+--- Processing Slot 9/23: v2_ctrl_fixed20k_500k_2 (Round 2) ---
+[2026-10-11 15:55:39] [*] Starting v2_ctrl_fixed20k_500k_2 (Policy: fixed20k, Static Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 16:07:38] [+] Slot v2_ctrl_fixed20k_500k_2 PASSED validation in 719.4s.
+[2026-10-11 16:07:53] 
+--- Processing Slot 10/23: v2_ctrl_fixed30k_500k_2 (Round 2) ---
+[2026-10-11 16:07:53] [*] Starting v2_ctrl_fixed30k_500k_2 (Policy: fixed30k, Static Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 16:19:49] [+] Slot v2_ctrl_fixed30k_500k_2 PASSED validation in 715.5s.
+[2026-10-11 16:20:04] 
+--- Processing Slot 11/23: v2_ctrl_fixed30k_1000k_rep (Round 2) ---
+[2026-10-11 16:20:04] [*] Starting v2_ctrl_fixed30k_1000k_rep (Policy: fixed30k, Static Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 16:32:01] [+] Slot v2_ctrl_fixed30k_1000k_rep PASSED validation in 717.7s.
+[2026-10-11 16:32:16] 
+--- Processing Slot 12/23: v2_dyn_fixed20k_2 (Round 2) ---
+[2026-10-11 16:32:16] [*] Starting v2_dyn_fixed20k_2 (Policy: fixed20k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 16:44:13] [+] Slot v2_dyn_fixed20k_2 PASSED validation in 717.1s.
+[2026-10-11 16:44:28] 
+--- Processing Slot 13/23: v2_dyn_fixed30k_2 (Round 2) ---
+[2026-10-11 16:44:28] [*] Starting v2_dyn_fixed30k_2 (Policy: fixed30k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 16:56:23] [+] Slot v2_dyn_fixed30k_2 PASSED validation in 714.1s.
+[2026-10-11 16:56:38] 
+--- Processing Slot 14/23: v2_dyn_rule_2 (Round 2) ---
+[2026-10-11 16:56:38] [*] Starting v2_dyn_rule_2 (Policy: rule, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 17:09:00] [!] Slot v2_dyn_rule_2 FAILED validation (Elapsed: 742.2s). Retrying...
+[2026-10-11 17:09:10] [*] Starting v2_dyn_rule_2_retry1 (Policy: rule, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 2/3)
+[2026-10-11 17:21:28] [+] Slot v2_dyn_rule_2_retry1 PASSED validation in 738.4s.
+[2026-10-11 17:21:43] 
+--- Processing Slot 15/23: v2_dyn_infer50k_2 (Round 2) ---
+[2026-10-11 17:21:43] [*] Starting v2_dyn_infer50k_2 (Policy: infer, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 17:35:41] [+] Slot v2_dyn_infer50k_2 PASSED validation in 837.3s.
+[2026-10-11 17:35:56] 
+--- Processing Slot 16/23: v2_dyn_infer20k_2 (Round 2) ---
+[2026-10-11 17:35:56] [*] Starting v2_dyn_infer20k_2 (Policy: infer20k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 17:49:58] [+] Slot v2_dyn_infer20k_2 PASSED validation in 842.4s.
+[2026-10-11 17:50:13] 
+--- Processing Slot 17/23: v2_ctrl_fixed20k_500k_3 (Round 3) ---
+[2026-10-11 17:50:13] [*] Starting v2_ctrl_fixed20k_500k_3 (Policy: fixed20k, Static Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 18:02:14] [+] Slot v2_ctrl_fixed20k_500k_3 PASSED validation in 721.1s.
+[2026-10-11 18:02:29] 
+--- Processing Slot 18/23: v2_ctrl_fixed30k_500k_3 (Round 3) ---
+[2026-10-11 18:02:29] [*] Starting v2_ctrl_fixed30k_500k_3 (Policy: fixed30k, Static Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 18:14:26] [!] Slot v2_ctrl_fixed30k_500k_3 FAILED validation (Elapsed: 717.0s). Retrying...
+[2026-10-11 18:14:36] [*] Starting v2_ctrl_fixed30k_500k_3_retry1 (Policy: fixed30k, Static Load: 500 kbps, Duration: 700s, Attempt: 2/3)
+[2026-10-11 18:26:37] [+] Slot v2_ctrl_fixed30k_500k_3_retry1 PASSED validation in 720.5s.
+[2026-10-11 18:26:52] 
+--- Processing Slot 19/23: v2_dyn_fixed20k_3 (Round 3) ---
+[2026-10-11 18:26:52] [*] Starting v2_dyn_fixed20k_3 (Policy: fixed20k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 18:38:52] [+] Slot v2_dyn_fixed20k_3 PASSED validation in 720.3s.
+[2026-10-11 18:39:07] 
+--- Processing Slot 20/23: v2_dyn_fixed30k_3 (Round 3) ---
+[2026-10-11 18:39:07] [*] Starting v2_dyn_fixed30k_3 (Policy: fixed30k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 18:51:11] [!] Slot v2_dyn_fixed30k_3 FAILED validation (Elapsed: 724.5s). Retrying...
+[2026-10-11 18:51:21] [*] Starting v2_dyn_fixed30k_3_retry1 (Policy: fixed30k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 2/3)
+[2026-10-11 19:03:16] [+] Slot v2_dyn_fixed30k_3_retry1 PASSED validation in 715.0s.
+[2026-10-11 19:03:31] 
+--- Processing Slot 21/23: v2_dyn_rule_3 (Round 3) ---
+[2026-10-11 19:03:31] [*] Starting v2_dyn_rule_3 (Policy: rule, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 19:15:48] [+] Slot v2_dyn_rule_3 PASSED validation in 736.8s.
+[2026-10-11 19:16:03] 
+--- Processing Slot 22/23: v2_dyn_infer50k_3 (Round 3) ---
+[2026-10-11 19:16:03] [*] Starting v2_dyn_infer50k_3 (Policy: infer, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 19:30:05] [+] Slot v2_dyn_infer50k_3 PASSED validation in 841.8s.
+[2026-10-11 19:30:20] 
+--- Processing Slot 23/23: v2_dyn_infer20k_3 (Round 3) ---
+[2026-10-11 19:30:20] [*] Starting v2_dyn_infer20k_3 (Policy: infer20k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 1/3)
+[2026-10-11 19:44:17] [!] Slot v2_dyn_infer20k_3 FAILED validation (Elapsed: 837.3s). Retrying...
+[2026-10-11 19:44:27] [*] Starting v2_dyn_infer20k_3_retry1 (Policy: infer20k, Schedule: 200:233,1000:233,500:234, Duration: 700s, Attempt: 2/3)
+[2026-10-11 19:58:25] [+] Slot v2_dyn_infer20k_3_retry1 PASSED validation in 838.0s.
+[2026-10-11 19:58:40] 
+==================================================
+[2026-10-11 19:58:40]  Phase 2 & Branch B Campaign Completed!
+[2026-10-11 19:58:40]  Slots Passed: 23/23
+[2026-10-11 19:58:40]  Total Time: 5.76 hours
+[2026-10-11 19:58:40] ==================================================

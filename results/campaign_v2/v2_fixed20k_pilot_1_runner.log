@@ -1,0 +1,52 @@
+
+==================================================
+ Starting Experiment: v2_fixed20k_pilot_1
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 134773)
+[+] Video Simulator started (PID 134788)
+[+] iperf3 UDP Client started (PID 134789)
+[+] INT Sender started (PID 134790)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=33s / 700s] INT probes logged: 20 | DASH rows: 32 | iperf active: True
+  [t=64s / 700s] INT probes logged: 46 | DASH rows: 65 | iperf active: True
+  [t=94s / 700s] INT probes logged: 75 | DASH rows: 94 | iperf active: True
+  [t=125s / 700s] INT probes logged: 102 | DASH rows: 124 | iperf active: True
+  [t=156s / 700s] INT probes logged: 119 | DASH rows: 155 | iperf active: True
+  [t=188s / 700s] INT probes logged: 141 | DASH rows: 188 | iperf active: True
+  [t=219s / 700s] INT probes logged: 163 | DASH rows: 219 | iperf active: True
+  [t=251s / 700s] INT probes logged: 182 | DASH rows: 251 | iperf active: True
+  [t=282s / 700s] INT probes logged: 206 | DASH rows: 283 | iperf active: True
+  [t=312s / 700s] INT probes logged: 230 | DASH rows: 312 | iperf active: True
+  [t=344s / 700s] INT probes logged: 251 | DASH rows: 344 | iperf active: True
+  [t=377s / 700s] INT probes logged: 269 | DASH rows: 377 | iperf active: True
+  [t=410s / 700s] INT probes logged: 286 | DASH rows: 410 | iperf active: True
+  [t=440s / 700s] INT probes logged: 314 | DASH rows: 441 | iperf active: True
+  [t=470s / 700s] INT probes logged: 337 | DASH rows: 470 | iperf active: True
+  [t=501s / 700s] INT probes logged: 362 | DASH rows: 501 | iperf active: True
+  [t=531s / 700s] INT probes logged: 386 | DASH rows: 531 | iperf active: True
+  [t=564s / 700s] INT probes logged: 407 | DASH rows: 563 | iperf active: True
+  [t=595s / 700s] INT probes logged: 430 | DASH rows: 594 | iperf active: True
+  [t=629s / 700s] INT probes logged: 450 | DASH rows: 629 | iperf active: True
+  [t=663s / 700s] INT probes logged: 470 | DASH rows: 663 | iperf active: True
+  [t=696s / 700s] INT probes logged: 487 | DASH rows: 696 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed20k_pilot_1
+STATUS: VALID
+  - Note: sender killed at teardown after 527/700 probes (normal).
+  - Duration: 699.2s, INT probes: 527, DASH rows: 700, Max DASH gap: 2.16s
+-------------------------
+
+[SUCCESS] Run v2_fixed20k_pilot_1 is VALID!
+[+] Registry updated for v2_fixed20k_pilot_1 (Status: VALID)
+[+] Experiment v2_fixed20k_pilot_1 finished.
+

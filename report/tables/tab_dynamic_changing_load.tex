@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Dynamic Changing-Load Schedule ($200 \to 1000 \to 500$\,kbps, 700\,s total duration, $N=3$ runs interleaved across 3 rounds). Startup transient ($t \le 60$\,s) is isolated from steady-state ($t > 60$\,s), revealing the startup penalty of the base RL controller.}
+\label{tab:dynamic_changing_load}
+\small
+\begin{tabular}{lccccccr}
+\toprule
+\textbf{Policy} & \textbf{Overall FPS} & \textbf{Overall Stall} & \textbf{Startup FPS ($t\le 60$s)} & \textbf{Startup Stall} & \textbf{Steady FPS ($t>60$s)} & \textbf{Steady Stall} & \textbf{QoE (MPC)} \\
+\midrule
+Base DDQN (Starts 20k floor) & 28.78 $\pm$ 1.05 & 2.33\% & 25.61 & 8.2\% & 29.09 & 1.8\% & -69.3 \\
+Rule Controller & 26.30 $\pm$ 4.79 & 8.76\% & 21.20 & 15.7\% & 26.79 & 8.1\% & -262.9 \\
+Fixed-20k & 25.36 $\pm$ 7.14 & 11.52\% & 22.62 & 16.9\% & 25.62 & 11.0\% & -346.0 \\
+Fixed-30k & 25.32 $\pm$ 8.11 & 12.29\% & 21.41 & 26.8\% & 25.69 & 10.9\% & -369.0 \\
+Base DDQN (Starts 50k) & 25.09 $\pm$ 3.42 & 10.29\% & 21.64 & 19.1\% & 25.42 & 9.4\% & -308.8 \\
+\bottomrule
+\end{tabular}
+\end{table*}

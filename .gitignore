@@ -1,0 +1,19 @@
+# Backups and archives
+backups/
+*.tar.gz
+
+# Packet capture dumps and logs
+*.pcap
+*.pcapng
+testbed/pcap/
+testbed/log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment and temp files
+.env
+*.bak
+*.orig
+*~

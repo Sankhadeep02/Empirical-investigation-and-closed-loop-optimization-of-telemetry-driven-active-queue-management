@@ -1,0 +1,571 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790830243.252854   86065 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790830248.119387   86065 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+E0000 00:00:1790830252.717268   86065 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+/home/p4/src/p4dev-python-venv/lib/python3.12/site-packages/keras/src/layers/core/dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Set default Target Delay in SW3
+Set default Target Delay in SW2
+Set default Target Delay in SW1
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 1,155 (4.51 KB)
+ Non-trainable params: 0 (0.00 B)
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 1,155 (4.51 KB)
+/home/p4/DESiRED/local_controller/receiveMetrics.py:167: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  aggregatedDash = pd.concat([aggregatedDash, aggregatedSample], ignore_index=True)
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830253, 1790830254, 1790830255, 1790830256], DASH=[1790830253, 1790830254, 1790830255, 1790830256])Received state, entering in the loop steps: 2026-10-01 00:50:57.072468
+[DEBUG DASH] rows=1 unique_ts=10
+Exiting the loop steps: 2026-10-01 00:50:57.644324
+========================================
+last action: 0 | reward: 0 | fps: 30.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830257, 1790830258, 1790830259, 1790830260], DASH=[1790830257, 1790830258, 1790830259, 1790830260])Received state, entering in the loop steps: 2026-10-01 00:51:01.084664
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:01.429372
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830261, 1790830262, 1790830263, 1790830264], DASH=[1790830261, 1790830262, 1790830263, 1790830264])Received state, entering in the loop steps: 2026-10-01 00:51:05.125372
+[DEBUG DASH] rows=1 unique_ts=12
+Exiting the loop steps: 2026-10-01 00:51:05.504303
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830265, 1790830266, 1790830267, 1790830268], DASH=[1790830265, 1790830266, 1790830267, 1790830268])Received state, entering in the loop steps: 2026-10-01 00:51:09.036911
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:09.470330
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830269, 1790830270, 1790830271, 1790830272], DASH=[1790830269, 1790830270, 1790830271, 1790830272])Received state, entering in the loop steps: 2026-10-01 00:51:13.055416
+[DEBUG DASH] rows=1 unique_ts=12
+Exiting the loop steps: 2026-10-01 00:51:13.687801
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830273, 1790830274, 1790830275, 1790830276], DASH=[1790830273, 1790830274, 1790830275, 1790830276])Received state, entering in the loop steps: 2026-10-01 00:51:17.096125
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:17.096240
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830277, 1790830278, 1790830279, 1790830280], DASH=[1790830277, 1790830278, 1790830279, 1790830280])Received state, entering in the loop steps: 2026-10-01 00:51:21.023848
+2
+Exiting the loop steps: 2026-10-01 00:51:21.329086
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830281, 1790830282, 1790830283, 1790830284], DASH=[1790830281, 1790830282, 1790830283, 1790830284])Received state, entering in the loop steps: 2026-10-01 00:51:25.129052
+[DEBUG DASH] rows=1 unique_ts=1
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:25.437340
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830285, 1790830286, 1790830287, 1790830288], DASH=[1790830285, 1790830286, 1790830287, 1790830288])Received state, entering in the loop steps: 2026-10-01 00:51:29.021881
+2
+Exiting the loop steps: 2026-10-01 00:51:29.410882
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830289, 1790830291, 1790830292, 1790830293], DASH=[1790830289, 1790830290, 1790830291, 1790830292])Received state, entering in the loop steps: 2026-10-01 00:51:34.110020
+[DEBUG DASH] rows=2 unique_ts=2
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:34.472095
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830294, 1790830295, 1790830296, 1790830297], DASH=[1790830293, 1790830294, 1790830295, 1790830296])Received state, entering in the loop steps: 2026-10-01 00:51:38.115675
+[DEBUG DASH] rows=2 unique_ts=22
+Exiting the loop steps: 2026-10-01 00:51:38.569087
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830298, 1790830299, 1790830300, 1790830301], DASH=[1790830297, 1790830298, 1790830299, 1790830300])Received state, entering in the loop steps: 2026-10-01 00:51:42.074347
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:42.074513
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830302, 1790830303, 1790830304, 1790830305], DASH=[1790830301, 1790830302, 1790830303, 1790830304])Received state, entering in the loop steps: 2026-10-01 00:51:46.104837
+2
+Exiting the loop steps: 2026-10-01 00:51:46.446979
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830306, 1790830307, 1790830308, 1790830309], DASH=[1790830305, 1790830306, 1790830307, 1790830308])Received state, entering in the loop steps: 2026-10-01 00:51:50.058082
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:50.442115
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830310, 1790830311, 1790830312, 1790830313], DASH=[1790830309, 1790830310, 1790830311, 1790830312])Received state, entering in the loop steps: 2026-10-01 00:51:54.066666
+2
+Exiting the loop steps: 2026-10-01 00:51:54.388432
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 50000 | Target_Delay(sw2): 50000 | Target_Delay(sw3): 50000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830314, 1790830315, 1790830316, 1790830317], DASH=[1790830313, 1790830314, 1790830315, 1790830316])Received state, entering in the loop steps: 2026-10-01 00:51:58.059555
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:51:58.376888
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 45000 | Target_Delay(sw2): 45000 | Target_Delay(sw3): 45000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830318, 1790830319, 1790830320, 1790830321], DASH=[1790830317, 1790830318, 1790830319, 1790830320])Received state, entering in the loop steps: 2026-10-01 00:52:02.064777
+2
+Exiting the loop steps: 2026-10-01 00:52:02.490413
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830322, 1790830324, 1790830325, 1790830326], DASH=[1790830321, 1790830322, 1790830323, 1790830324])Received state, entering in the loop steps: 2026-10-01 00:52:07.114985
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:52:07.115088
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+
+========================================
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830327, 1790830328, 1790830330, 1790830331], DASH=[1790830325, 1790830326, 1790830327, 1790830328])Received state, entering in the loop steps: 2026-10-01 00:52:12.084447
+2
+Exiting the loop steps: 2026-10-01 00:52:12.084528
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830332, 1790830333, 1790830334, 1790830335], DASH=[1790830329, 1790830330, 1790830331, 1790830332])Received state, entering in the loop steps: 2026-10-01 00:52:16.062254
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:52:16.062674
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830336, 1790830337, 1790830338, 1790830339], DASH=[1790830333, 1790830334, 1790830335, 1790830336])Received state, entering in the loop steps: 2026-10-01 00:52:20.020492
+2
+Exiting the loop steps: 2026-10-01 00:52:20.296712
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 35000 | Target_Delay(sw2): 35000 | Target_Delay(sw3): 35000
+========================================
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830340, 1790830341, 1790830342, 1790830343], DASH=[1790830337, 1790830338, 1790830339, 1790830340])Received state, entering in the loop steps: 2026-10-01 00:52:24.065588
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:52:24.383138
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 45000 | Target_Delay(sw2): 45000 | Target_Delay(sw3): 45000
+========================================
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830344, 1790830345, 1790830346, 1790830347], DASH=[1790830341, 1790830342, 1790830343, 1790830344])Received state, entering in the loop steps: 2026-10-01 00:52:28.140623
+2
+Exiting the loop steps: 2026-10-01 00:52:28.420088
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830348, 1790830349, 1790830350, 1790830351], DASH=[1790830345, 1790830347, 1790830348, 1790830349])Received state, entering in the loop steps: 2026-10-01 00:52:32.074861
+[DEBUG DASH] rows=3 unique_ts=3
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:52:32.449460
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830352, 1790830353, 1790830354, 1790830355], DASH=[1790830350, 1790830351, 1790830352, 1790830353])Received state, entering in the loop steps: 2026-10-01 00:52:36.060777
+[DEBUG DASH] rows=3 unique_ts=32
+Exiting the loop steps: 2026-10-01 00:52:36.432768
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830356, 1790830357, 1790830358, 1790830359], DASH=[1790830354, 1790830355, 1790830356, 1790830357])Received state, entering in the loop steps: 2026-10-01 00:52:40.081432
+[DEBUG DASH] rows=3 unique_ts=3
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:52:40.462566
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830360, 1790830361, 1790830362, 1790830363], DASH=[1790830358, 1790830359, 1790830360, 1790830361])Received state, entering in the loop steps: 2026-10-01 00:52:44.036883
+2
+Exiting the loop steps: 2026-10-01 00:52:44.036957
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=3 unique_ts=3WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending batch-paired sample to RL (INT=[1790830364, 1790830366, 1790830367, 1790830368], DASH=[1790830362, 1790830363, 1790830364, 1790830365])Received state, entering in the loop steps: 2026-10-01 00:52:49.079026
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-10-01 00:52:49.079160
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3logs saved

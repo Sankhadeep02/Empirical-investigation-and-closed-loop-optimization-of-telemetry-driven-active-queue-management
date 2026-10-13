@@ -1,0 +1,33 @@
+
+==================================================
+ Starting Experiment: v2_fixed20k_smoke_1
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 120s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 134368)
+[+] Video Simulator started (PID 134383)
+[+] iperf3 UDP Client started (PID 134384)
+[+] INT Sender started (PID 134385)
+
+[*] Experiment running for 120 seconds... Monitoring progress:
+  [t=30s / 120s] INT probes logged: 29 | DASH rows: 31 | iperf active: True
+  [t=61s / 120s] INT probes logged: 54 | DASH rows: 61 | iperf active: True
+  [t=91s / 120s] INT probes logged: 81 | DASH rows: 92 | iperf active: True
+  [t=122s / 120s] INT probes logged: 106 | DASH rows: 120 | iperf active: False
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed20k_smoke_1
+STATUS: VALID
+  - Duration: 120.2s, INT probes: 120, DASH rows: 120, Max DASH gap: 2.13s
+-------------------------
+
+[SUCCESS] Run v2_fixed20k_smoke_1 is VALID!
+[+] Registry updated for v2_fixed20k_smoke_1 (Status: VALID)
+[+] Experiment v2_fixed20k_smoke_1 finished.
+

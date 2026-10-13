@@ -1,0 +1,53 @@
+
+==================================================
+ Starting Experiment: v2_infer_socket_load_pilot_4
+ Policy: infer | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 147599)
+[+] RL Inference Controller started (PID 147614)
+[+] Video Simulator started (PID 147625)
+[+] iperf3 UDP Client started (PID 147626)
+[+] INT Sender started (PID 147627)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=31s / 700s] INT probes logged: 28 | DASH rows: 31 | iperf active: True
+  [t=62s / 700s] INT probes logged: 59 | DASH rows: 62 | iperf active: True
+  [t=93s / 700s] INT probes logged: 91 | DASH rows: 94 | iperf active: True
+  [t=123s / 700s] INT probes logged: 121 | DASH rows: 124 | iperf active: True
+  [t=155s / 700s] INT probes logged: 152 | DASH rows: 154 | iperf active: True
+  [t=187s / 700s] INT probes logged: 183 | DASH rows: 186 | iperf active: True
+  [t=217s / 700s] INT probes logged: 214 | DASH rows: 217 | iperf active: True
+  [t=247s / 700s] INT probes logged: 244 | DASH rows: 247 | iperf active: True
+  [t=277s / 700s] INT probes logged: 274 | DASH rows: 277 | iperf active: True
+  [t=308s / 700s] INT probes logged: 305 | DASH rows: 308 | iperf active: True
+  [t=340s / 700s] INT probes logged: 337 | DASH rows: 340 | iperf active: True
+  [t=370s / 700s] INT probes logged: 368 | DASH rows: 370 | iperf active: True
+  [t=402s / 700s] INT probes logged: 398 | DASH rows: 401 | iperf active: True
+  [t=435s / 700s] INT probes logged: 432 | DASH rows: 434 | iperf active: True
+  [t=466s / 700s] INT probes logged: 464 | DASH rows: 467 | iperf active: True
+  [t=497s / 700s] INT probes logged: 494 | DASH rows: 496 | iperf active: True
+  [t=528s / 700s] INT probes logged: 525 | DASH rows: 528 | iperf active: True
+  [t=559s / 700s] INT probes logged: 556 | DASH rows: 558 | iperf active: True
+  [t=589s / 700s] INT probes logged: 586 | DASH rows: 589 | iperf active: True
+  [t=619s / 700s] INT probes logged: 617 | DASH rows: 620 | iperf active: True
+  [t=650s / 700s] INT probes logged: 647 | DASH rows: 650 | iperf active: True
+  [t=681s / 700s] INT probes logged: 678 | DASH rows: 681 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_infer_socket_load_pilot_4
+STATUS: VALID
+  - Duration: 698.6s, INT probes: 700, DASH rows: 700, Max DASH gap: 5.37s
+-------------------------
+
+[SUCCESS] Run v2_infer_socket_load_pilot_4 is VALID!
+[+] Registry updated for v2_infer_socket_load_pilot_4 (Status: VALID)
+[+] Experiment v2_infer_socket_load_pilot_4 finished.
+

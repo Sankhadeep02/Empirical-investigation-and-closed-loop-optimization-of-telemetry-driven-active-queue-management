@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Control Batch Analysis at 500\,kbps: Comparison between initial Campaign v2 runs and the interleaved Control Batch to quantify host-state and temporal drift effects.}
+\label{tab:control_batch}
+\small
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Batch} & \textbf{Policy} & \textbf{N} & \textbf{FPS (Mean $\pm$ Std)} & \textbf{Stall Rate (\%)} & \textbf{QoE (MPC)} \\
+\midrule
+Campaign v2 (Batch 1) & fixed20k & 6 & 26.20 $\pm$ 8.48 & 10.48\% & -314.5 \\
+Campaign v2 (Batch 1) & fixed30k & 6 & 26.71 $\pm$ 7.87 & 8.55\% & -256.4 \\
+Control Batch (Batch 2) & fixed20k & 3 & 22.41 $\pm$ 11.68 & 20.95\% & -629.9 \\
+Control Batch (Batch 2) & fixed30k & 3 & 23.41 $\pm$ 11.05 & 17.10\% & -513.8 \\
+\bottomrule
+\end{tabular}
+\end{table}

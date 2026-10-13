@@ -1,0 +1,703 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790735784.101655   75551 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790735785.522349   75551 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+E0000 00:00:1790735787.237761   75551 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+/home/p4/src/p4dev-python-venv/lib/python3.12/site-packages/keras/src/layers/core/dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Set default Target Delay in SW3
+Set default Target Delay in SW2
+Set default Target Delay in SW1
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 1,155 (4.51 KB)
+ Non-trainable params: 0 (0.00 B)
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ Dense_1 (Dense)                 │ (None, 24)             │           480 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Dense_2 (Dense)                 │ (None, 24)             │           600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ Output (Dense)                  │ (None, 3)              │            75 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,155 (4.51 KB)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 1,155 (4.51 KB)
+/home/p4/DESiRED/local_controller/receiveMetrics.py:164: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  aggregatedDash = pd.concat([aggregatedDash, aggregatedSample], ignore_index=True)
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:36:31.908427
+0
+Exiting the loop steps: 2026-09-29 22:36:32.488622
+========================================
+last action: 0 | reward: 0 | fps: 30.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:36:35.852925
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+0
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:36:36.175522
+========================================
+last action: 1 | reward: 0 | fps: 30.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:36:39.859461
+0
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:36:40.116650
+========================================
+last action: 0 | reward: 0 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=5 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:36:45.898454
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:36:46.255790
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:36:49.793152
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:36:50.126657
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:36:53.865961
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:36:53.866062
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:36:57.808719
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:36:58.214061
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (4 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:37:01.811423
+
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:37:02.077345
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=6 unique_ts=3[DEBUG INT] rows=7 unique_ts=3[DEBUG INT] rows=8 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=9 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=10 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735821, 1790735826, 1790735829, 1790735830], DASH=[1790735821, 1790735825, 1790735827, 1790735829]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735831, 1790735832, 1790735833, 1790735834], DASH=[1790735829, 1790735830, 1790735831, 1790735832]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735835, 1790735838, 1790735840, 1790735842], DASH=[1790735838, 1790735839, 1790735840, 1790735843]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:37:38.384849
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:37:39.072331
+========================================
+last action: 1 | reward: 2 | fps: 12.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735857, 1790735859, 1790735862, 1790735866], DASH=[1790735859, 1790735861, 1790735862, 1790735864]
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=2[DEBUG INT] rows=5 unique_ts=2[DEBUG INT] rows=6 unique_ts=2[DEBUG INT] rows=7 unique_ts=2[DEBUG INT] rows=8 unique_ts=2[DEBUG INT] rows=9 unique_ts=2[DEBUG INT] rows=10 unique_ts=2[DEBUG INT] rows=11 unique_ts=2[DEBUG INT] rows=12 unique_ts=2[DEBUG INT] rows=13 unique_ts=2[DEBUG INT] rows=14 unique_ts=2[DEBUG INT] rows=15 unique_ts=2[DEBUG INT] rows=16 unique_ts=2[DEBUG INT] rows=17 unique_ts=3[DEBUG INT] rows=18 unique_ts=3[DEBUG INT] rows=19 unique_ts=3[DEBUG INT] rows=20 unique_ts=3[DEBUG INT] rows=21 unique_ts=3[DEBUG INT] rows=22 unique_ts=3[DEBUG INT] rows=23 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=24 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=25 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=26 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:37:53.887547
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735868, 1790735870, 1790735871, 1790735872], DASH=[1790735871, 1790735872, 1790735873, 1790735874]
+
+current state 4th second timestamp:  12.0next state 4th second timestamp:  0.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:37:54.650936
+========================================
+last action: 0 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 70000 | Target_Delay(sw2): 70000 | Target_Delay(sw3): 70000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735873, 1790735874, 1790735875, 1790735876], DASH=[1790735875, 1790735876, 1790735877, 1790735878]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735877, 1790735878, 1790735879, 1790735880], DASH=[1790735879, 1790735880, 1790735881, 1790735882]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735881, 1790735882, 1790735883, 1790735884], DASH=[1790735883, 1790735884, 1790735885, 1790735886]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735885, 1790735886, 1790735887, 1790735888], DASH=[1790735887, 1790735888, 1790735889, 1790735891]
+[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735889, 1790735891, 1790735893, 1790735898], DASH=[1790735893, 1790735895, 1790735896, 1790735898]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG INT] rows=5 unique_ts=3[DEBUG INT] rows=6 unique_ts=3[DEBUG INT] rows=7 unique_ts=3[DEBUG INT] rows=8 unique_ts=3[DEBUG INT] rows=9 unique_ts=3[DEBUG INT] rows=10 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=11 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:38:25.814903
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:38:26.375524
+========================================
+last action: 1 | reward: -2 | fps: 18.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:38:29.859173
+
+current state 4th second timestamp:  18.0next state 4th second timestamp:  /home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:38:29.859428
+========================================
+last action: 2 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 65000 | Target_Delay(sw2): 65000 | Target_Delay(sw3): 65000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:38:33.829542
+[DEBUG DASH] rows=1 unique_ts=10.5
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:38:35.157439
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 60000 | Target_Delay(sw2): 60000 | Target_Delay(sw3): 60000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:38:37.893748
+
+current state 4th second timestamp:  24.0next state 4th second timestamp:  24.0
+
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:38:38.386214
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 55000 | Target_Delay(sw2): 55000 | Target_Delay(sw3): 55000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:38:41.814435
+0.5
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:38:42.264753
+========================================
+last action: 1 | reward: 0.5 | fps: 24.0 | Target_Delay (sw1): 50000 | Target_Delay(sw2): 50000 | Target_Delay(sw3): 50000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:38:45.873410
+
+current state 4th second timestamp:  24.0next state 4th second timestamp:  30.0
+
+1
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:38:46.422451
+========================================
+last action: 1 | reward: 1 | fps: 30.0 | Target_Delay (sw1): 45000 | Target_Delay(sw2): 45000 | Target_Delay(sw3): 45000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:38:49.841139
+[DEBUG DASH] rows=1 unique_ts=11
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:38:50.570050
+========================================
+last action: 1 | reward: 1 | fps: 24.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735929, 1790735932, 1790735934, 1790735944], DASH=[1790735937, 1790735939, 1790735942, 1790735943]
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735945, 1790735949, 1790735951, 1790735953], DASH=[1790735945, 1790735946, 1790735947, 1790735949]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=1[DEBUG INT] rows=4 unique_ts=1[DEBUG INT] rows=5 unique_ts=1[DEBUG INT] rows=6 unique_ts=1[DEBUG INT] rows=7 unique_ts=1[DEBUG INT] rows=8 unique_ts=1[DEBUG INT] rows=9 unique_ts=1[DEBUG INT] rows=10 unique_ts=1[DEBUG INT] rows=11 unique_ts=1[DEBUG INT] rows=12 unique_ts=1[DEBUG DASH] rows=4 unique_ts=2[DEBUG INT] rows=13 unique_ts=1[DEBUG INT] rows=14 unique_ts=2[DEBUG DASH] rows=5 unique_ts=3[DEBUG DASH] rows=6 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=15 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=16 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735953, 1790735954, 1790735955, 1790735957], DASH=[1790735951, 1790735953, 1790735956, 1790735957]
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735959, 1790735963, 1790735967, 1790735969], DASH=[1790735964, 1790735965, 1790735967, 1790735969]
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735971, 1790735973, 1790735979, 1790735985], DASH=[1790735982, 1790735983, 1790735986, 1790735988]/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=2[DEBUG INT] rows=5 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=6 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:40:01.408935
+
+current state 4th second timestamp:  24.0next state 4th second timestamp:  0.0
+
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:40:01.412445
+========================================
+last action: 2 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790735989, 1790735990, 1790735995, 1790735997], DASH=[1790735995, 1790735997, 1790735998, 1790736000]
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736000, 1790736002, 1790736006, 1790736008], DASH=[1790736001, 1790736005, 1790736007, 1790736008]
+[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736012, 1790736015, 1790736017, 1790736021], DASH=[1790736017, 1790736019, 1790736021, 1790736022]
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736024, 1790736027, 1790736030, 1790736035], DASH=[1790736030, 1790736031, 1790736033, 1790736035]
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736037, 1790736042, 1790736044, 1790736047], DASH=[1790736042, 1790736043, 1790736044, 1790736046]
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736050, 1790736052, 1790736054, 1790736056], DASH=[1790736054, 1790736055, 1790736056, 1790736060]
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736060, 1790736062, 1790736065, 1790736068], DASH=[1790736066, 1790736068, 1790736069, 1790736071]
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736073, 1790736077, 1790736078, 1790736083], DASH=[1790736079, 1790736080, 1790736082, 1790736084]
+[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=2[DEBUG INT] rows=5 unique_ts=2[DEBUG INT] rows=6 unique_ts=2[DEBUG INT] rows=8 unique_ts=2[DEBUG INT] rows=9 unique_ts=2[DEBUG INT] rows=10 unique_ts=2[DEBUG INT] rows=11 unique_ts=2[DEBUG INT] rows=12 unique_ts=2[DEBUG INT] rows=13 unique_ts=2[DEBUG INT] rows=14 unique_ts=2[DEBUG INT] rows=15 unique_ts=2[DEBUG INT] rows=16 unique_ts=2[DEBUG INT] rows=17 unique_ts=2[DEBUG INT] rows=18 unique_ts=2[DEBUG INT] rows=19 unique_ts=2[DEBUG INT] rows=20 unique_ts=2[DEBUG INT] rows=21 unique_ts=2[DEBUG INT] rows=22 unique_ts=2[DEBUG INT] rows=23 unique_ts=2[DEBUG INT] rows=24 unique_ts=2[DEBUG INT] rows=25 unique_ts=2[DEBUG INT] rows=27 unique_ts=2[DEBUG INT] rows=28 unique_ts=2[DEBUG INT] rows=29 unique_ts=2[DEBUG INT] rows=30 unique_ts=2[DEBUG INT] rows=31 unique_ts=2[DEBUG INT] rows=32 unique_ts=2[DEBUG INT] rows=33 unique_ts=3[DEBUG INT] rows=34 unique_ts=3[DEBUG INT] rows=35 unique_ts=3[DEBUG INT] rows=36 unique_ts=3[DEBUG INT] rows=37 unique_ts=3[DEBUG INT] rows=38 unique_ts=3[DEBUG INT] rows=39 unique_ts=3[DEBUG INT] rows=40 unique_ts=3[DEBUG INT] rows=41 unique_ts=3[DEBUG INT] rows=42 unique_ts=3[DEBUG INT] rows=43 unique_ts=3[DEBUG INT] rows=44 unique_ts=3[DEBUG INT] rows=45 unique_ts=3[DEBUG INT] rows=46 unique_ts=3[DEBUG INT] rows=47 unique_ts=3[DEBUG INT] rows=48 unique_ts=3[DEBUG INT] rows=49 unique_ts=3[DEBUG INT] rows=50 unique_ts=3[DEBUG INT] rows=51 unique_ts=3[DEBUG INT] rows=52 unique_ts=3[DEBUG INT] rows=53 unique_ts=3[DEBUG INT] rows=54 unique_ts=3[DEBUG INT] rows=55 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=56 unique_ts=3[DEBUG INT] rows=57 unique_ts=3[DEBUG INT] rows=58 unique_ts=3[DEBUG INT] rows=59 unique_ts=3[DEBUG INT] rows=60 unique_ts=3[DEBUG INT] rows=61 unique_ts=3/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+[DEBUG INT] rows=62 unique_ts=3[DEBUG INT] rows=63 unique_ts=3[DEBUG INT] rows=64 unique_ts=3[DEBUG INT] rows=65 unique_ts=3[DEBUG INT] rows=66 unique_ts=3[DEBUG INT] rows=67 unique_ts=3[DEBUG INT] rows=68 unique_ts=3[DEBUG INT] rows=69 unique_ts=3[DEBUG INT] rows=70 unique_ts=3[DEBUG INT] rows=71 unique_ts=3[DEBUG INT] rows=72 unique_ts=3[DEBUG INT] rows=73 unique_ts=3[DEBUG INT] rows=74 unique_ts=3[DEBUG INT] rows=75 unique_ts=3[DEBUG INT] rows=76 unique_ts=3[DEBUG INT] rows=77 unique_ts=3[DEBUG INT] rows=78 unique_ts=3[DEBUG INT] rows=79 unique_ts=3[DEBUG INT] rows=80 unique_ts=3[DEBUG INT] rows=81 unique_ts=3[DEBUG INT] rows=82 unique_ts=3[DEBUG INT] rows=83 unique_ts=3[DEBUG INT] rows=84 unique_ts=3[DEBUG INT] rows=85 unique_ts=3[DEBUG INT] rows=86 unique_ts=3[DEBUG INT] rows=87 unique_ts=3[DEBUG INT] rows=88 unique_ts=3[DEBUG INT] rows=89 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=90 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=91 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:41:32.434448
+-2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:41:32.434904
+========================================
+last action: 2 | reward: -2 | fps: 0.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736091, 1790736092, 1790736097, 1790736100], DASH=[1790736096, 1790736097, 1790736099, 1790736100]
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736103, 1790736106, 1790736111, 1790736115], DASH=[1790736109, 1790736112, 1790736113, 1790736115]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=1[DEBUG INT] rows=4 unique_ts=1[DEBUG INT] rows=5 unique_ts=1[DEBUG INT] rows=6 unique_ts=1[DEBUG INT] rows=7 unique_ts=1[DEBUG INT] rows=8 unique_ts=1[DEBUG INT] rows=9 unique_ts=1[DEBUG INT] rows=10 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=11 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=12 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=13 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736118, 1790736119, 1790736122, 1790736125], DASH=[1790736118, 1790736119, 1790736121, 1790736123]
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736127, 1790736130, 1790736134, 1790736136], DASH=[1790736136, 1790736138, 1790736139, 1790736140]
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736141, 1790736144, 1790736147, 1790736149], DASH=[1790736143, 1790736145, 1790736146, 1790736147]
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736152, 1790736154, 1790736158, 1790736161], DASH=[1790736158, 1790736160, 1790736161, 1790736163]
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736163, 1790736166, 1790736169, 1790736173], DASH=[1790736171, 1790736174, 1790736176, 1790736177]
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736177, 1790736179, 1790736182, 1790736184], DASH=[1790736178, 1790736180, 1790736181, 1790736182]
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736187, 1790736191, 1790736193, 1790736196], DASH=[1790736196, 1790736197, 1790736199, 1790736200]
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736200, 1790736204, 1790736207, 1790736210], DASH=[1790736201, 1790736203, 1790736205, 1790736206]
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=2[DEBUG INT] rows=4 unique_ts=2[DEBUG INT] rows=5 unique_ts=2[DEBUG INT] rows=6 unique_ts=2[DEBUG INT] rows=7 unique_ts=2[DEBUG INT] rows=8 unique_ts=2[DEBUG INT] rows=9 unique_ts=2[DEBUG INT] rows=10 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=11 unique_ts=2[DEBUG INT] rows=12 unique_ts=2[DEBUG INT] rows=13 unique_ts=2[DEBUG INT] rows=14 unique_ts=3[DEBUG INT] rows=15 unique_ts=3[DEBUG INT] rows=16 unique_ts=3[DEBUG INT] rows=17 unique_ts=3[DEBUG INT] rows=18 unique_ts=3[DEBUG INT] rows=19 unique_ts=3[DEBUG INT] rows=20 unique_ts=3[DEBUG INT] rows=21 unique_ts=3[DEBUG INT] rows=22 unique_ts=3[DEBUG INT] rows=23 unique_ts=3[DEBUG INT] rows=24 unique_ts=3[DEBUG INT] rows=25 unique_ts=3[DEBUG INT] rows=26 unique_ts=3[DEBUG INT] rows=27 unique_ts=3[DEBUG INT] rows=28 unique_ts=3[DEBUG INT] rows=29 unique_ts=3[DEBUG INT] rows=30 unique_ts=3[DEBUG INT] rows=31 unique_ts=3[DEBUG INT] rows=32 unique_ts=3[DEBUG INT] rows=33 unique_ts=3[DEBUG INT] rows=34 unique_ts=3[DEBUG INT] rows=35 unique_ts=3[DEBUG INT] rows=36 unique_ts=3[DEBUG INT] rows=37 unique_ts=3[DEBUG INT] rows=38 unique_ts=3[DEBUG INT] rows=39 unique_ts=3[DEBUG INT] rows=40 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=41 unique_ts=3[DEBUG INT] rows=42 unique_ts=3[DEBUG INT] rows=43 unique_ts=3[DEBUG INT] rows=45 unique_ts=3[DEBUG INT] rows=46 unique_ts=3[DEBUG INT] rows=47 unique_ts=3[DEBUG INT] rows=48 unique_ts=3[DEBUG INT] rows=49 unique_ts=3[DEBUG INT] rows=50 unique_ts=3[DEBUG INT] rows=51 unique_ts=3[DEBUG INT] rows=52 unique_ts=3[DEBUG INT] rows=53 unique_ts=3[DEBUG INT] rows=54 unique_ts=3[DEBUG INT] rows=55 unique_ts=3[DEBUG INT] rows=56 unique_ts=3[DEBUG INT] rows=57 unique_ts=3[DEBUG INT] rows=58 unique_ts=3[DEBUG INT] rows=59 unique_ts=3[DEBUG INT] rows=60 unique_ts=3[DEBUG INT] rows=61 unique_ts=3[DEBUG INT] rows=62 unique_ts=3[DEBUG INT] rows=63 unique_ts=3[DEBUG INT] rows=64 unique_ts=3[DEBUG INT] rows=65 unique_ts=3[DEBUG INT] rows=66 unique_ts=3[DEBUG INT] rows=67 unique_ts=3[DEBUG INT] rows=68 unique_ts=3[DEBUG INT] rows=69 unique_ts=3[DEBUG INT] rows=70 unique_ts=3[DEBUG INT] rows=71 unique_ts=3[DEBUG INT] rows=72 unique_ts=3[DEBUG INT] rows=73 unique_ts=3[DEBUG INT] rows=74 unique_ts=3[DEBUG INT] rows=75 unique_ts=3[DEBUG INT] rows=76 unique_ts=3[DEBUG INT] rows=77 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=78 unique_ts=3[DEBUG INT] rows=79 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736214, 1790736216, 1790736217, 1790736220], DASH=[1790736208, 1790736211, 1790736213, 1790736215]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=5 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736220, 1790736221, 1790736222, 1790736223], DASH=[1790736216, 1790736217, 1790736218, 1790736221]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736224, 1790736225, 1790736226, 1790736227], DASH=[1790736222, 1790736223, 1790736224, 1790736225]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736228, 1790736229, 1790736230, 1790736231], DASH=[1790736226, 1790736227, 1790736228, 1790736229]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736232, 1790736233, 1790736234, 1790736235], DASH=[1790736230, 1790736231, 1790736232, 1790736233]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736236, 1790736237, 1790736238, 1790736239], DASH=[1790736234, 1790736235, 1790736236, 1790736237]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736240, 1790736241, 1790736242, 1790736243], DASH=[1790736238, 1790736239, 1790736240, 1790736241]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736244, 1790736245, 1790736246, 1790736247], DASH=[1790736242, 1790736243, 1790736244, 1790736245]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736248, 1790736249, 1790736250, 1790736251], DASH=[1790736246, 1790736247, 1790736248, 1790736249]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736252, 1790736253, 1790736254, 1790736255], DASH=[1790736250, 1790736251, 1790736252, 1790736253]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736256, 1790736257, 1790736258, 1790736259], DASH=[1790736254, 1790736255, 1790736256, 1790736257]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736260, 1790736261, 1790736262, 1790736263], DASH=[1790736258, 1790736259, 1790736260, 1790736261]
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736264, 1790736265, 1790736266, 1790736267], DASH=[1790736262, 1790736263, 1790736264, 1790736265]
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736268, 1790736269, 1790736270, 1790736284], DASH=[1790736266, 1790736267, 1790736268, 1790736269]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=1[DEBUG INT] rows=3 unique_ts=1[DEBUG INT] rows=4 unique_ts=1[DEBUG INT] rows=5 unique_ts=1[DEBUG INT] rows=6 unique_ts=1[DEBUG INT] rows=7 unique_ts=1[DEBUG INT] rows=8 unique_ts=1[DEBUG INT] rows=9 unique_ts=1[DEBUG INT] rows=10 unique_ts=1[DEBUG INT] rows=11 unique_ts=1[DEBUG INT] rows=12 unique_ts=1[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=13 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=14 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=15 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=16 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:44:48.826561
+
+current state 4th second timestamp:  0.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:44:48.826779
+========================================
+last action: 2 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 40000 | Target_Delay(sw2): 40000 | Target_Delay(sw3): 40000
+========================================
+[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:44:52.885340
+[DEBUG DASH] rows=3 unique_ts=3[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 276ms/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 302ms/step
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+/home/p4/DESiRED/local_controller/receiveMetrics.py:134: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  dataset = dataset.fillna(dataset.mean())
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736288, 1790736289, 1790736290, 1790736291], DASH=[1790736291, 1790736292, 1790736293, 1790736294]
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:44:54.822854
+========================================
+last action: 1 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 35000 | Target_Delay(sw2): 35000 | Target_Delay(sw3): 35000
+========================================
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=2 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=3 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736292, 1790736293, 1790736294, 1790736296], DASH=[1790736296, 1790736297, 1790736298, 1790736299]
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736296, 1790736297, 1790736298, 1790736299], DASH=[1790736300, 1790736301, 1790736302, 1790736303]
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736300, 1790736301, 1790736302, 1790736303], DASH=[1790736304, 1790736305, 1790736306, 1790736307]
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736304, 1790736305, 1790736306, 1790736307], DASH=[1790736308, 1790736309, 1790736310, 1790736311]
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736308, 1790736309, 1790736310, 1790736311], DASH=[1790736312, 1790736313, 1790736314, 1790736315]
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736312, 1790736313, 1790736314, 1790736315], DASH=[1790736316, 1790736317, 1790736318, 1790736319]
+[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=4 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=5 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+Sending paired sample to RL (3 timestamp overlap)Received state, entering in the loop steps: 2026-09-29 22:45:25.180834
+[DEBUG INT] rows=1 unique_ts=1
+current state 4th second timestamp:  30.0next state 4th second timestamp:  30.0
+
+2
+next state received, memorizing transitionExiting the loop steps: 2026-09-29 22:45:26.458235
+========================================
+last action: 0 | reward: 2 | fps: 30.0 | Target_Delay (sw1): 45000 | Target_Delay(sw2): 45000 | Target_Delay(sw3): 45000
+========================================
+[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736324, 1790736325, 1790736326, 1790736327], DASH=[1790736326, 1790736327, 1790736328, 1790736329]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736328, 1790736329, 1790736330, 1790736331], DASH=[1790736330, 1790736331, 1790736332, 1790736333]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736332, 1790736333, 1790736334, 1790736335], DASH=[1790736334, 1790736335, 1790736336, 1790736337]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG DASH] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG DASH] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3[DEBUG DASH] rows=3 unique_ts=3[DEBUG INT] rows=4 unique_ts=4[DEBUG] INT reached 4 unique timestamps, calling jointoRl
+[DEBUG DASH] rows=4 unique_ts=4[DEBUG] DASH reached 4 unique timestamps, calling jointoRl
+[DEBUG] insufficient timestamp overlap: INT=[1790736336, 1790736337, 1790736338, 1790736339], DASH=[1790736338, 1790736339, 1790736340, 1790736341]
+[DEBUG INT] rows=1 unique_ts=1[DEBUG INT] rows=2 unique_ts=2[DEBUG INT] rows=3 unique_ts=3logs saved

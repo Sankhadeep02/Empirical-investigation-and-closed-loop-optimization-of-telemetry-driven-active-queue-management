@@ -1,0 +1,10 @@
+run_id,policy,initial_delay,load_kbps,duration_s,controller_enabled,model_file,code_commit,status,notes
+infer_socket_load_2,RL-inference,50000,500,120,yes,train_socket_load_1.h5,95bc029,complete,"120-second smoke test, controller verified"
+infer_socket_load_3,RL-inference,50000,500,700,yes,train_socket_load_1.h5,95bc029,invalid,Diagnostic run; iperf failed with connection refused
+infer_socket_load_4,RL-inference,50000,500,700,yes,train_socket_load_1.h5,95bc029,complete,"65 actions, all action 1; clamped at 20000"
+fixed20k_load_1,fixed-20k,20000,500,700,no,N/A,95bc029,complete,"700 INT rows, 555 DASH rows, 0.15% UDP loss"
+fixed20k_load_2,fixed20k,20000,500,700,no,N/A,95bc029,VALID,"699.3s, 596 INT, 618 DASH, sender killed at teardown (normal)"
+fixed20k_load_3,fixed20k,20000,500,700,no,N/A,95bc029,VALID,"699.8s, 554 INT, 582 DASH, sender killed at teardown (normal)"
+fixed20k_load_4,fixed20k,20000,500,700,no,N/A,95bc029,INVALID_DASH_DURATION,"37.14s DASH gap — video simulator stall, excluded"
+fixed20k_load_5,fixed20k,20000,500,700,no,N/A,95bc029,VALID,"699.8s, 587 INT, 610 DASH, sender killed at teardown (normal)"
+fixed30k_load_1,fixed30k,30000,500,700,no,N/A,95bc029,INVALID_DASH_DURATION,

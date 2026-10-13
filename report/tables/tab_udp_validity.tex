@@ -1,0 +1,45 @@
+\begin{longtable}{lcccccccccp{4.2cm}}
+\caption{Complete 27-Segment Validity and Physical-Plausibility Audit for UDP Within-Run Tests} \label{tab:udp_validity} \\
+\toprule
+\textbf{Run ID} & \textbf{Load} & \textbf{Seg} & \textbf{Target} & \textbf{Total} & \textbf{Drops} & \textbf{Dev vs A} & \textbf{Median} & \textbf{IQR} & \textbf{$\le$210ms} & \textbf{Status / Issues} \\
+ & (kbps) & & ($\mu$s) & (pkts) & (pkts) & (\%) & (ms) & (ms) & & \\
+\midrule
+\endfirsthead
+\multicolumn{11}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+\textbf{Run ID} & \textbf{Load} & \textbf{Seg} & \textbf{Target} & \textbf{Total} & \textbf{Drops} & \textbf{Dev vs A} & \textbf{Median} & \textbf{IQR} & \textbf{$\le$210ms} & \textbf{Status / Issues} \\
+\midrule
+\endhead
+\midrule \multicolumn{11}{r}{{Continued on next page}} \\ \bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+mech\_1150k\_rep1 & 1150 & A & 20 & 4024 & 182 & --- & 9.23 & 19.45 & $\checkmark$ & OK \\
+mech\_1150k\_rep1 & 1150 & B & 70 & 3990 & 11 & 0.8\% & 7.97 & 16.91 & $\checkmark$ & OK \\
+mech\_1150k\_rep1 & 1150 & C & 20 & 4178 & 215 & 3.8\% & 7.86 & 23.47 & $\checkmark$ & OK \\
+mech\_1150k\_rep2 & 1150 & A & 20 & 4012 & 39 & --- & 0.64 & 3.32 & $\checkmark$ & OK \\
+mech\_1150k\_rep2 & 1150 & B & 70 & 3666 & 52 & 8.6\% & 1.75 & 11.57 & $\checkmark$ & Marginal imbalance (8.6\% vs Seg A) \\
+mech\_1150k\_rep2 & 1150 & C & 20 & 4016 & 68 & 0.1\% & 1.35 & 3.17 & $\checkmark$ & OK \\
+mech\_1150k\_rep3 & 1150 & A & 20 & 4330 & 221 & --- & 9.42 & 21.55 & $\checkmark$ & OK \\
+mech\_1150k\_rep3 & 1150 & B & 70 & 4074 & 21 & 5.9\% & 7.47 & 10.22 & $\checkmark$ & Marginal imbalance (5.9\% vs Seg A) \\
+mech\_1150k\_rep3 & 1150 & C & 20 & 4148 & 208 & 4.2\% & 8.74 & 23.00 & $\checkmark$ & OK \\
+mech\_1320k\_rep1 & 1320 & A & 20 & 4214 & 192 & --- & 9.97 & 19.48 & $\checkmark$ & OK \\
+mech\_1320k\_rep1 & 1320 & B & 70 & 3873 & 55 & 8.1\% & 11.28 & 21.59 & $\checkmark$ & Marginal imbalance (8.1\% vs Seg A) \\
+mech\_1320k\_rep1 & 1320 & C & 20 & 47 & 0 & 98.9\% & 0.05 & 1.87 & $\checkmark$ & Starved traffic (47 pkts); Imbalanced (98.9\% vs Seg A) \\
+mech\_1320k\_rep2 & 1320 & A & 20 & 4799 & 366 & --- & 17.86 & 40.91 & $\checkmark$ & OK \\
+mech\_1320k\_rep2 & 1320 & B & 70 & 4334 & 67 & 9.7\% & 10.01 & 24.95 & $\checkmark$ & Marginal imbalance (9.7\% vs Seg A) \\
+mech\_1320k\_rep2 & 1320 & C & 20 & 5211 & 577 & 8.6\% & 37.01 & 74.37 & $\checkmark$ & Marginal imbalance (8.6\% vs Seg A) \\
+mech\_1320k\_rep3 & 1320 & A & 20 & 2158 & 179 & --- & 912.21 & 919.15 & $\times$ & Delay 912.2ms exceeds physical ceiling (210ms) \\
+mech\_1320k\_rep3 & 1320 & B & 70 & 4059 & 79 & 88.1\% & 2.30 & 20.69 & $\checkmark$ & Imbalanced (88.1\% vs Seg A) \\
+mech\_1320k\_rep3 & 1320 & C & 20 & 3616 & 120 & 67.6\% & 2.67 & 28.48 & $\checkmark$ & Imbalanced (67.6\% vs Seg A) \\
+mech\_1485k\_rep1 & 1485 & A & 20 & 5737 & 603 & --- & 27.63 & 45.52 & $\checkmark$ & OK \\
+mech\_1485k\_rep1 & 1485 & B & 70 & 5037 & 114 & 12.2\% & 12.90 & 24.50 & $\checkmark$ & Imbalanced (12.2\% vs Seg A) \\
+mech\_1485k\_rep1 & 1485 & C & 20 & 4791 & 302 & 16.5\% & 20.23 & 75.42 & $\checkmark$ & Imbalanced (16.5\% vs Seg A) \\
+mech\_1485k\_rep2 & 1485 & A & 20 & 5060 & 174 & --- & 2.07 & 4.73 & $\checkmark$ & OK \\
+mech\_1485k\_rep2 & 1485 & B & 70 & 3116 & 153 & 38.4\% & 24.16 & 152.75 & $\checkmark$ & Imbalanced (38.4\% vs Seg A) \\
+mech\_1485k\_rep2 & 1485 & C & 20 & 5581 & 626 & 10.3\% & 21.57 & 61.06 & $\checkmark$ & Imbalanced (10.3\% vs Seg A) \\
+mech\_1485k\_rep3 & 1485 & A & 20 & 5962 & 789 & --- & 36.81 & 56.88 & $\checkmark$ & OK \\
+mech\_1485k\_rep3 & 1485 & B & 70 & 3710 & 170 & 37.8\% & 54.43 & 960.20 & $\checkmark$ & Imbalanced (37.8\% vs Seg A) \\
+mech\_1485k\_rep3 & 1485 & C & 20 & 4167 & 411 & 30.1\% & 37.26 & 108.55 & $\checkmark$ & Imbalanced (30.1\% vs Seg A) \\
+\end{longtable}

@@ -1,0 +1,28 @@
+test_id,load_kbps,rep,segment,target_ms,total_pkts,fwd_pkts,red_drops,dev_vs_A_%,qdelay_median_ms,qdelay_iqr_ms,is_plausible,segment_issues
+mech_1150k_rep1,1150,1,A,20,4024,3842,182,0.0,9.23,19.45,True,OK
+mech_1150k_rep1,1150,1,B,70,3990,3979,11,0.8,7.97,16.91,True,OK
+mech_1150k_rep1,1150,1,C,20,4178,3963,215,3.8,7.86,23.47,True,OK
+mech_1150k_rep2,1150,2,A,20,4012,3973,39,0.0,0.64,3.32,True,OK
+mech_1150k_rep2,1150,2,B,70,3666,3614,52,8.6,1.75,11.57,True,Marginal imbalance (8.6% vs Seg A)
+mech_1150k_rep2,1150,2,C,20,4016,3948,68,0.1,1.35,3.17,True,OK
+mech_1150k_rep3,1150,3,A,20,4330,4109,221,0.0,9.42,21.55,True,OK
+mech_1150k_rep3,1150,3,B,70,4074,4053,21,5.9,7.47,10.22,True,Marginal imbalance (5.9% vs Seg A)
+mech_1150k_rep3,1150,3,C,20,4148,3940,208,4.2,8.74,23.0,True,OK
+mech_1320k_rep1,1320,1,A,20,4214,4022,192,0.0,9.97,19.48,True,OK
+mech_1320k_rep1,1320,1,B,70,3873,3818,55,8.1,11.28,21.59,True,Marginal imbalance (8.1% vs Seg A)
+mech_1320k_rep1,1320,1,C,20,47,47,0,98.9,0.05,1.87,True,Starved traffic (47 pkts); Imbalanced (98.9% vs Seg A)
+mech_1320k_rep2,1320,2,A,20,4799,4433,366,0.0,17.86,40.91,True,OK
+mech_1320k_rep2,1320,2,B,70,4334,4267,67,9.7,10.01,24.95,True,Marginal imbalance (9.7% vs Seg A)
+mech_1320k_rep2,1320,2,C,20,5211,4634,577,8.6,37.01,74.37,True,Marginal imbalance (8.6% vs Seg A)
+mech_1320k_rep3,1320,3,A,20,2158,1979,179,0.0,912.21,919.15,False,Delay 912.2ms exceeds physical ceiling (210ms)
+mech_1320k_rep3,1320,3,B,70,4059,3980,79,88.1,2.3,20.69,True,Imbalanced (88.1% vs Seg A)
+mech_1320k_rep3,1320,3,C,20,3616,3496,120,67.6,2.67,28.48,True,Imbalanced (67.6% vs Seg A)
+mech_1485k_rep1,1485,1,A,20,5737,5134,603,0.0,27.63,45.52,True,OK
+mech_1485k_rep1,1485,1,B,70,5037,4923,114,12.2,12.9,24.5,True,Imbalanced (12.2% vs Seg A)
+mech_1485k_rep1,1485,1,C,20,4791,4489,302,16.5,20.23,75.42,True,Imbalanced (16.5% vs Seg A)
+mech_1485k_rep2,1485,2,A,20,5060,4886,174,0.0,2.07,4.73,True,OK
+mech_1485k_rep2,1485,2,B,70,3116,2963,153,38.4,24.16,152.75,True,Imbalanced (38.4% vs Seg A)
+mech_1485k_rep2,1485,2,C,20,5581,4955,626,10.3,21.57,61.06,True,Imbalanced (10.3% vs Seg A)
+mech_1485k_rep3,1485,3,A,20,5962,5173,789,0.0,36.81,56.88,True,OK
+mech_1485k_rep3,1485,3,B,70,3710,3540,170,37.8,54.43,960.2,True,Imbalanced (37.8% vs Seg A)
+mech_1485k_rep3,1485,3,C,20,4167,3756,411,30.1,37.26,108.55,True,Imbalanced (30.1% vs Seg A)

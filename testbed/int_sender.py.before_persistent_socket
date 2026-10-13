@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""
+INT Probe Sender - DESiRED testbed
+Sends a custom probe packet with protocol=253 and an initial nodeCount
+header (count=0) so DESiRED.p4's parser and add_swtrace() action attach
+one 32-byte InBandNetworkTelemetry_h entry per switch hop.
+"""
+import argparse
+import time
+from scapy.all import Ether, IP, Raw, sendp, get_if_hwaddr
+
+IP_PROTO_INT = 253
+
+def build_probe(src_ip, dst_ip, dst_mac, iface):
+    node_count_bytes = (0).to_bytes(2, byteorder='big')
+    pkt = (
+        Ether(src=get_if_hwaddr(iface), dst=dst_mac) /
+        IP(src=src_ip, dst=dst_ip, proto=IP_PROTO_INT) /
+        Raw(load=node_count_bytes)
+    )
+    return pkt
+
+def main():
+    parser = argparse.ArgumentParser(description="DESiRED INT probe sender")
+    parser.add_argument("--src", required=True)
+    parser.add_argument("--dst", required=True)
+    parser.add_argument("--dst-mac", required=True)
+    parser.add_argument("--iface", default="eth0")
+    parser.add_argument("--count", type=int, default=10)
+    parser.add_argument("--interval", type=float, default=1.0)
+    args = parser.parse_args()
+
+    # start = time.time()
+    for i in range(args.count):
+        pkt = build_probe(args.src, args.dst, args.dst_mac, args.iface)
+        send_started = time.time()
+        sendp(pkt, iface=args.iface, verbose=False)
+        send_finished = time.time()
+        print(
+            f"[{i+1}/{args.count}] sent INT probe "
+            f"{args.src} -> {args.dst} "
+            f"started={send_started:.3f} finished={send_finished:.3f} "
+            f"sendp_ms={(send_finished - send_started) * 1000:.1f}",
+            flush=True
+        )
+
+        if i + 1 < args.count:
+            time.sleep(args.interval)
+
+if __name__ == "__main__":
+    main()

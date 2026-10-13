@@ -1,0 +1,1262 @@
+============================================================
+DESiRED PRE-FIX INSPECTION
+Collected: 2026-10-04T02:30:19-04:00
+============================================================
+
+### 1. Git status and recent changes
+ M src/controlplane/environment.py
+ M src/controlplane/receiveMetrics.py
+?? "Research Papers/"
+?? experiment_plan.md
+?? figs/buffer_dynamics.png
+?? figs/network_performance.png
+?? figs/qoe_comparison.png
+?? figs/target_delay_trajectory.png
+?? local_controller/
+?? manifests/
+?? metrics.md
+?? results/
+?? scripts/
+?? src/controlplane/__pycache__/
+?? src/controlplane/agent_logs/
+?? src/controlplane/agent_models/
+?? src/controlplane/environment.py.orig
+?? src/controlplane/logs/
+?? src/controlplane/receiveMetrics.py.bak2
+?? src/controlplane/receiveMetrics.py.bak3
+?? src/controlplane/receiveMetrics.py.bak4
+?? src/controlplane/receiveMetrics.py.bak5
+?? src/controlplane/receiveMetrics.py.orig
+?? src/controlplane/receiveMetrics.py.orig2
+?? src/dataplane/DESiRED.json
+?? src/dataplane/DESiRED.p4i
+?? src/logs/
+?? testbed/
+
+95bc029 update repo
+d9168e6 update repo
+695c50a update repo
+bd579c0 Initial commit
+
+--- Diff: video simulator ---
+
+--- Diff: experiment runner ---
+
+--- Diff: validator ---
+
+--- Diff: batch runner ---
+
+--- Diff: redo script, if present ---
+
+### 2. Current video simulator
+     1	#!/usr/bin/env python3
+     2	"""
+     3	Video-QoS Simulator - DESiRED testbed (simplified DASH.js replacement)
+     4	Uses real measured ping RTT through the 3-switch path as a congestion
+     5	proxy, drives a buffer-level simulation, derives FPS/bitrate tier.
+     6	Writes dash_<id>.txt in format: timestamp;bufferLocal;FPS;BitrateCalc
+     7	"""
+     8	import argparse
+     9	import time
+    10	import subprocess
+    11	
+    12	TIERS = [
+    13	    (10.0, 30, 1040),
+    14	    (3.0,  24,  490),
+    15	    (0.0,  18,  140),
+    16	]
+    17	BUFFER_MAX = 64.0
+    18	BUFFER_DRAIN_RATE = 1.0
+    19	BUFFER_FILL_RATE = 1.5
+    20	
+    21	def choose_tier(buffer_level):
+    22	    for min_buf, fps, bitrate in TIERS:
+    23	        if buffer_level > min_buf:
+    24	            return fps, bitrate
+    25	    return 0, 0
+    26	
+    27	def measure_delay_once(dst_ip, timeout=1.0):
+    28	    result = subprocess.run(
+    29	        ["ping", "-c", "1", "-W", str(timeout), dst_ip],
+    30	        capture_output=True, text=True
+    31	    )
+    32	    if result.returncode == 0 and "time=" in result.stdout:
+    33	        time_str = result.stdout.split("time=")[1].split(" ")[0]
+    34	        return float(time_str)
+    35	    return None
+    36	
+    37	def main():
+    38	    parser = argparse.ArgumentParser()
+    39	    parser.add_argument("--dst", required=True)
+    40	    parser.add_argument("--target-delay-ms", type=float, default=20.0)
+    41	    parser.add_argument("--duration", type=int, default=60)
+    42	    parser.add_argument("--out", required=True)
+    43	    args = parser.parse_args()
+    44	
+    45	    buffer_level = 20.0
+    46	    start = time.time()
+    47	
+    48	    with open(args.out, "a") as f:
+    49	        while time.time() - start < args.duration:
+    50	            second_start = time.time()
+    51	            delay_ms = measure_delay_once(args.dst)
+    52	
+    53	            if delay_ms is None:
+    54	                buffer_level = max(0.0, buffer_level - BUFFER_DRAIN_RATE * 2)
+    55	            elif delay_ms <= args.target_delay_ms:
+    56	                buffer_level = min(BUFFER_MAX, buffer_level + BUFFER_FILL_RATE)
+    57	            else:
+    58	                excess_ratio = delay_ms / args.target_delay_ms
+    59	                buffer_level = max(0.0, buffer_level - BUFFER_DRAIN_RATE * excess_ratio)
+    60	
+    61	            fps, bitrate = choose_tier(buffer_level)
+    62	            ts = str(int(time.time() * 1000))[:14]
+    63	            line = f"{ts};{buffer_level:.2f};{fps};{bitrate}\n"
+    64	            f.write(line)
+    65	            f.flush()
+    66	            print(f"[t={int(time.time()-start)}s] delay={delay_ms}ms buffer={buffer_level:.2f}s fps={fps} bitrate={bitrate}kbps")
+    67	
+    68	            elapsed = time.time() - second_start
+    69	            if elapsed < 1.0:
+    70	                time.sleep(1.0 - elapsed)
+    71	
+    72	if __name__ == "__main__":
+    73	    main()
+
+### 3. Current experiment runner
+     1	#!/usr/bin/env python3
+     2	"""
+     3	scripts/run_experiment.py
+     4	
+     5	Automated orchestrator for running DESiRED testbed experiments.
+     6	Handles pre-flight checks, switch register configuration, synchronized
+     7	process launch, live telemetry monitoring, graceful teardown, validation,
+     8	and registry recording.
+     9	"""
+    10	
+    11	import sys
+    12	import os
+    13	import time
+    14	import argparse
+    15	import subprocess
+    16	import signal
+    17	from pathlib import Path
+    18	import csv
+    19	
+    20	REPO_ROOT = Path("/home/p4/DESiRED")
+    21	LOG_DIR = REPO_ROOT / "src/logs"
+    22	AGENT_LOG_DIR = REPO_ROOT / "local_controller/agent_logs"
+    23	REGISTRY_FILE = REPO_ROOT / "results/experiment_registry.csv"
+    24	
+    25	THRIFT_PORTS = [9090, 9091, 9092]
+    26	
+    27	def run_cmd(cmd, check=True):
+    28	    res = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    29	    if check and res.returncode != 0:
+    30	        raise RuntimeError(f"Command failed ({res.returncode}): {cmd}\nStderr: {res.stderr}")
+    31	    return res
+    32	
+    33	def set_switch_registers(target_delay):
+    34	    print(f"[*] Setting switch targetDelay_reg to {target_delay} on switches s1, s2, s3...")
+    35	    for port in THRIFT_PORTS:
+    36	        cmd = f"echo 'register_write MyEgress.targetDelay_reg 0 {target_delay}' | simple_switch_CLI --thrift-port {port} --thrift-ip 127.0.0.1"
+    37	        run_cmd(cmd)
+    38	    
+    39	    # Read back and verify
+    40	    for port in THRIFT_PORTS:
+    41	        cmd = f"echo 'register_read MyEgress.targetDelay_reg 0' | simple_switch_CLI --thrift-port {port} --thrift-ip 127.0.0.1"
+    42	        res = run_cmd(cmd)
+    43	        if f"= {target_delay}" not in res.stdout:
+    44	            raise RuntimeError(f"Switch on port {port} readback mismatch! Output: {res.stdout}")
+    45	    print(f"[+] All switch registers verified at {target_delay} us.")
+    46	
+    47	def ensure_iperf_server():
+    48	    res = subprocess.run("mx h4 ss -lntup", shell=True, capture_output=True, text=True)
+    49	    if ":5201" not in res.stdout:
+    50	        print("[*] Starting iperf3 server in h4...")
+    51	        subprocess.run("mx h4 iperf3 -s -D", shell=True, check=True)
+    52	        time.sleep(1)
+    53	        res = subprocess.run("mx h4 ss -lntup", shell=True, capture_output=True, text=True)
+    54	        if ":5201" not in res.stdout:
+    55	            raise RuntimeError("Failed to start iperf3 server in h4 namespace.")
+    56	    print("[+] iperf3 server active in h4 namespace.")
+    57	
+    58	def cleanup_processes():
+    59	    targets = ["int_sender.py", "int_receiver_debug.py", "video_simulator.py", "receiveMetrics.py", "rule_controller.py"]
+    60	    for t in targets:
+    61	        subprocess.run(f"pkill -f {t}", shell=True, stderr=subprocess.DEVNULL)
+    62	    # Stop any active iperf clients
+    63	    subprocess.run("pkill -f 'iperf3 -c'", shell=True, stderr=subprocess.DEVNULL)
+    64	    time.sleep(1)
+    65	
+    66	def record_registry(run_id, policy, initial_delay, load_kbps, duration, controller_enabled, model_file, status, notes):
+    67	    REGISTRY_FILE.parent.mkdir(parents=True, exist_ok=True)
+    68	    
+    69	    # Check git commit
+    70	    git_commit = "95bc029"
+    71	    try:
+    72	        git_commit = subprocess.check_output("git rev-parse --short HEAD", shell=True, cwd=REPO_ROOT, text=True).strip()
+    73	    except Exception:
+    74	        pass
+    75	
+    76	    rows = []
+    77	    updated = False
+    78	    if REGISTRY_FILE.exists():
+    79	        with open(REGISTRY_FILE, 'r', newline='') as f:
+    80	            reader = csv.DictReader(f)
+    81	            fieldnames = reader.fieldnames
+    82	            for row in reader:
+    83	                if row['run_id'] == run_id:
+    84	                    row['status'] = status
+    85	                    row['notes'] = notes
+    86	                    updated = True
+    87	                rows.append(row)
+    88	    else:
+    89	        fieldnames = ['run_id','policy','initial_delay','load_kbps','duration_s','controller_enabled','model_file','code_commit','status','notes']
+    90	
+    91	    if not updated:
+    92	        rows.append({
+    93	            'run_id': run_id,
+    94	            'policy': policy,
+    95	            'initial_delay': str(initial_delay),
+    96	            'load_kbps': str(load_kbps),
+    97	            'duration_s': str(duration),
+    98	            'controller_enabled': "yes" if controller_enabled else "no",
+    99	            'model_file': model_file,
+   100	            'code_commit': git_commit,
+   101	            'status': status,
+   102	            'notes': notes
+   103	        })
+   104	
+   105	    with open(REGISTRY_FILE, 'w', newline='') as f:
+   106	        writer = csv.DictWriter(f, fieldnames=fieldnames)
+   107	        writer.writeheader()
+   108	        writer.writerows(rows)
+   109	    print(f"[+] Registry updated for {run_id} (Status: {status})")
+   110	
+   111	def main():
+   112	    parser = argparse.ArgumentParser(description="DESiRED Experiment Runner")
+   113	    parser.add_argument("--run-id", required=True, help="Unique run identifier (e.g. fixed50k_load_1)")
+   114	    parser.add_argument("--policy", required=True, choices=["fixed20k", "fixed50k", "fixed30k", "fixed40k", "infer", "rule"], help="Control policy")
+   115	    parser.add_argument("--duration", type=int, default=700, help="Run duration in seconds")
+   116	    parser.add_argument("--load-kbps", type=int, default=500, help="Background UDP load in kbps")
+   117	    parser.add_argument("--skip-validation", action="store_true", help="Skip post-run validation")
+   118	    args = parser.parse_args()
+   119	
+   120	    run_id = args.run_id
+   121	    policy = args.policy
+   122	    duration = args.duration
+   123	    load_kbps = args.load_kbps
+   124	
+   125	    LOG_DIR.mkdir(parents=True, exist_ok=True)
+   126	    AGENT_LOG_DIR.mkdir(parents=True, exist_ok=True)
+   127	
+   128	    # Determine initial delay and controller configuration
+   129	    if policy == "fixed20k":
+   130	        initial_delay = 20000
+   131	        controller_enabled = False
+   132	        model_file = "N/A"
+   133	    elif policy == "fixed50k":
+   134	        initial_delay = 50000
+   135	        controller_enabled = False
+   136	        model_file = "N/A"
+   137	    elif policy == "fixed30k":
+   138	        initial_delay = 30000
+   139	        controller_enabled = False
+   140	        model_file = "N/A"
+   141	    elif policy == "fixed40k":
+   142	        initial_delay = 40000
+   143	        controller_enabled = False
+   144	        model_file = "N/A"
+   145	    elif policy == "infer":
+   146	        initial_delay = 50000
+   147	        controller_enabled = True
+   148	        model_file = "train_socket_load_1.h5"
+   149	    elif policy == "rule":
+   150	        initial_delay = 50000
+   151	        controller_enabled = True
+   152	        model_file = "heuristic_threshold"
+   153	    else:
+   154	        raise ValueError(f"Unknown policy: {policy}")
+   155	
+   156	    print(f"\n==================================================")
+   157	    print(f" Starting Experiment: {run_id}")
+   158	    print(f" Policy: {policy} | Target Delay: {initial_delay} us | Duration: {duration}s | Load: {load_kbps} kbps")
+   159	    print(f"==================================================\n")
+   160	
+   161	    cleanup_processes()
+   162	    ensure_iperf_server()
+   163	    set_switch_registers(initial_delay)
+   164	    time.sleep(5.0)  # Let network settle after register writes
+   165	
+   166	    # Remove any existing log files for this run_id to prevent collision
+   167	    for pattern in [f"*{run_id}*"]:
+   168	        for p in LOG_DIR.glob(pattern):
+   169	            p.unlink()
+   170	        for p in AGENT_LOG_DIR.glob(pattern):
+   171	            p.unlink()
+   172	
+   173	    int_log = LOG_DIR / f"log_INT_{run_id}.txt"
+   174	    dash_log = LOG_DIR / f"dash_{run_id}.txt"
+   175	    receiver_log = LOG_DIR / f"receiver_{run_id}.log"
+   176	    sender_log = LOG_DIR / f"sender_{run_id}.log"
+   177	    video_log = LOG_DIR / f"video_{run_id}.log"
+   178	    iperf_log = LOG_DIR / f"iperf_client_{run_id}.log"
+   179	    controller_log = LOG_DIR / f"controller_{run_id}.log"
+   180	
+   181	    # 1. Start INT Receiver on h4
+   182	    recv_cmd = f"mx h4 python3 /home/p4/DESiRED/testbed/int_receiver_debug.py --iface h4-eth0 --out {int_log} > {receiver_log} 2>&1"
+   183	    p_recv = subprocess.Popen(recv_cmd, shell=True)
+   184	    time.sleep(1.0)
+   185	    print(f"[+] INT Receiver started (PID {p_recv.pid})")
+   186	
+   187	    # 2. Start Controller (if applicable)
+   188	    p_ctrl = None
+   189	    if policy == "infer":
+   190	        # Parse run number and type for receiveMetrics.py
+   191	        # run_id e.g. infer_socket_load_5 -> number='5', type='infer_socket_load'
+   192	        parts = run_id.rsplit("_", 1)
+   193	        c_type, c_num = parts[0], parts[1]
+   194	        ctrl_cmd = f"python3 receiveMetrics.py {c_num} {c_type} --duration {duration} > {controller_log} 2>&1"
+   195	        p_ctrl = subprocess.Popen(ctrl_cmd, shell=True, cwd=REPO_ROOT / "local_controller")
+   196	        time.sleep(2.0)
+   197	        print(f"[+] RL Inference Controller started (PID {p_ctrl.pid})")
+   198	    elif policy == "rule":
+   199	        parts = run_id.rsplit("_", 1)
+   200	        c_type, c_num = parts[0], parts[1]
+   201	        ctrl_cmd = f"python3 rule_controller.py {c_num} {c_type} --duration {duration} > {controller_log} 2>&1"
+   202	        p_ctrl = subprocess.Popen(ctrl_cmd, shell=True, cwd=REPO_ROOT / "local_controller")
+   203	        time.sleep(1.0)
+   204	        print(f"[+] Rule-Based Controller started (PID {p_ctrl.pid})")
+   205	
+   206	    # 3. Start Video Simulator on h1
+   207	    # Convert target delay from µs to ms for the video simulator's ping threshold
+   208	    target_delay_ms = initial_delay / 1000.0
+   209	    video_cmd = f"mx h1 python3 /home/p4/DESiRED/testbed/video_simulator.py --dst 10.0.0.2 --duration {duration} --target-delay-ms {target_delay_ms} --out {dash_log} > {video_log} 2>&1"
+   210	    p_video = subprocess.Popen(video_cmd, shell=True)
+   211	    print(f"[+] Video Simulator started (PID {p_video.pid})")
+   212	
+   213	    # 4. Start iperf client on h2
+   214	    iperf_cmd = f"mx h2 iperf3 -c 10.0.0.4 -u -b {load_kbps}k -t {duration} -i 1 > {iperf_log} 2>&1"
+   215	    p_iperf = subprocess.Popen(iperf_cmd, shell=True)
+   216	    print(f"[+] iperf3 UDP Client started (PID {p_iperf.pid})")
+   217	
+   218	    # 5. Start INT Sender on h3
+   219	    sender_cmd = f"mx h3 python3 /home/p4/DESiRED/testbed/int_sender.py --src 10.0.0.3 --dst 10.0.0.4 --dst-mac 00:00:0a:00:00:04 --iface h3-eth0 --count {duration} --interval 1.0 > {sender_log} 2>&1"
+   220	    p_sender = subprocess.Popen(sender_cmd, shell=True)
+   221	    print(f"[+] INT Sender started (PID {p_sender.pid})")
+   222	
+   223	    # Monitor loop
+   224	    start_time = time.time()
+   225	    print(f"\n[*] Experiment running for {duration} seconds... Monitoring progress:")
+   226	    
+   227	    last_print = start_time
+   228	    while time.time() - start_time < (duration + 5):
+   229	        time.sleep(5.0)
+   230	        elapsed = int(time.time() - start_time)
+   231	        if time.time() - last_print >= 30.0:
+   232	            last_print = time.time()
+   233	            int_cnt = sum(1 for _ in open(int_log)) if int_log.exists() else 0
+   234	            dash_cnt = sum(1 for _ in open(dash_log)) if dash_log.exists() else 0
+   235	            print(f"  [t={elapsed}s / {duration}s] INT probes logged: {int_cnt} | DASH rows: {dash_cnt} | iperf active: {p_iperf.poll() is None}")
+   236	
+   237	        if p_sender.poll() is not None and elapsed >= duration:
+   238	            break
+   239	
+   240	    print(f"\n[*] Duration reached. Waiting for process completion and log flushes...")
+   241	    time.sleep(10.0)
+   242	
+   243	    # Teardown
+   244	    cleanup_processes()
+   245	    print(f"[+] Processes cleanly terminated.")
+   246	
+   247	    # Validation
+   248	    status = "UNKNOWN"
+   249	    notes = ""
+   250	    if not args.skip_validation:
+   251	        val_cmd = f"python3 scripts/validate_run.py {run_id} --duration {duration}"
+   252	        res = subprocess.run(val_cmd, shell=True, capture_output=True, text=True, cwd=REPO_ROOT)
+   253	        print(f"\n--- Validation Output ---")
+   254	        print(res.stdout.strip())
+   255	        if res.stderr.strip():
+   256	            print(f"Validation Stderr: {res.stderr.strip()}")
+   257	        print(f"-------------------------\n")
+   258	        
+   259	        for line in res.stdout.splitlines():
+   260	            if line.startswith("STATUS:"):
+   261	                status = line.split(":", 1)[1].strip()
+   262	            elif line.strip().startswith("- Duration:"):
+   263	                notes = line.strip().lstrip("- ")
+   264	
+   265	        if status == "VALID":
+   266	            print(f"[SUCCESS] Run {run_id} is VALID!")
+   267	        else:
+   268	            print(f"[WARNING] Run {run_id} validation status: {status}")
+   269	    else:
+   270	        status = "COMPLETE_UNVALIDATED"
+   271	
+   272	    record_registry(run_id, policy, initial_delay, load_kbps, duration, controller_enabled, model_file, status, notes)
+   273	    print(f"[+] Experiment {run_id} finished.\n")
+   274	
+   275	if __name__ == "__main__":
+   276	    main()
+
+### 4. Current validation script
+     1	#!/usr/bin/env python3
+     2	"""
+     3	scripts/validate_run.py
+     4	
+     5	Automated validator for DESiRED testbed experiment runs.
+     6	Verifies data integrity, duration, telemetry pairing, network load,
+     7	and controller execution for publishable experiments.
+     8	
+     9	Status outcomes:
+    10	  VALID
+    11	  INVALID_NETWORK_LOAD
+    12	  INVALID_INT_CAPTURE
+    13	  INVALID_DASH_DURATION
+    14	  INVALID_CONTROLLER_EXIT
+    15	  INVALID_CONFIG
+    16	"""
+    17	
+    18	import sys
+    19	import os
+    20	import argparse
+    21	from pathlib import Path
+    22	import re
+    23	
+    24	LOG_DIR = Path("/home/p4/DESiRED/src/logs")
+    25	AGENT_LOG_DIR = Path("/home/p4/DESiRED/local_controller/agent_logs")
+    26	
+    27	def validate_run(run_id, expected_duration=700, max_dash_gap=8.5, min_int_ratio=0.85, is_controller=None):
+    28	    details = []
+    29	    
+    30	    # Auto-detect if controller was expected if not explicitly specified
+    31	    if is_controller is None:
+    32	        if run_id.startswith("infer_") or run_id.startswith("train_") or run_id.startswith("online_") or run_id.startswith("rule_"):
+    33	            is_controller = True
+    34	        else:
+    35	            is_controller = False
+    36	
+    37	    # 1. Check iperf client log
+    38	    iperf_file = LOG_DIR / f"iperf_client_{run_id}.log"
+    39	    if not iperf_file.exists():
+    40	        details.append(f"Missing iperf client log: {iperf_file}")
+    41	        return "INVALID_NETWORK_LOAD", details
+    42	    
+    43	    iperf_content = iperf_file.read_text(errors='ignore')
+    44	    if "Connection refused" in iperf_content or "error - unable to connect" in iperf_content:
+    45	        details.append("iperf connection refused or failed to connect.")
+    46	        return "INVALID_NETWORK_LOAD", details
+    47	    
+    48	    if "iperf Done." not in iperf_content:
+    49	        details.append("iperf log does not contain 'iperf Done.'. Run terminated early.")
+    50	        return "INVALID_NETWORK_LOAD", details
+    51	    
+    52	    # Check for transfer volume
+    53	    match_transfer = re.search(r'(\d+\.?\d*)\s+MBytes', iperf_content)
+    54	    if not match_transfer and "KBytes" not in iperf_content:
+    55	        details.append("iperf transfer data missing or malformed.")
+    56	        return "INVALID_NETWORK_LOAD", details
+    57	
+    58	    # 2. Check sender log
+    59	    sender_file = LOG_DIR / f"sender_{run_id}.log"
+    60	    expected_probes = expected_duration
+    61	    if sender_file.exists():
+    62	        sender_lines = [l for l in sender_file.read_text(errors='ignore').splitlines() if l.strip()]
+    63	        last_line = sender_lines[-1] if sender_lines else ""
+    64	        match_sender = re.search(r'\[(\d+)/(\d+)\]', last_line)
+    65	        if match_sender:
+    66	            sent_count = int(match_sender.group(1))
+    67	            total_count = int(match_sender.group(2))
+    68	            # Use the number of probes actually SENT as the expected total.
+    69	            # The sender is killed by cleanup_processes() at teardown, so
+    70	            # sent_count < total_count is normal, not a failure.
+    71	            expected_probes = sent_count if sent_count > 0 else total_count
+    72	            if sent_count < int(total_count * 0.70):
+    73	                # Only fail if sender barely started (< 70% sent)
+    74	                details.append(f"Sender aborted very early: only {sent_count}/{total_count} probes sent.")
+    75	                return "INVALID_INT_CAPTURE", details
+    76	            elif sent_count < total_count:
+    77	                details.append(f"Note: sender killed at teardown after {sent_count}/{total_count} probes (normal).")
+    78	        else:
+    79	            details.append(f"Sender log does not end with expected [N/N] probe line: {last_line}")
+    80	    else:
+    81	        # Note: some runs might have used stdout redirection differently
+    82	        details.append(f"Warning: sender log {sender_file} not found; proceeding to check INT log.")
+    83	
+    84	    # 3. Check INT file
+    85	    int_file = LOG_DIR / f"log_INT_{run_id}.txt"
+    86	    if not int_file.exists():
+    87	        details.append(f"Missing INT log: {int_file}")
+    88	        return "INVALID_INT_CAPTURE", details
+    89	    
+    90	    int_lines = [l for l in int_file.read_text(errors='ignore').splitlines() if l.strip()]
+    91	    int_count = len(int_lines)
+    92	    min_probes = int(expected_probes * min_int_ratio)
+    93	    if int_count < min_probes:
+    94	        details.append(f"INT probe count too low: {int_count} received, expected at least {min_probes} ({min_int_ratio*100}% of {expected_probes}).")
+    95	        return "INVALID_INT_CAPTURE", details
+    96	
+    97	    # 4. Check DASH file
+    98	    dash_file = LOG_DIR / f"dash_{run_id}.txt"
+    99	    if not dash_file.exists():
+   100	        details.append(f"Missing DASH log: {dash_file}")
+   101	        return "INVALID_DASH_DURATION", details
+   102	
+   103	    dash_lines = [l for l in dash_file.read_text(errors='ignore').splitlines() if l.strip()]
+   104	    if len(dash_lines) < 10:
+   105	        details.append(f"DASH log has too few lines: {len(dash_lines)}")
+   106	        return "INVALID_DASH_DURATION", details
+   107	
+   108	    timestamps = []
+   109	    for line in dash_lines:
+   110	        parts = line.split(";")
+   111	        if len(parts) >= 4:
+   112	            try:
+   113	                # Millisecond epoch timestamp
+   114	                ts_ms = int(parts[0])
+   115	                timestamps.append(ts_ms / 1000.0)
+   116	            except ValueError:
+   117	                continue
+   118	
+   119	    if not timestamps:
+   120	        details.append("No valid timestamps found in DASH file.")
+   121	        return "INVALID_DASH_DURATION", details
+   122	
+   123	    dash_duration = timestamps[-1] - timestamps[0]
+   124	    if dash_duration < (expected_duration - 30):
+   125	        details.append(f"DASH elapsed duration {dash_duration:.1f}s is less than threshold ({expected_duration - 30}s).")
+   126	        return "INVALID_DASH_DURATION", details
+   127	
+   128	    # Check maximum gap between consecutive DASH samples
+   129	    max_gap = 0.0
+   130	    for i in range(1, len(timestamps)):
+   131	        gap = timestamps[i] - timestamps[i-1]
+   132	        if gap > max_gap:
+   133	            max_gap = gap
+   134	
+   135	    if max_gap > max_dash_gap:
+   136	        details.append(f"DASH maximum inter-sample gap ({max_gap:.2f}s) exceeded limit of {max_dash_gap}s.")
+   137	        return "INVALID_DASH_DURATION", details
+   138	
+   139	    # 5. Check Controller (for RL / Controller runs)
+   140	    if is_controller:
+   141	        ctrl_file = LOG_DIR / f"controller_{run_id}.log"
+   142	        if not ctrl_file.exists():
+   143	            details.append(f"Missing controller log: {ctrl_file}")
+   144	            return "INVALID_CONTROLLER_EXIT", details
+   145	
+   146	        ctrl_content = ctrl_file.read_text(errors='ignore')
+   147	        if "Traceback (most recent call last):" in ctrl_content:
+   148	            details.append("Controller log contains unhandled Python Traceback.")
+   149	            return "INVALID_CONTROLLER_EXIT", details
+   150	
+   151	        if "logs saved" not in ctrl_content:
+   152	            details.append("Controller log does not end with 'logs saved'.")
+   153	            return "INVALID_CONTROLLER_EXIT", details
+   154	
+   155	        # Verify action history
+   156	        action_file = AGENT_LOG_DIR / f"action_history_{run_id}.csv"
+   157	        if not action_file.exists():
+   158	            details.append(f"Missing action history file: {action_file}")
+   159	            return "INVALID_CONTROLLER_EXIT", details
+   160	
+   161	        delay_file = AGENT_LOG_DIR / f"sw1_target_delay_history_{run_id}.csv"
+   162	        if not delay_file.exists():
+   163	            details.append(f"Missing sw1 target delay history file: {delay_file}")
+   164	            return "INVALID_CONTROLLER_EXIT", details
+   165	
+   166	    # All checks passed!
+   167	    details.append(f"Duration: {dash_duration:.1f}s, INT probes: {int_count}, DASH rows: {len(dash_lines)}, Max DASH gap: {max_gap:.2f}s")
+   168	    return "VALID", details
+   169	
+   170	def main():
+   171	    parser = argparse.ArgumentParser(description="Validate DESiRED experiment run logs.")
+   172	    parser.add_argument("run_id", help="Run ID (e.g. fixed20k_load_1, infer_socket_load_4)")
+   173	    parser.add_argument("--duration", type=int, default=700, help="Expected experiment duration in seconds")
+   174	    parser.add_argument("--controller", action="store_true", default=None, help="Force controller checks")
+   175	    parser.add_argument("--no-controller", dest="controller", action="store_false", help="Disable controller checks")
+   176	    args = parser.parse_args()
+   177	
+   178	    status, details = validate_run(args.run_id, expected_duration=args.duration, is_controller=args.controller)
+   179	    print(f"RUN_ID: {args.run_id}")
+   180	    print(f"STATUS: {status}")
+   181	    for d in details:
+   182	        print(f"  - {d}")
+   183	
+   184	    if status == "VALID":
+   185	        sys.exit(0)
+   186	    else:
+   187	        sys.exit(1)
+   188	
+   189	if __name__ == "__main__":
+   190	    main()
+
+### 5. Current batch runner
+     1	#!/usr/bin/env bash
+     2	# Batch script to run all missing baseline (fixed) and RL‑inference experiments
+     3	# Uses the DESiRED run_experiment orchestrator.
+     4	# All runs use default duration 700 s and UDP load 500 kbps.
+     5	
+     6	REPO_ROOT="/home/p4/DESiRED"
+     7	SCRIPT="$REPO_ROOT/scripts/run_experiment.py"
+     8	
+     9	run_missing() {
+    10	  local policy=$1
+    11	  local run_id=$2
+    12	  echo "[+] Starting $policy run $run_id"
+    13	  python3 "$SCRIPT" \
+    14	    --run-id "$run_id" \
+    15	    --policy "$policy" \
+    16	    --duration 700 \
+    17	    --load-kbps 500
+    18	  # run_experiment.py records the result and validates automatically.
+    19	}
+    20	
+    21	# Fixed‑20k (static) – we already have load_1, need 2‑5
+    22	for i in {2..5}; do
+    23	  run_missing fixed20k "fixed20k_load_$i"
+    24	done
+    25	
+    26	# Fixed‑30k – all 1‑5 missing
+    27	for i in {1..5}; do
+    28	  run_missing fixed30k "fixed30k_load_$i"
+    29	done
+    30	
+    31	# Fixed‑40k – all 1‑5 missing
+    32	for i in {1..5}; do
+    33	  run_missing fixed40k "fixed40k_load_$i"
+    34	done
+    35	
+    36	# Fixed‑50k – all 1‑5 missing
+    37	for i in {1..5}; do
+    38	  run_missing fixed50k "fixed50k_load_$i"
+    39	done
+    40	
+    41	# RL‑Inference – we have 2,3,4; need 5‑8
+    42	for i in {5..8}; do
+    43	  run_missing infer "infer_socket_load_$i"
+    44	done
+    45	
+    46	# Rule‑Based – all 1‑5 missing
+    47	for i in {1..5}; do
+    48	  run_missing rule "rule_load_$i"
+    49	done
+    50	
+    51	echo "[+] All missing runs submitted."
+
+### 6. Redo script, if present
+     1	#!/usr/bin/env bash
+     2	# Re-run the three fixed20k runs that had the wrong target-delay-ms
+     3	# These should now run correctly with the fix to run_experiment.py
+     4	
+     5	REPO_ROOT="/home/p4/DESiRED"
+     6	SCRIPT="$REPO_ROOT/scripts/run_experiment.py"
+     7	
+     8	echo "[*] Re-running fixed20k load_2, load_3, load_5 with corrected video simulator target delay..."
+     9	for i in 2 3 5; do
+    10	  echo "[+] Starting fixed20k_load_$i (redo)"
+    11	  python3 "$SCRIPT" \
+    12	    --run-id "fixed20k_load_$i" \
+    13	    --policy fixed20k \
+    14	    --duration 700 \
+    15	    --load-kbps 500
+    16	done
+    17	echo "[+] Redo complete."
+
+### 7. Registry
+run_id,policy,initial_delay,load_kbps,duration_s,controller_enabled,model_file,code_commit,status,notes
+infer_socket_load_2,RL-inference,50000,500,120,yes,train_socket_load_1.h5,95bc029,complete,"120-second smoke test, controller verified"
+infer_socket_load_3,RL-inference,50000,500,700,yes,train_socket_load_1.h5,95bc029,invalid,Diagnostic run; iperf failed with connection refused
+infer_socket_load_4,RL-inference,50000,500,700,yes,train_socket_load_1.h5,95bc029,complete,"65 actions, all action 1; clamped at 20000"
+fixed20k_load_1,fixed-20k,20000,500,700,no,N/A,95bc029,complete,"700 INT rows, 555 DASH rows, 0.15% UDP loss"
+fixed20k_load_2,fixed20k,20000,500,700,no,N/A,95bc029,VALID,"699.3s, 596 INT, 618 DASH, sender killed at teardown (normal)"
+fixed20k_load_3,fixed20k,20000,500,700,no,N/A,95bc029,VALID,"699.8s, 554 INT, 582 DASH, sender killed at teardown (normal)"
+fixed20k_load_4,fixed20k,20000,500,700,no,N/A,95bc029,INVALID_DASH_DURATION,"37.14s DASH gap — video simulator stall, excluded"
+fixed20k_load_5,fixed20k,20000,500,700,no,N/A,95bc029,VALID,"699.8s, 587 INT, 610 DASH, sender killed at teardown (normal)"
+fixed30k_load_1,fixed30k,30000,500,700,no,N/A,95bc029,INVALID_DASH_DURATION,
+
+### 8. Recent batch-run log
+  [t=187s / 700s] INT probes logged: 139 | DASH rows: 151 | iperf active: True
+  [t=217s / 700s] INT probes logged: 169 | DASH rows: 181 | iperf active: True
+  [t=247s / 700s] INT probes logged: 199 | DASH rows: 211 | iperf active: True
+  [t=278s / 700s] INT probes logged: 225 | DASH rows: 239 | iperf active: True
+  [t=312s / 700s] INT probes logged: 235 | DASH rows: 247 | iperf active: True
+  [t=345s / 700s] INT probes logged: 248 | DASH rows: 263 | iperf active: True
+  [t=377s / 700s] INT probes logged: 271 | DASH rows: 290 | iperf active: True
+  [t=407s / 700s] INT probes logged: 298 | DASH rows: 319 | iperf active: True
+  [t=438s / 700s] INT probes logged: 324 | DASH rows: 346 | iperf active: True
+  [t=470s / 700s] INT probes logged: 347 | DASH rows: 371 | iperf active: True
+  [t=501s / 700s] INT probes logged: 373 | DASH rows: 397 | iperf active: True
+  [t=531s / 700s] INT probes logged: 402 | DASH rows: 426 | iperf active: True
+  [t=563s / 700s] INT probes logged: 423 | DASH rows: 450 | iperf active: True
+  [t=596s / 700s] INT probes logged: 444 | DASH rows: 474 | iperf active: True
+  [t=627s / 700s] INT probes logged: 464 | DASH rows: 498 | iperf active: True
+  [t=658s / 700s] INT probes logged: 485 | DASH rows: 522 | iperf active: True
+  [t=690s / 700s] INT probes logged: 508 | DASH rows: 546 | iperf active: True
+
+[*] Duration reached. Waiting for process completion and log flushes...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: fixed20k_load_4
+STATUS: INVALID_INT_CAPTURE
+  - Sender only completed 531/700 probes.
+-------------------------
+
+[WARNING] Run fixed20k_load_4 validation status: INVALID_INT_CAPTURE
+[+] Registry updated for fixed20k_load_4 (Status: INVALID_INT_CAPTURE)
+[+] Experiment fixed20k_load_4 finished.
+
+[+] Starting fixed20k run fixed20k_load_5
+
+==================================================
+ Starting Experiment: fixed20k_load_5
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 130595)
+[+] Video Simulator started (PID 130609)
+[+] iperf3 UDP Client started (PID 130610)
+[+] INT Sender started (PID 130611)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 28 | DASH rows: 29 | iperf active: True
+  [t=60s / 700s] INT probes logged: 55 | DASH rows: 56 | iperf active: True
+  [t=91s / 700s] INT probes logged: 82 | DASH rows: 83 | iperf active: True
+  [t=122s / 700s] INT probes logged: 102 | DASH rows: 108 | iperf active: True
+  [t=155s / 700s] INT probes logged: 122 | DASH rows: 133 | iperf active: True
+  [t=187s / 700s] INT probes logged: 143 | DASH rows: 157 | iperf active: True
+  [t=217s / 700s] INT probes logged: 162 | DASH rows: 181 | iperf active: True
+  [t=248s / 700s] INT probes logged: 189 | DASH rows: 209 | iperf active: True
+  [t=279s / 700s] INT probes logged: 215 | DASH rows: 236 | iperf active: True
+  [t=310s / 700s] INT probes logged: 242 | DASH rows: 264 | iperf active: True
+  [t=340s / 700s] INT probes logged: 271 | DASH rows: 294 | iperf active: True
+  [t=371s / 700s] INT probes logged: 301 | DASH rows: 323 | iperf active: True
+  [t=402s / 700s] INT probes logged: 326 | DASH rows: 351 | iperf active: True
+  [t=434s / 700s] INT probes logged: 348 | DASH rows: 375 | iperf active: True
+  [t=465s / 700s] INT probes logged: 372 | DASH rows: 399 | iperf active: True
+  [t=497s / 700s] INT probes logged: 392 | DASH rows: 424 | iperf active: True
+  [t=530s / 700s] INT probes logged: 415 | DASH rows: 451 | iperf active: True
+  [t=560s / 700s] INT probes logged: 444 | DASH rows: 481 | iperf active: True
+  [t=590s / 700s] INT probes logged: 473 | DASH rows: 510 | iperf active: True
+  [t=621s / 700s] INT probes logged: 503 | DASH rows: 541 | iperf active: True
+  [t=651s / 700s] INT probes logged: 532 | DASH rows: 570 | iperf active: True
+  [t=682s / 700s] INT probes logged: 556 | DASH rows: 596 | iperf active: True
+
+[*] Duration reached. Waiting for process completion and log flushes...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: fixed20k_load_5
+STATUS: INVALID_INT_CAPTURE
+  - Sender only completed 587/700 probes.
+-------------------------
+
+[WARNING] Run fixed20k_load_5 validation status: INVALID_INT_CAPTURE
+[+] Registry updated for fixed20k_load_5 (Status: INVALID_INT_CAPTURE)
+[+] Experiment fixed20k_load_5 finished.
+
+[+] Starting fixed30k run fixed30k_load_1
+
+==================================================
+ Starting Experiment: fixed30k_load_1
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 131891)
+[+] Video Simulator started (PID 131906)
+[+] iperf3 UDP Client started (PID 131907)
+[+] INT Sender started (PID 131908)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=31s / 700s] INT probes logged: 21 | DASH rows: 26 | iperf active: True
+  [t=62s / 700s] INT probes logged: 44 | DASH rows: 54 | iperf active: True
+  [t=94s / 700s] INT probes logged: 65 | DASH rows: 78 | iperf active: True
+  [t=127s / 700s] INT probes logged: 83 | DASH rows: 102 | iperf active: True
+  [t=158s / 700s] INT probes logged: 94 | DASH rows: 117 | iperf active: True
+  [t=190s / 700s] INT probes logged: 117 | DASH rows: 144 | iperf active: True
+  [t=221s / 700s] INT probes logged: 140 | DASH rows: 168 | iperf active: True
+  [t=252s / 700s] INT probes logged: 163 | DASH rows: 194 | iperf active: True
+  [t=283s / 700s] INT probes logged: 187 | DASH rows: 221 | iperf active: True
+  [t=315s / 700s] INT probes logged: 211 | DASH rows: 248 | iperf active: True
+  [t=347s / 700s] INT probes logged: 234 | DASH rows: 272 | iperf active: True
+  [t=378s / 700s] INT probes logged: 258 | DASH rows: 297 | iperf active: True
+  [t=409s / 700s] INT probes logged: 284 | DASH rows: 324 | iperf active: True
+  [t=439s / 700s] INT probes logged: 312 | DASH rows: 353 | iperf active: True
+  [t=470s / 700s] INT probes logged: 339 | DASH rows: 380 | iperf active: True
+  [t=501s / 700s] INT probes logged: 366 | DASH rows: 409 | iperf active: True
+  [t=533s / 700s] INT probes logged: 390 | DASH rows: 435 | iperf active: True
+  [t=566s / 700s] INT probes logged: 411 | DASH rows: 458 | iperf active: True
+  [t=600s / 700s] INT probes logged: 432 | DASH rows: 483 | iperf active: True
+  [t=633s / 700s] INT probes logged: 451 | DASH rows: 505 | iperf active: True
+  [t=665s / 700s] INT probes logged: 473 | DASH rows: 531 | iperf active: True
+  [t=695s / 700s] INT probes logged: 503 | DASH rows: 561 | iperf active: True
+
+[*] Duration reached. Waiting for process completion and log flushes...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: fixed30k_load_1
+STATUS: INVALID_DASH_DURATION
+  - Note: sender killed at teardown after 523/700 probes (normal).
+  - DASH maximum inter-sample gap (11.17s) exceeded limit of 8.5s.
+-------------------------
+
+[WARNING] Run fixed30k_load_1 validation status: INVALID_DASH_DURATION
+[+] Registry updated for fixed30k_load_1 (Status: INVALID_DASH_DURATION)
+[+] Experiment fixed30k_load_1 finished.
+
+[+] Starting fixed30k run fixed30k_load_2
+
+==================================================
+ Starting Experiment: fixed30k_load_2
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 133314)
+[+] Video Simulator started (PID 133334)
+[+] iperf3 UDP Client started (PID 133335)
+[+] INT Sender started (PID 133336)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=32s / 700s] INT probes logged: 20 | DASH rows: 25 | iperf active: True
+  [t=62s / 700s] INT probes logged: 47 | DASH rows: 53 | iperf active: True
+  [t=92s / 700s] INT probes logged: 74 | DASH rows: 79 | iperf active: True
+  [t=124s / 700s] INT probes logged: 96 | DASH rows: 103 | iperf active: True
+  [t=154s / 700s] INT probes logged: 124 | DASH rows: 131 | iperf active: True
+  [t=185s / 700s] INT probes logged: 152 | DASH rows: 159 | iperf active: True
+  [t=215s / 700s] INT probes logged: 179 | DASH rows: 187 | iperf active: True
+  [t=247s / 700s] INT probes logged: 205 | DASH rows: 214 | iperf active: True
+
+### 9. Process state
+root       42368   42210  0 Sep29 pts/6    00:47:11 simple_switch -i 1@s1-eth1 -i 2@s1-eth2 -i 3@s1-eth3 -i 4@s1-cpu-eth0 --pcap=./pcap --thrift-port 9090 --nanolog ipc:///tmp/bm-1-log.ipc --device-id 1 /home/p4/DESiRED/src/dataplane/DESiRED.json --log-console
+root       42381   42214  0 Sep29 pts/7    00:42:09 simple_switch -i 1@s2-eth1 -i 2@s2-eth2 -i 3@s2-cpu-eth0 --pcap=./pcap --thrift-port 9091 --nanolog ipc:///tmp/bm-2-log.ipc --device-id 2 /home/p4/DESiRED/src/dataplane/DESiRED.json --log-console
+root       42394   42218  0 Sep29 pts/8    00:45:12 simple_switch -i 1@s3-eth1 -i 2@s3-eth2 -i 3@s3-eth3 -i 4@s3-cpu-eth0 --pcap=./pcap --thrift-port 9092 --nanolog ipc:///tmp/bm-3-log.ipc --device-id 3 /home/p4/DESiRED/src/dataplane/DESiRED.json --log-console
+p4        134076  134047  0 02:30 pts/14   00:00:00 grep --color=auto -E [b]atch_run_missing.sh|[i]nt_sender.py|[i]nt_receiver_debug.py|[v]ideo_simulator.py|[i]perf3 -c|[r]eceiveMetrics.py|simple_switch
+
+### 10. Video invocation locations
+scripts/redo_fixed20k.sh:2:# Re-run the three fixed20k runs that had the wrong target-delay-ms
+scripts/run_experiment.py:59:    targets = ["int_sender.py", "int_receiver_debug.py", "video_simulator.py", "receiveMetrics.py", "rule_controller.py"]
+scripts/run_experiment.py:209:    video_cmd = f"mx h1 python3 /home/p4/DESiRED/testbed/video_simulator.py --dst 10.0.0.2 --duration {duration} --target-delay-ms {target_delay_ms} --out {dash_log} > {video_log} 2>&1"
+testbed/video_simulator.py:40:    parser.add_argument("--target-delay-ms", type=float, default=20.0)
+
+### 11. INT validation locations
+scripts/validate_run.py:3:scripts/validate_run.py
+scripts/validate_run.py:12:  INVALID_INT_CAPTURE
+scripts/validate_run.py:13:  INVALID_DASH_DURATION
+scripts/validate_run.py:27:def validate_run(run_id, expected_duration=700, max_dash_gap=8.5, min_int_ratio=0.85, is_controller=None):
+scripts/validate_run.py:60:    expected_probes = expected_duration
+scripts/validate_run.py:66:            sent_count = int(match_sender.group(1))
+scripts/validate_run.py:70:            # sent_count < total_count is normal, not a failure.
+scripts/validate_run.py:71:            expected_probes = sent_count if sent_count > 0 else total_count
+scripts/validate_run.py:72:            if sent_count < int(total_count * 0.70):
+scripts/validate_run.py:74:                details.append(f"Sender aborted very early: only {sent_count}/{total_count} probes sent.")
+scripts/validate_run.py:75:                return "INVALID_INT_CAPTURE", details
+scripts/validate_run.py:76:            elif sent_count < total_count:
+scripts/validate_run.py:77:                details.append(f"Note: sender killed at teardown after {sent_count}/{total_count} probes (normal).")
+scripts/validate_run.py:88:        return "INVALID_INT_CAPTURE", details
+scripts/validate_run.py:92:    min_probes = int(expected_probes * min_int_ratio)
+scripts/validate_run.py:94:        details.append(f"INT probe count too low: {int_count} received, expected at least {min_probes} ({min_int_ratio*100}% of {expected_probes}).")
+scripts/validate_run.py:95:        return "INVALID_INT_CAPTURE", details
+scripts/validate_run.py:101:        return "INVALID_DASH_DURATION", details
+scripts/validate_run.py:106:        return "INVALID_DASH_DURATION", details
+scripts/validate_run.py:121:        return "INVALID_DASH_DURATION", details
+scripts/validate_run.py:126:        return "INVALID_DASH_DURATION", details
+scripts/validate_run.py:137:        return "INVALID_DASH_DURATION", details
+scripts/validate_run.py:178:    status, details = validate_run(args.run_id, expected_duration=args.duration, is_controller=args.controller)
+scripts/run_experiment.py:251:        val_cmd = f"python3 scripts/validate_run.py {run_id} --duration {duration}"
+
+### 12. Existing run summaries
+total 72K
+drwxrwxr-x  3 p4 p4 4.0K Oct  4 02:30 .
+drwxrwxr-x 11 p4 p4 4.0K Oct  4 00:43 ..
+drwxrwxr-x  2 p4 p4 4.0K Oct  4 02:27 campaign_v2
+-rw-r--r--  1 p4 p4 1.2K Oct  4 02:18 experiment_registry.csv
+-rw-rw-r--  1 p4 p4 2.2K Oct  4 02:13 paper_results.md
+-rw-rw-r--  1 p4 p4 1.8K Oct  4 02:13 policy_comparison.csv
+-rw-rw-r--  1 p4 p4  43K Oct  4 02:31 pre_fix_inspection_20261004_023019.txt
+-rw-rw-r--  1 p4 p4 1.8K Oct  4 02:13 run_summary.csv
+
+--- results/run_summary.csv ---
+run_id,policy,load_kbps,duration_s,dash_samples,mean_fps,median_fps,mean_bitrate_kbps,mean_buffer_s,median_buffer_s,min_buffer_s,pct_30_fps,pct_24_fps,pct_18_fps,pct_0_fps,pct_low_buffer,iperf_rate_kbps,loss_pct,jitter_ms,int_probes,hop3_enq_q_p95,total_deq_us,actions_total,action_0,action_1,action_2,delay_init,delay_final,delay_mean
+infer_socket_load_4,RL-DDQN,500,698.3529999256134,587,25.017843420740366,30.0,726.1156179683966,21.518146882523546,14.955,0.0,58.87581209748467,18.659617728437965,15.982175203721399,6.482394970355962,19.432579117421476,499.0,0.0,113.005,627,789936314.3,0.44019138755980863,65,0,65,0,50000,20000,21590.909090909092
+fixed20k_load_1,Fixed-20k,500,699.183000087738,555,24.942911919064866,30.0,674.3937704547237,16.304732516742728,10.795,0.0,47.82825094209495,31.179819830105487,17.284888206728137,3.707041021071431,16.70406756970822,499.0,0.15,2.286,700,1863160107.0,0.6,0,0,0,0,50000,50000,50000.0
+fixed20k_load_2,Fixed-20k,500,699.2509999275208,618,4.697214558206252,0.0,52.7986944347526,0.5593024371667054,0.0,0.0,0.0,5.362023107631346,18.946272290970715,75.69170460139793,92.77355349834164,499.0,0.0,15.426,596,4260991034.25,0.2818791946308725,0,0,0,0,50000,50000,50000.0
+fixed20k_load_3,Fixed-20k,500,699.760999917984,582,4.168869066557956,0.0,50.6536086568861,0.5280350856281014,0.0,0.0,0.19392336993525183,5.493875699473212,15.512010487243389,78.80019044334816,92.34681556887355,500.0,0.0,5.475,554,1200933332.5,0.4584837545126354,0,0,0,0,50000,50000,50000.0
+fixed20k_load_5,Fixed-20k,500,699.7509999275208,610,4.30049545425807,0.0,49.514913318566414,0.5097004789882549,0.0,0.0,0.14405126045209798,4.913605002205513,17.100082642183988,77.8422610951584,93.76649691090475,499.0,0.0,28.737,587,2647518569.7,0.3952299829642249,0,0,0,0,50000,50000,50000.0
+
+--- results/policy_comparison.csv ---
+policy,replications,mean_fps_mean,mean_fps_sd,mean_fps_ci95,mean_fps_fmt,pct_30_fps_mean,pct_30_fps_sd,pct_30_fps_ci95,pct_30_fps_fmt,pct_0_fps_mean,pct_0_fps_sd,pct_0_fps_ci95,pct_0_fps_fmt,mean_buffer_s_mean,mean_buffer_s_sd,mean_buffer_s_ci95,mean_buffer_s_fmt,min_buffer_s_mean,min_buffer_s_sd,min_buffer_s_ci95,min_buffer_s_fmt,pct_low_buffer_mean,pct_low_buffer_sd,pct_low_buffer_ci95,pct_low_buffer_fmt,mean_bitrate_kbps_mean,mean_bitrate_kbps_sd,mean_bitrate_kbps_ci95,mean_bitrate_kbps_fmt,iperf_rate_kbps_mean,iperf_rate_kbps_sd,iperf_rate_kbps_ci95,iperf_rate_kbps_fmt,loss_pct_mean,loss_pct_sd,loss_pct_ci95,loss_pct_fmt,jitter_ms_mean,jitter_ms_sd,jitter_ms_ci95,jitter_ms_fmt
+Fixed-20k,4,9.527372749521785,10.279479299733195,16.354651565875514,9.53 ± 10.28 (95% CI ±16.35),12.041556393120572,23.85793804826281,37.95797943478613,12.04 ± 23.86 (95% CI ±37.96),59.01029929024398,36.891743591284595,58.69476405373379,59.01 ± 36.89 (95% CI ±58.69),4.475442629631448,7.8862198457011825,12.546975774510582,4.48 ± 7.89 (95% CI ±12.55),0.0,0.0,0.0,0.00 ± 0.00 (95% CI ±0.00),73.89773338695704,38.13374879647577,60.67079433519295,73.90 ± 38.13 (95% CI ±60.67),206.84024671623223,311.7053222872183,495.92316775896427,206.84 ± 311.71 (95% CI ±495.92),499.25,0.5,0.7955,499.25 ± 0.50 (95% CI ±0.80),0.0375,0.075,0.11932499999999999,0.04 ± 0.07 (95% CI ±0.12),12.980999999999998,11.901717271049586,18.935632178239892,12.98 ± 11.90 (95% CI ±18.94)
+RL-DDQN,1,25.017843420740366,0.0,0.0,25.02,58.87581209748467,0.0,0.0,58.88,6.482394970355962,0.0,0.0,6.48,21.518146882523546,0.0,0.0,21.52,0.0,0.0,0.0,0.00,19.432579117421476,0.0,0.0,19.43,726.1156179683966,0.0,0.0,726.12,499.0,0.0,0.0,499.00,0.0,0.0,0.0,0.00,113.005,0.0,0.0,113.00
+
+### 13. Selected DASH diagnostics
+
+--- src/logs/dash_fixed20k_load_1.txt ---
+555 src/logs/dash_fixed20k_load_1.txt
+1790873233583;21.50;30;1040
+1790873234583;23.00;30;1040
+1790873931778;29.25;30;1040
+1790873932766;30.75;30;1040
+parsed_rows: 555
+span_s: 699.183
+max_gap_s: 7.967
+gaps_over_2s: 68
+gaps_over_5s: 1
+mean_fps: 24.562
+zero_fps_rows: 39
+
+--- src/logs/dash_fixed20k_load_2.txt ---
+618 src/logs/dash_fixed20k_load_2.txt
+1791091082690;0.00;0;0
+1791091083007;0.00;0;0
+1791091780959;0.00;0;0
+1791091781941;0.00;0;0
+parsed_rows: 618
+span_s: 699.251
+max_gap_s: 3.211
+gaps_over_2s: 24
+gaps_over_5s: 0
+mean_fps: 4.903
+zero_fps_rows: 462
+
+--- src/logs/dash_fixed20k_load_3.txt ---
+582 src/logs/dash_fixed20k_load_3.txt
+1791091813569;14.00;30;1040
+1791091814926;5.20;24;490
+1791092512257;0.00;0;0
+1791092513330;0.00;0;0
+parsed_rows: 582
+span_s: 699.761
+max_gap_s: 5.51
+gaps_over_2s: 38
+gaps_over_5s: 1
+mean_fps: 4.268
+zero_fps_rows: 456
+
+--- src/logs/dash_fixed20k_load_4.txt ---
+555 src/logs/dash_fixed20k_load_4.txt
+1791092536390;18.82;30;1040
+1791092537911;14.70;30;1040
+1791093234445;0.00;0;0
+1791093236195;0.00;0;0
+parsed_rows: 555
+span_s: 699.805
+max_gap_s: 37.14
+gaps_over_2s: 44
+gaps_over_5s: 1
+mean_fps: 5.103
+zero_fps_rows: 422
+
+--- src/logs/dash_fixed20k_load_5.txt ---
+610 src/logs/dash_fixed20k_load_5.txt
+1791093264507;8.55;24;490
+1791093265475;5.20;24;490
+1791093962235;0.00;0;0
+1791093964258;0.00;0;0
+parsed_rows: 610
+span_s: 699.751
+max_gap_s: 2.955
+gaps_over_2s: 38
+gaps_over_5s: 0
+mean_fps: 4.475
+zero_fps_rows: 470
+
+--- src/logs/dash_fixed30k_load_1.txt ---
+566 src/logs/dash_fixed30k_load_1.txt
+1791093988901;15.37;30;1040
+1791093989843;13.52;30;1040
+1791094687427;6.22;24;490
+1791094688425;7.72;24;490
+parsed_rows: 566
+span_s: 699.524
+max_gap_s: 11.172
+gaps_over_2s: 48
+gaps_over_5s: 1
+mean_fps: 4.569
+zero_fps_rows: 428
+
+### 14. Selected video logs
+
+--- src/logs/video_fixed20k_load_1.log (last 25 lines) ---
+[t=675s] delay=6.21ms buffer=10.09s fps=30 bitrate=1040kbps
+[t=676s] delay=12.2ms buffer=11.59s fps=30 bitrate=1040kbps
+[t=677s] delay=14.1ms buffer=13.09s fps=30 bitrate=1040kbps
+[t=678s] delay=60.8ms buffer=10.05s fps=30 bitrate=1040kbps
+[t=679s] delay=14.3ms buffer=11.55s fps=30 bitrate=1040kbps
+[t=680s] delay=14.7ms buffer=13.05s fps=30 bitrate=1040kbps
+[t=681s] delay=10.4ms buffer=14.55s fps=30 bitrate=1040kbps
+[t=682s] delay=23.0ms buffer=13.40s fps=30 bitrate=1040kbps
+[t=683s] delay=12.7ms buffer=14.90s fps=30 bitrate=1040kbps
+[t=684s] delay=7.67ms buffer=16.40s fps=30 bitrate=1040kbps
+[t=685s] delay=12.4ms buffer=17.90s fps=30 bitrate=1040kbps
+[t=686s] delay=7.32ms buffer=19.40s fps=30 bitrate=1040kbps
+[t=687s] delay=7.91ms buffer=20.90s fps=30 bitrate=1040kbps
+[t=688s] delay=10.4ms buffer=22.40s fps=30 bitrate=1040kbps
+[t=689s] delay=13.9ms buffer=23.90s fps=30 bitrate=1040kbps
+[t=690s] delay=7.92ms buffer=25.40s fps=30 bitrate=1040kbps
+[t=691s] delay=10.0ms buffer=26.90s fps=30 bitrate=1040kbps
+[t=692s] delay=12.9ms buffer=28.40s fps=30 bitrate=1040kbps
+[t=693s] delay=10.9ms buffer=29.90s fps=30 bitrate=1040kbps
+[t=694s] delay=15.2ms buffer=31.40s fps=30 bitrate=1040kbps
+[t=695s] delay=29.5ms buffer=29.92s fps=30 bitrate=1040kbps
+[t=696s] delay=23.4ms buffer=28.75s fps=30 bitrate=1040kbps
+[t=697s] delay=13.1ms buffer=30.25s fps=30 bitrate=1040kbps
+[t=698s] delay=20.1ms buffer=29.25s fps=30 bitrate=1040kbps
+[t=699s] delay=11.6ms buffer=30.75s fps=30 bitrate=1040kbps
+
+--- src/logs/video_fixed20k_load_2.log (last 25 lines) ---
+[t=666s] delay=69.2ms buffer=0.00s fps=0 bitrate=0kbps
+[t=667s] delay=79.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=669s] delay=178.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=670s] delay=127.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=671s] delay=290.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=673s] delay=86.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=675s] delay=90.8ms buffer=0.00s fps=0 bitrate=0kbps
+[t=676s] delay=144.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=678s] delay=33.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=679s] delay=23.2ms buffer=0.00s fps=0 bitrate=0kbps
+[t=680s] delay=31.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=681s] delay=28.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=683s] delay=20.1ms buffer=0.00s fps=0 bitrate=0kbps
+[t=684s] delay=36.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=686s] delay=30.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=687s] delay=86.8ms buffer=0.00s fps=0 bitrate=0kbps
+[t=689s] delay=27.2ms buffer=0.00s fps=0 bitrate=0kbps
+[t=689s] delay=25.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=692s] delay=66.7ms buffer=0.00s fps=0 bitrate=0kbps
+[t=692s] delay=8.74ms buffer=1.50s fps=18 bitrate=140kbps
+[t=693s] delay=57.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=695s] delay=296.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=697s] delay=79.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=699s] delay=71.1ms buffer=0.00s fps=0 bitrate=0kbps
+[t=700s] delay=20.2ms buffer=0.00s fps=0 bitrate=0kbps
+
+--- src/logs/video_fixed20k_load_3.log (last 25 lines) ---
+[t=674s] delay=99.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=675s] delay=160.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=676s] delay=149.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=677s] delay=84.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=678s] delay=13.9ms buffer=1.50s fps=18 bitrate=140kbps
+[t=679s] delay=38.8ms buffer=0.00s fps=0 bitrate=0kbps
+[t=680s] delay=81.1ms buffer=0.00s fps=0 bitrate=0kbps
+[t=681s] delay=49.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=682s] delay=95.2ms buffer=0.00s fps=0 bitrate=0kbps
+[t=683s] delay=139.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=685s] delay=231.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=686s] delay=74.7ms buffer=0.00s fps=0 bitrate=0kbps
+[t=687s] delay=15.1ms buffer=1.50s fps=18 bitrate=140kbps
+[t=688s] delay=33.8ms buffer=0.00s fps=0 bitrate=0kbps
+[t=689s] delay=77.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=690s] delay=97.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=691s] delay=18.7ms buffer=1.50s fps=18 bitrate=140kbps
+[t=692s] delay=21.1ms buffer=0.44s fps=18 bitrate=140kbps
+[t=693s] delay=48.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=694s] delay=29.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=695s] delay=64.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=696s] delay=26.1ms buffer=0.00s fps=0 bitrate=0kbps
+[t=697s] delay=20.9ms buffer=0.00s fps=0 bitrate=0kbps
+[t=698s] delay=25.7ms buffer=0.00s fps=0 bitrate=0kbps
+[t=699s] delay=71.8ms buffer=0.00s fps=0 bitrate=0kbps
+
+--- src/logs/video_fixed20k_load_4.log (last 25 lines) ---
+[t=667s] delay=83.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=668s] delay=54.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=669s] delay=56.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=670s] delay=39.9ms buffer=0.00s fps=0 bitrate=0kbps
+[t=671s] delay=41.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=674s] delay=978.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=675s] delay=35.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=677s] delay=54.2ms buffer=0.00s fps=0 bitrate=0kbps
+[t=678s] delay=33.1ms buffer=0.00s fps=0 bitrate=0kbps
+[t=680s] delay=61.8ms buffer=0.00s fps=0 bitrate=0kbps
+[t=682s] delay=175.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=683s] delay=55.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=684s] delay=22.7ms buffer=0.00s fps=0 bitrate=0kbps
+[t=685s] delay=55.9ms buffer=0.00s fps=0 bitrate=0kbps
+[t=687s] delay=80.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=689s] delay=276.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=689s] delay=24.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=691s] delay=67.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=692s] delay=39.2ms buffer=0.00s fps=0 bitrate=0kbps
+[t=694s] delay=55.9ms buffer=0.00s fps=0 bitrate=0kbps
+[t=695s] delay=125.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=696s] delay=75.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=697s] delay=71.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=698s] delay=66.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=699s] delay=781.0ms buffer=0.00s fps=0 bitrate=0kbps
+
+--- src/logs/video_fixed20k_load_5.log (last 25 lines) ---
+[t=668s] delay=62.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=669s] delay=100.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=670s] delay=172.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=671s] delay=47.7ms buffer=0.00s fps=0 bitrate=0kbps
+[t=673s] delay=198.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=674s] delay=75.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=675s] delay=60.9ms buffer=0.00s fps=0 bitrate=0kbps
+[t=676s] delay=45.7ms buffer=0.00s fps=0 bitrate=0kbps
+[t=677s] delay=69.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=680s] delay=Nonems buffer=0.00s fps=0 bitrate=0kbps
+[t=681s] delay=96.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=683s] delay=163.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=683s] delay=36.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=685s] delay=88.1ms buffer=0.00s fps=0 bitrate=0kbps
+[t=686s] delay=52.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=687s] delay=46.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=689s] delay=34.7ms buffer=0.00s fps=0 bitrate=0kbps
+[t=690s] delay=50.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=691s] delay=68.0ms buffer=0.00s fps=0 bitrate=0kbps
+[t=692s] delay=50.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=693s] delay=71.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=694s] delay=67.6ms buffer=0.00s fps=0 bitrate=0kbps
+[t=697s] delay=49.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=697s] delay=33.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=699s] delay=72.5ms buffer=0.00s fps=0 bitrate=0kbps
+
+--- src/logs/video_fixed30k_load_1.log (last 25 lines) ---
+[t=675s] delay=25.3ms buffer=0.00s fps=0 bitrate=0kbps
+[t=676s] delay=89.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=677s] delay=57.9ms buffer=0.00s fps=0 bitrate=0kbps
+[t=678s] delay=21.5ms buffer=0.00s fps=0 bitrate=0kbps
+[t=679s] delay=17.0ms buffer=1.50s fps=18 bitrate=140kbps
+[t=680s] delay=21.1ms buffer=0.44s fps=18 bitrate=140kbps
+[t=681s] delay=11.8ms buffer=1.94s fps=18 bitrate=140kbps
+[t=682s] delay=16.8ms buffer=3.44s fps=24 bitrate=490kbps
+[t=683s] delay=17.4ms buffer=4.95s fps=24 bitrate=490kbps
+[t=684s] delay=27.5ms buffer=3.57s fps=24 bitrate=490kbps
+[t=685s] delay=30.2ms buffer=2.06s fps=18 bitrate=140kbps
+[t=686s] delay=16.0ms buffer=3.56s fps=24 bitrate=490kbps
+[t=687s] delay=27.1ms buffer=2.21s fps=18 bitrate=140kbps
+[t=688s] delay=26.6ms buffer=0.88s fps=18 bitrate=140kbps
+[t=689s] delay=28.4ms buffer=0.00s fps=0 bitrate=0kbps
+[t=690s] delay=16.5ms buffer=1.50s fps=18 bitrate=140kbps
+[t=691s] delay=21.8ms buffer=0.41s fps=18 bitrate=140kbps
+[t=692s] delay=26.2ms buffer=0.00s fps=0 bitrate=0kbps
+[t=693s] delay=17.0ms buffer=1.50s fps=18 bitrate=140kbps
+[t=694s] delay=18.5ms buffer=3.00s fps=18 bitrate=140kbps
+[t=695s] delay=16.9ms buffer=4.50s fps=24 bitrate=490kbps
+[t=696s] delay=25.5ms buffer=3.23s fps=24 bitrate=490kbps
+[t=697s] delay=13.4ms buffer=4.72s fps=24 bitrate=490kbps
+[t=698s] delay=13.9ms buffer=6.22s fps=24 bitrate=490kbps
+[t=699s] delay=13.4ms buffer=7.72s fps=24 bitrate=490kbps
+
+### 15. Selected sender/INT capture diagnostics
+
+--- fixed20k_load_1 ---
+   700 src/logs/sender_fixed20k_load_1.log
+   700 src/logs/log_INT_fixed20k_load_1.txt
+  1400 total
+sender tail:
+[698/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1790874153.484 finished=1790874153.485 sendp_ms=1.0
+[699/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1790874154.489 finished=1790874154.489 sendp_ms=0.7
+[700/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1790874155.494 finished=1790874155.496 sendp_ms=1.8
+INT head/tail:
+1790873230917,3,3,2,0,215722220339,215722221224,973856375,0,53,0,2,1,2,0,215722456794,215722458528,974093543,0,189,0,1,2,3,0,215722939162,215722939990,974575161,0,32,0
+1790874155503,3,3,2,0,216646804885,216646807833,1898442720,0,320,0,2,1,2,0,216647042645,216647043133,1898678305,0,29,0,1,2,3,0,216647524657,216647525355,1899160528,0,30,0
+
+--- fixed20k_load_2 ---
+   597 src/logs/sender_fixed20k_load_2.log
+   596 src/logs/log_INT_fixed20k_load_2.txt
+  1193 total
+sender tail:
+[595/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791091799.065 finished=1791091799.066 sendp_ms=1.2
+[596/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791091800.067 finished=1791091800.072 sendp_ms=4.6
+[597/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791091801.073 finished=1791091801.076 sendp_ms=3.0
+INT head/tail:
+1791091084157,3,3,2,0,433575460094,433575461355,4078731725,0,33,0,2,1,2,0,433575694312,433575696195,4078966187,0,413,0,1,2,3,0,433576173180,433576175187,4079444995,0,598,0
+1791091801116,3,3,2,0,434292417410,434292418816,500721631,0,293,0,2,1,2,0,434292631514,434292653675,500945425,0,11365,0,1,2,3,0,434293105710,434293112530,501414137,0,1503,0
+
+--- fixed20k_load_3 ---
+   554 src/logs/sender_fixed20k_load_3.log
+   554 src/logs/log_INT_fixed20k_load_3.txt
+  1108 total
+sender tail:
+[552/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791092527.338 finished=1791092527.338 sendp_ms=0.6
+[553/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791092528.339 finished=1791092528.340 sendp_ms=0.6
+[554/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791092529.345 finished=1791092529.346 sendp_ms=0.9
+INT head/tail:
+1791091815575,3,3,2,0,434306877925,434306879239,515182313,0,32,0,2,1,2,0,434307114353,434307115487,515418571,0,21,0,1,2,3,0,434307596280,434307597515,515900577,0,45,0
+1791092529357,3,3,2,0,435020659827,435020661408,1228963881,0,636,0,2,1,2,0,435020895016,435020897068,1229199676,0,501,0,1,2,3,0,435021376204,435021377745,1229680332,0,524,0
+
+--- fixed20k_load_4 ---
+   531 src/logs/sender_fixed20k_load_4.log
+   531 src/logs/log_INT_fixed20k_load_4.txt
+  1062 total
+sender tail:
+[529/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791093248.422 finished=1791093248.426 sendp_ms=4.2
+[530/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791093249.451 finished=1791093249.453 sendp_ms=1.9
+[531/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791093250.456 finished=1791093250.458 sendp_ms=2.2
+INT head/tail:
+1791092537892,3,3,2,0,435029144020,435029192381,1237495243,0,246,0,2,1,2,0,435029370536,435029371742,1237674790,0,58,0,1,2,3,0,435029837509,435029843787,1238144959,0,1938,0
+1791093250479,3,3,2,0,435741778698,435741780872,1950083500,0,484,0,2,1,2,0,435742014776,435742016779,1950319498,0,392,0,1,2,3,0,435742486955,435742492950,1950795505,0,558,0
+
+--- fixed20k_load_5 ---
+   587 src/logs/sender_fixed20k_load_5.log
+   587 src/logs/log_INT_fixed20k_load_5.txt
+  1174 total
+sender tail:
+[585/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791093979.387 finished=1791093979.388 sendp_ms=1.0
+[586/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791093980.391 finished=1791093980.393 sendp_ms=1.8
+[587/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791093981.394 finished=1791093981.395 sendp_ms=0.9
+INT head/tail:
+1791093265430,3,3,2,0,435756729107,435756733001,1965032717,1,3392,0,2,1,2,0,435756964470,435756965868,1965268184,0,794,0,1,2,3,0,435757436248,435757445782,1965739885,0,9009,1
+1791093981409,3,3,2,0,436472712107,436472713591,2681016644,0,54,0,2,1,2,0,436472947477,436472948985,2681251650,0,443,0,1,2,3,0,436473424722,436473428700,2681731769,0,37,0
+
+--- fixed30k_load_1 ---
+   523 src/logs/sender_fixed30k_load_1.log
+   523 src/logs/log_INT_fixed30k_load_1.txt
+  1046 total
+sender tail:
+[521/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791094701.689 finished=1791094701.689 sendp_ms=0.6
+[522/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791094702.691 finished=1791094702.692 sendp_ms=0.8
+[523/700] sent INT probe 10.0.0.3 -> 10.0.0.4 started=1791094703.693 finished=1791094703.694 sendp_ms=0.8
+INT head/tail:
+1791093989909,3,3,2,0,436481205543,436481209735,2689512801,0,41,0,2,1,2,0,436481434843,436481437370,2689739572,0,909,0,1,2,3,0,436481911008,436481911964,2690214701,0,372,0
+1791094703701,3,3,2,0,437195005016,437195005784,3403308862,0,28,0,2,1,2,0,437195242474,437195243557,3403546634,0,29,0,1,2,3,0,437195723886,437195725114,3404027877,0,348,0
+
+### 16. System resource snapshot
+ 02:31:42 up 6 days, 16:09,  2 users,  load average: 2.63, 2.30, 4.17
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       4.3Gi       875Mi        72Mi       2.8Gi       3.5Gi
+Swap:          4.0Gi       1.0Gi       3.0Gi
+    PID    PPID %CPU %MEM STAT     ELAPSED CMD
+ 119818  119744 20.7  7.3 Sl      02:27:59 /opt/antigravity/antigravity-ide --type=zygote
+ 123099  122404 15.5 16.3 Sl      02:11:52 /snap/firefox/8969/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:52197 -prefMapHandle 1:295503 -jsInitHandle 2:162620 -parentBuildID 20260921225441 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {b3c15ebd-a36f-46d9-9749-4b6395626521} -parentPid 122228 -crashHelperPid 122305 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8969/usr/lib/firefox/omni.ja -appomni /snap/firefox/8969/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8969/usr/lib/firefox/browser 8 tab
+ 122228   41042  7.5  5.1 Sl      02:12:30 /snap/firefox/8969/usr/lib/firefox/firefox
+ 119772  119740  5.7  1.2 Sl      02:28:01 /opt/antigravity/antigravity-ide --type=zygote --no-zygote-sandbox
+ 121792  119735  4.7  2.8 Sl      02:21:32 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --enable-crash-reporter=8d99aab4-8657-4170-8fff-2fbe3031dd10,no_channel --user-data-dir=/home/p4/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17555154806873274621,8705240281567086294,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709004115666625
+ 119735   41042  2.9  3.2 SLl     02:28:09 /opt/antigravity/antigravity-ide
+   1001       1  2.4  0.0 Ss    6-16:08:25 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+      1       0  2.3  0.1 Ss    6-16:09:00 /usr/lib/systemd/systemd --system --deserialize=92 splash
+ 121779  119735  2.0  1.1 Sl      02:21:32 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=8d99aab4-8657-4170-8fff-2fbe3031dd10,no_channel --user-data-dir=/home/p4/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17555154806873274621,8705240281567086294,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709003178624776
+ 119847  119735  1.9  2.2 Sl      02:27:58 /opt/antigravity/resources/app/extensions/antigravity/bin/language_server_linux_x64 --csrf_token 116e938e-6ec1-44cd-8c32-3495a3f6f95b --extension_server_port 41421 --extension_server_csrf_token 9cba3f11-533a-453f-9bc7-95321dede6cd --app_data_dir antigravity-ide --subclient_type ide --cloud_code_endpoint https://cloudcode-pa.googleapis.com
+ 122919  122404  1.4  0.9 Sl      02:11:57 /snap/firefox/8969/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:52038 -prefMapHandle 1:295503 -jsInitHandle 2:162620 -parentBuildID 20260921225441 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {2ce50757-d18e-4978-9635-4bffa267452e} -parentPid 122228 -crashHelperPid 122305 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8969/usr/lib/firefox/omni.ja -appomni /snap/firefox/8969/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8969/usr/lib/firefox/browser 7 tab
+ 121884  121792  1.4  1.3 Sl      02:21:24 /opt/antigravity/resources/app/extensions/antigravity/bin/language_server_linux_x64 --enable_lsp --csrf_token 1ba398e1-f6a0-4c2b-ae9b-89b6ea2eecd9 --extension_server_port 37811 --extension_server_csrf_token f2aa91f4-253e-4fc1-9027-d0af6a9fad4a --workspace_id file_home_p4_DESiRED --cloud_code_endpoint https://daily-cloudcode-pa.googleapis.com --subclient_type ide --app_data_dir antigravity-ide --parent_pipe_path /tmp/server_7644521fcc0288a0
+ 119959  119735  0.9  1.2 Sl      02:27:42 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=8d99aab4-8657-4170-8fff-2fbe3031dd10,no_channel --user-data-dir=/home/p4/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17555154806873274621,8705240281567086294,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708993808206286
+ 122439  122404  0.9  1.8 Sl      02:12:15 /snap/firefox/8969/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:36959 -prefMapHandle 1:295503 -jsInitHandle 2:162620 -parentBuildID 20260921225441 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {3fa891cb-d02b-4d48-afc8-fbc8c362ebd7} -parentPid 122228 -crashHelperPid 122305 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8969/usr/lib/firefox/omni.ja -appomni /snap/firefox/8969/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8969/usr/lib/firefox/browser 3 tab
+  41042    2940  0.8  3.6 Ssl   4-21:17:59 /usr/bin/gnome-shell
+  40893   40891  0.7  0.0 Sl    4-21:18:01 /usr/bin/VBoxClient --draganddrop
+  40815   40813  0.6  1.4 Sl+   4-21:18:02 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3
+  42368   42210  0.6  0.4 Sl+   4-21:12:36 simple_switch -i 1@s1-eth1 -i 2@s1-eth2 -i 3@s1-eth3 -i 4@s1-cpu-eth0 --pcap=./pcap --thrift-port 9090 --nanolog ipc:///tmp/bm-1-log.ipc --device-id 1 /home/p4/DESiRED/src/dataplane/DESiRED.json --log-console
+  42394   42218  0.6  0.4 Sl+   4-21:12:33 simple_switch -i 1@s3-eth1 -i 2@s3-eth2 -i 3@s3-eth3 -i 4@s3-cpu-eth0 --pcap=./pcap --thrift-port 9092 --nanolog ipc:///tmp/bm-3-log.ipc --device-id 3 /home/p4/DESiRED/src/dataplane/DESiRED.json --log-console
+  42381   42214  0.5  0.3 Sl+   4-21:12:34 simple_switch -i 1@s2-eth1 -i 2@s2-eth2 -i 3@s2-cpu-eth0 --pcap=./pcap --thrift-port 9091 --nanolog ipc:///tmp/bm-2-log.ipc --device-id 2 /home/p4/DESiRED/src/dataplane/DESiRED.json --log-console
+ 122102    2940  0.5  2.1 Sl      02:17:59 /usr/bin/nautilus --gapplication-service
+ 119882  119735  0.5  1.6 Sl      02:27:49 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=8d99aab4-8657-4170-8fff-2fbe3031dd10,no_channel --user-data-dir=/home/p4/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17555154806873274621,8705240281567086294,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708990997080739
+ 134047   41784  0.4  0.0 Ss         01:25 bash
+ 119783  119735  0.4  0.6 Sl      02:28:01 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=8d99aab4-8657-4170-8fff-2fbe3031dd10,no_channel --user-data-dir=/home/p4/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17555154806873274621,8705240281567086294,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708989122997041
+ 126280  119744  0.3  1.4 Sl      01:20:05 /opt/antigravity/antigravity-ide --type=zygote
+   2897       1  0.2  0.0 Sl    6-16:07:29 /usr/bin/VBoxDRMClient
+     15       2  0.2  0.0 I     6-16:09:00 [rcu_preempt]
+  40885   40883  0.1  0.0 Sl    4-21:18:01 /usr/bin/VBoxClient --seamless
+ 125034  121792  0.1  0.9 Sl      01:49:07 /bin/python3 /home/p4/.antigravity-ide/extensions/ms-python.python-2026.4.0-universal/python_files/run-jedi-language-server.py

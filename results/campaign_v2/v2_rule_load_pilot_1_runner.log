@@ -1,0 +1,53 @@
+
+==================================================
+ Starting Experiment: v2_rule_load_pilot_1
+ Policy: rule | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 151508)
+[+] Rule-Based Controller started (PID 151524)
+[+] Video Simulator started (PID 151532)
+[+] iperf3 UDP Client started (PID 151533)
+[+] INT Sender started (PID 151534)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 30 | DASH rows: 30 | iperf active: True
+  [t=60s / 700s] INT probes logged: 60 | DASH rows: 60 | iperf active: True
+  [t=90s / 700s] INT probes logged: 90 | DASH rows: 90 | iperf active: True
+  [t=120s / 700s] INT probes logged: 120 | DASH rows: 121 | iperf active: True
+  [t=150s / 700s] INT probes logged: 150 | DASH rows: 151 | iperf active: True
+  [t=180s / 700s] INT probes logged: 180 | DASH rows: 180 | iperf active: True
+  [t=211s / 700s] INT probes logged: 211 | DASH rows: 212 | iperf active: True
+  [t=242s / 700s] INT probes logged: 241 | DASH rows: 242 | iperf active: True
+  [t=272s / 700s] INT probes logged: 273 | DASH rows: 273 | iperf active: True
+  [t=303s / 700s] INT probes logged: 303 | DASH rows: 303 | iperf active: True
+  [t=334s / 700s] INT probes logged: 333 | DASH rows: 334 | iperf active: True
+  [t=364s / 700s] INT probes logged: 364 | DASH rows: 365 | iperf active: True
+  [t=396s / 700s] INT probes logged: 395 | DASH rows: 396 | iperf active: True
+  [t=427s / 700s] INT probes logged: 427 | DASH rows: 427 | iperf active: True
+  [t=460s / 700s] INT probes logged: 459 | DASH rows: 459 | iperf active: True
+  [t=491s / 700s] INT probes logged: 491 | DASH rows: 492 | iperf active: True
+  [t=524s / 700s] INT probes logged: 523 | DASH rows: 524 | iperf active: True
+  [t=556s / 700s] INT probes logged: 556 | DASH rows: 557 | iperf active: True
+  [t=586s / 700s] INT probes logged: 586 | DASH rows: 587 | iperf active: True
+  [t=618s / 700s] INT probes logged: 617 | DASH rows: 618 | iperf active: True
+  [t=649s / 700s] INT probes logged: 648 | DASH rows: 649 | iperf active: True
+  [t=680s / 700s] INT probes logged: 679 | DASH rows: 680 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_rule_load_pilot_1
+STATUS: INVALID_CONTROLLER_EXIT
+  - Controller log contains unhandled Python Traceback.
+-------------------------
+
+[WARNING] Run v2_rule_load_pilot_1 validation status: INVALID_CONTROLLER_EXIT
+[+] Registry updated for v2_rule_load_pilot_1 (Status: INVALID_CONTROLLER_EXIT)
+[+] Experiment v2_rule_load_pilot_1 finished.
+

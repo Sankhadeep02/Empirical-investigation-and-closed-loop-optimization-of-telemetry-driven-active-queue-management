@@ -1,0 +1,150 @@
+[2026-10-11 03:51:38] ==================================================
+[2026-10-11 03:51:38]  Starting Automated Load Sweep Batch (33 runs)
+[2026-10-11 03:51:38] ==================================================
+[2026-10-11 03:51:38] 
+--- Progress: Run 1/33 (3.0%) ---
+[2026-10-11 03:51:38] [*] Starting v2_fixed20k_200k_1 (Policy: fixed20k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 03:52:18] ==================================================
+[2026-10-11 03:52:18]  Starting Automated Load Sweep Batch (33 runs)
+[2026-10-11 03:52:18] ==================================================
+[2026-10-11 03:52:18] 
+--- Progress: Run 1/33 (3.0%) ---
+[2026-10-11 03:52:18] [*] Starting v2_fixed20k_200k_1 (Policy: fixed20k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 04:04:22] [+] Slot v2_fixed20k_200k_1 PASSED validation in 723.2s.
+[2026-10-11 04:04:27] 
+--- Progress: Run 2/33 (6.1%) ---
+[2026-10-11 04:04:27] [*] Starting v2_fixed30k_200k_1 (Policy: fixed30k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 04:16:20] [+] Slot v2_fixed30k_200k_1 PASSED validation in 713.8s.
+[2026-10-11 04:16:26] 
+--- Progress: Run 3/33 (9.1%) ---
+[2026-10-11 04:16:26] [*] Starting v2_fixed40k_200k_1 (Policy: fixed40k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 04:28:24] [+] Slot v2_fixed40k_200k_1 PASSED validation in 718.3s.
+[2026-10-11 04:28:29] 
+--- Progress: Run 4/33 (12.1%) ---
+[2026-10-11 04:28:29] [*] Starting v2_fixed50k_200k_1 (Policy: fixed50k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 04:40:29] [+] Slot v2_fixed50k_200k_1 PASSED validation in 720.5s.
+[2026-10-11 04:40:34] 
+--- Progress: Run 5/33 (15.2%) ---
+[2026-10-11 04:40:34] [*] Starting v2_fixed70k_200k_1 (Policy: fixed70k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 04:52:36] [+] Slot v2_fixed70k_200k_1 PASSED validation in 721.2s.
+[2026-10-11 04:52:41] 
+--- Progress: Run 6/33 (18.2%) ---
+[2026-10-11 04:52:41] [*] Starting v2_fixed20k_1000k_1 (Policy: fixed20k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 05:04:38] [+] Slot v2_fixed20k_1000k_1 PASSED validation in 717.8s.
+[2026-10-11 05:04:43] 
+--- Progress: Run 7/33 (21.2%) ---
+[2026-10-11 05:04:43] [*] Starting v2_fixed30k_1000k_1 (Policy: fixed30k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 05:16:41] [+] Slot v2_fixed30k_1000k_1 PASSED validation in 717.5s.
+[2026-10-11 05:16:46] 
+--- Progress: Run 8/33 (24.2%) ---
+[2026-10-11 05:16:46] [*] Starting v2_fixed40k_1000k_1 (Policy: fixed40k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 05:28:52] [+] Slot v2_fixed40k_1000k_1 PASSED validation in 725.9s.
+[2026-10-11 05:28:57] 
+--- Progress: Run 9/33 (27.3%) ---
+[2026-10-11 05:28:57] [*] Starting v2_fixed50k_1000k_1 (Policy: fixed50k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 05:40:55] [+] Slot v2_fixed50k_1000k_1 PASSED validation in 718.4s.
+[2026-10-11 05:41:00] 
+--- Progress: Run 10/33 (30.3%) ---
+[2026-10-11 05:41:00] [*] Starting v2_fixed70k_1000k_1 (Policy: fixed70k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 05:52:59] [+] Slot v2_fixed70k_1000k_1 PASSED validation in 718.3s.
+[2026-10-11 05:53:04] 
+--- Progress: Run 11/33 (33.3%) ---
+[2026-10-11 05:53:04] [*] Starting v2_fixed70k_500k_1 (Policy: fixed70k, Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 06:04:59] [+] Slot v2_fixed70k_500k_1 PASSED validation in 715.5s.
+[2026-10-11 06:05:04] 
+--- Progress: Run 12/33 (36.4%) ---
+[2026-10-11 06:05:04] [*] Starting v2_fixed20k_200k_2 (Policy: fixed20k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 06:17:00] [+] Slot v2_fixed20k_200k_2 PASSED validation in 716.2s.
+[2026-10-11 06:17:05] 
+--- Progress: Run 13/33 (39.4%) ---
+[2026-10-11 06:17:05] [*] Starting v2_fixed30k_200k_2 (Policy: fixed30k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 06:29:02] [+] Slot v2_fixed30k_200k_2 PASSED validation in 716.4s.
+[2026-10-11 06:29:07] 
+--- Progress: Run 14/33 (42.4%) ---
+[2026-10-11 06:29:07] [*] Starting v2_fixed40k_200k_2 (Policy: fixed40k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 06:41:09] [+] Slot v2_fixed40k_200k_2 PASSED validation in 722.0s.
+[2026-10-11 06:41:14] 
+--- Progress: Run 15/33 (45.5%) ---
+[2026-10-11 06:41:14] [*] Starting v2_fixed50k_200k_2 (Policy: fixed50k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 06:53:11] [+] Slot v2_fixed50k_200k_2 PASSED validation in 717.4s.
+[2026-10-11 06:53:16] 
+--- Progress: Run 16/33 (48.5%) ---
+[2026-10-11 06:53:16] [*] Starting v2_fixed70k_200k_2 (Policy: fixed70k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 07:05:14] [!] Slot v2_fixed70k_200k_2 FAILED validation (Elapsed: 718.1s). Retrying...
+[2026-10-11 07:05:24] [*] Starting v2_fixed70k_200k_2_retry1 (Policy: fixed70k, Load: 200 kbps, Duration: 700s, Attempt: 2/3)
+[2026-10-11 07:17:22] [+] Slot v2_fixed70k_200k_2_retry1 PASSED validation in 717.6s.
+[2026-10-11 07:17:27] 
+--- Progress: Run 17/33 (51.5%) ---
+[2026-10-11 07:17:27] [*] Starting v2_fixed20k_1000k_2 (Policy: fixed20k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 07:29:28] [+] Slot v2_fixed20k_1000k_2 PASSED validation in 720.8s.
+[2026-10-11 07:29:33] 
+--- Progress: Run 18/33 (54.5%) ---
+[2026-10-11 07:29:33] [*] Starting v2_fixed30k_1000k_2 (Policy: fixed30k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 07:41:31] [+] Slot v2_fixed30k_1000k_2 PASSED validation in 718.5s.
+[2026-10-11 07:41:36] 
+--- Progress: Run 19/33 (57.6%) ---
+[2026-10-11 07:41:36] [*] Starting v2_fixed40k_1000k_2 (Policy: fixed40k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 07:53:37] [+] Slot v2_fixed40k_1000k_2 PASSED validation in 720.8s.
+[2026-10-11 07:53:42] 
+--- Progress: Run 20/33 (60.6%) ---
+[2026-10-11 07:53:42] [*] Starting v2_fixed50k_1000k_2 (Policy: fixed50k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 08:05:52] [+] Slot v2_fixed50k_1000k_2 PASSED validation in 729.6s.
+[2026-10-11 08:05:57] 
+--- Progress: Run 21/33 (63.6%) ---
+[2026-10-11 08:05:57] [*] Starting v2_fixed70k_1000k_2 (Policy: fixed70k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 08:17:56] [+] Slot v2_fixed70k_1000k_2 PASSED validation in 719.3s.
+[2026-10-11 08:18:01] 
+--- Progress: Run 22/33 (66.7%) ---
+[2026-10-11 08:18:01] [*] Starting v2_fixed70k_500k_2 (Policy: fixed70k, Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 08:30:04] [+] Slot v2_fixed70k_500k_2 PASSED validation in 723.5s.
+[2026-10-11 08:30:09] 
+--- Progress: Run 23/33 (69.7%) ---
+[2026-10-11 08:30:09] [*] Starting v2_fixed20k_200k_3 (Policy: fixed20k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 08:42:12] [+] Slot v2_fixed20k_200k_3 PASSED validation in 722.7s.
+[2026-10-11 08:42:17] 
+--- Progress: Run 24/33 (72.7%) ---
+[2026-10-11 08:42:17] [*] Starting v2_fixed30k_200k_3 (Policy: fixed30k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 08:54:22] [+] Slot v2_fixed30k_200k_3 PASSED validation in 724.6s.
+[2026-10-11 08:54:27] 
+--- Progress: Run 25/33 (75.8%) ---
+[2026-10-11 08:54:27] [*] Starting v2_fixed40k_200k_3 (Policy: fixed40k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 09:06:28] [!] Slot v2_fixed40k_200k_3 FAILED validation (Elapsed: 721.4s). Retrying...
+[2026-10-11 09:06:38] [*] Starting v2_fixed40k_200k_3_retry1 (Policy: fixed40k, Load: 200 kbps, Duration: 700s, Attempt: 2/3)
+[2026-10-11 09:18:38] [+] Slot v2_fixed40k_200k_3_retry1 PASSED validation in 719.9s.
+[2026-10-11 09:18:43] 
+--- Progress: Run 26/33 (78.8%) ---
+[2026-10-11 09:18:43] [*] Starting v2_fixed50k_200k_3 (Policy: fixed50k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 09:30:42] [+] Slot v2_fixed50k_200k_3 PASSED validation in 718.6s.
+[2026-10-11 09:30:47] 
+--- Progress: Run 27/33 (81.8%) ---
+[2026-10-11 09:30:47] [*] Starting v2_fixed70k_200k_3 (Policy: fixed70k, Load: 200 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 09:42:44] [+] Slot v2_fixed70k_200k_3 PASSED validation in 717.3s.
+[2026-10-11 09:42:49] 
+--- Progress: Run 28/33 (84.8%) ---
+[2026-10-11 09:42:49] [*] Starting v2_fixed20k_1000k_3 (Policy: fixed20k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 09:54:51] [+] Slot v2_fixed20k_1000k_3 PASSED validation in 722.1s.
+[2026-10-11 09:54:56] 
+--- Progress: Run 29/33 (87.9%) ---
+[2026-10-11 09:54:56] [*] Starting v2_fixed30k_1000k_3 (Policy: fixed30k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 10:06:57] [+] Slot v2_fixed30k_1000k_3 PASSED validation in 721.0s.
+[2026-10-11 10:07:02] 
+--- Progress: Run 30/33 (90.9%) ---
+[2026-10-11 10:07:02] [*] Starting v2_fixed40k_1000k_3 (Policy: fixed40k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 10:19:09] [+] Slot v2_fixed40k_1000k_3 PASSED validation in 727.2s.
+[2026-10-11 10:19:14] 
+--- Progress: Run 31/33 (93.9%) ---
+[2026-10-11 10:19:14] [*] Starting v2_fixed50k_1000k_3 (Policy: fixed50k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 10:31:13] [+] Slot v2_fixed50k_1000k_3 PASSED validation in 718.9s.
+[2026-10-11 10:31:18] 
+--- Progress: Run 32/33 (97.0%) ---
+[2026-10-11 10:31:18] [*] Starting v2_fixed70k_1000k_3 (Policy: fixed70k, Load: 1000 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 10:43:16] [+] Slot v2_fixed70k_1000k_3 PASSED validation in 717.2s.
+[2026-10-11 10:43:21] 
+--- Progress: Run 33/33 (100.0%) ---
+[2026-10-11 10:43:21] [*] Starting v2_fixed70k_500k_3 (Policy: fixed70k, Load: 500 kbps, Duration: 700s, Attempt: 1/3)
+[2026-10-11 10:55:20] [+] Slot v2_fixed70k_500k_3 PASSED validation in 718.9s.
+[2026-10-11 10:55:25] 
+==================================================
+[2026-10-11 10:55:25]  Sweep Batch Completed in 7.05 hours
+[2026-10-11 10:55:25]  Total Runs: 33 | Valid: 33 | Failed: 0
+[2026-10-11 10:55:25] ==================================================

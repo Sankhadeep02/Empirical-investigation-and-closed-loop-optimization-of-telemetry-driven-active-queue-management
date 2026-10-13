@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Complete Campaign v2 Run Provenance and Validity Audit (Total: 104 executions). Every attempt is logged with zero deleted runs.}
+\label{tab:validity_audit}
+\small
+\begin{tabular}{lcp{6.5cm}}
+\toprule
+\textbf{Validation Status} & \textbf{Count} & \textbf{Description / Root Cause} \\
+\midrule
+VALID & 81 & Passed all duration, INT probe ratio, and DASH sampling criteria. \\
+INVALID\_DASH\_DURATION & 15 & Transient DASH sampling gaps ($>8.5$\,s) due to host CPU contention; retried and passed. \\
+INVALID\_CONTROLLER\_EXIT & 3 & Controller process shutdown timing race in early pilot runs; resolved with graceful synchronization. \\
+INVALID\_CONTROLLER\_INPUT\_PATH & 2 & Diagnostic pilot path misconfiguration in early setup. \\
+INVALID\_RULE\_INT\_FIELD & 1 & Header offset mismatch in legacy INT receiver script; resolved. \\
+Other Startup Races & 2 & Startup sync race condition in early controller pilot. \\
+\midrule
+\textbf{Total Logged Attempts} & \textbf{104} & \textbf{100\% Data Integrity Preserved} \\
+\bottomrule
+\end{tabular}
+\end{table}

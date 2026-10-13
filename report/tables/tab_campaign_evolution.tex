@@ -1,0 +1,16 @@
+\begin{table}[H]
+\centering
+\small
+\caption{System Configuration and Experimental Parameters Across Evaluated Campaigns}
+\label{tab:campaign_evolution}
+\begin{tabularx}{\textwidth}{lccccX}
+\toprule
+\textbf{Campaign} & \textbf{Rate Limit} & \textbf{Buffer} & \textbf{Mirror Session 2} & \textbf{Traffic Type} & \textbf{Experimental Role \& Scope} \\
+\midrule
+\textbf{v1 (Baseline)} & None & 64 pkts & Unconfigured & Video + UDP & Open-loop baseline; uncongested bottleneck; zero AQM drops. \\
+\textbf{v2 (Sweep)} & None & 64 pkts & Unconfigured & Video + UDP & Multi-load fixed sweep; host contention mimicry diagnosed. \\
+\textbf{v3 (Overload)} & 200 pps & 32 pkts & Unconfigured & Video + UDP & Shaped queue; unconfigured mirror caused 100\% tail-drops. \\
+\textbf{v4 (Mechanism)} & 200 pps & 32 pkts & \textbf{Configured (Port 2)} & UDP \& TCP & Closed-loop AQM verified; leak check passed; responsive vs. non-responsive comparison. \\
+\bottomrule
+\end{tabularx}
+\end{table}

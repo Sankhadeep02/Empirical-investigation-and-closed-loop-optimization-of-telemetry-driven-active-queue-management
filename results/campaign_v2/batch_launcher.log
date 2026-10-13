@@ -1,0 +1,1013 @@
+nohup: ignoring input
+==================================================
+Starting v2_fixed20k_eval_1 (fixed20k) at 2026-10-04T06:57:58-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed20k_eval_1
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 159734)
+[+] Video Simulator started (PID 159748)
+[+] iperf3 UDP Client started (PID 159749)
+[+] INT Sender started (PID 159750)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=31s / 700s] INT probes logged: 29 | DASH rows: 31 | iperf active: True
+  [t=64s / 700s] INT probes logged: 62 | DASH rows: 63 | iperf active: True
+  [t=96s / 700s] INT probes logged: 95 | DASH rows: 96 | iperf active: True
+  [t=129s / 700s] INT probes logged: 127 | DASH rows: 129 | iperf active: True
+  [t=160s / 700s] INT probes logged: 158 | DASH rows: 160 | iperf active: True
+  [t=192s / 700s] INT probes logged: 191 | DASH rows: 192 | iperf active: True
+  [t=223s / 700s] INT probes logged: 221 | DASH rows: 223 | iperf active: True
+  [t=257s / 700s] INT probes logged: 256 | DASH rows: 257 | iperf active: True
+  [t=290s / 700s] INT probes logged: 288 | DASH rows: 290 | iperf active: True
+  [t=321s / 700s] INT probes logged: 320 | DASH rows: 322 | iperf active: True
+  [t=352s / 700s] INT probes logged: 351 | DASH rows: 353 | iperf active: True
+  [t=382s / 700s] INT probes logged: 381 | DASH rows: 383 | iperf active: True
+  [t=413s / 700s] INT probes logged: 412 | DASH rows: 414 | iperf active: True
+  [t=443s / 700s] INT probes logged: 442 | DASH rows: 444 | iperf active: True
+  [t=474s / 700s] INT probes logged: 473 | DASH rows: 475 | iperf active: True
+  [t=504s / 700s] INT probes logged: 503 | DASH rows: 505 | iperf active: True
+  [t=535s / 700s] INT probes logged: 533 | DASH rows: 535 | iperf active: True
+  [t=566s / 700s] INT probes logged: 564 | DASH rows: 566 | iperf active: True
+  [t=600s / 700s] INT probes logged: 598 | DASH rows: 600 | iperf active: True
+  [t=630s / 700s] INT probes logged: 629 | DASH rows: 631 | iperf active: True
+  [t=660s / 700s] INT probes logged: 659 | DASH rows: 661 | iperf active: True
+  [t=690s / 700s] INT probes logged: 689 | DASH rows: 691 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed20k_eval_1
+STATUS: VALID
+  - Duration: 700.0s, INT probes: 700, DASH rows: 700, Max DASH gap: 2.90s
+-------------------------
+
+[SUCCESS] Run v2_fixed20k_eval_1 is VALID!
+[+] Registry updated for v2_fixed20k_eval_1 (Status: VALID)
+[+] Experiment v2_fixed20k_eval_1 finished.
+
+Finished v2_fixed20k_eval_1: VALID at 2026-10-04T07:09:58-04:00
+==================================================
+Starting v2_fixed20k_eval_2 (fixed20k) at 2026-10-04T07:10:18-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed20k_eval_2
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 161133)
+[+] Video Simulator started (PID 161148)
+[+] iperf3 UDP Client started (PID 161150)
+[+] INT Sender started (PID 161164)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=31s / 700s] INT probes logged: 31 | DASH rows: 32 | iperf active: True
+  [t=61s / 700s] INT probes logged: 61 | DASH rows: 62 | iperf active: True
+  [t=91s / 700s] INT probes logged: 91 | DASH rows: 92 | iperf active: True
+  [t=122s / 700s] INT probes logged: 108 | DASH rows: 113 | iperf active: True
+  [t=154s / 700s] INT probes logged: 153 | DASH rows: 154 | iperf active: True
+  [t=186s / 700s] INT probes logged: 186 | DASH rows: 187 | iperf active: True
+  [t=218s / 700s] INT probes logged: 218 | DASH rows: 219 | iperf active: True
+  [t=250s / 700s] INT probes logged: 249 | DASH rows: 250 | iperf active: True
+  [t=281s / 700s] INT probes logged: 280 | DASH rows: 280 | iperf active: True
+  [t=315s / 700s] INT probes logged: 314 | DASH rows: 315 | iperf active: True
+  [t=346s / 700s] INT probes logged: 346 | DASH rows: 347 | iperf active: True
+  [t=376s / 700s] INT probes logged: 376 | DASH rows: 377 | iperf active: True
+  [t=406s / 700s] INT probes logged: 406 | DASH rows: 407 | iperf active: True
+  [t=437s / 700s] INT probes logged: 436 | DASH rows: 437 | iperf active: True
+  [t=469s / 700s] INT probes logged: 468 | DASH rows: 469 | iperf active: True
+  [t=500s / 700s] INT probes logged: 500 | DASH rows: 501 | iperf active: True
+  [t=533s / 700s] INT probes logged: 532 | DASH rows: 533 | iperf active: True
+  [t=564s / 700s] INT probes logged: 564 | DASH rows: 565 | iperf active: True
+  [t=594s / 700s] INT probes logged: 593 | DASH rows: 594 | iperf active: True
+  [t=625s / 700s] INT probes logged: 625 | DASH rows: 626 | iperf active: True
+  [t=656s / 700s] INT probes logged: 656 | DASH rows: 657 | iperf active: True
+  [t=686s / 700s] INT probes logged: 686 | DASH rows: 687 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed20k_eval_2
+STATUS: INVALID_DASH_DURATION
+  - DASH maximum inter-sample gap (9.99s) exceeded limit of 8.5s.
+-------------------------
+
+[WARNING] Run v2_fixed20k_eval_2 validation status: INVALID_DASH_DURATION
+[+] Registry updated for v2_fixed20k_eval_2 (Status: INVALID_DASH_DURATION)
+[+] Experiment v2_fixed20k_eval_2 finished.
+
+Finished v2_fixed20k_eval_2: INVALID_DASH_DURATION at 2026-10-04T07:22:12-04:00
+==================================================
+Starting v2_fixed20k_eval_3 (fixed20k) at 2026-10-04T07:22:32-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed20k_eval_3
+ Policy: fixed20k | Target Delay: 20000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 20000 on switches s1, s2, s3...
+[+] All switch registers verified at 20000 us.
+[+] INT Receiver started (PID 162488)
+[+] Video Simulator started (PID 162503)
+[+] iperf3 UDP Client started (PID 162504)
+[+] INT Sender started (PID 162506)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 29 | DASH rows: 30 | iperf active: True
+  [t=60s / 700s] INT probes logged: 59 | DASH rows: 60 | iperf active: True
+  [t=90s / 700s] INT probes logged: 89 | DASH rows: 90 | iperf active: True
+  [t=120s / 700s] INT probes logged: 119 | DASH rows: 120 | iperf active: True
+  [t=152s / 700s] INT probes logged: 150 | DASH rows: 150 | iperf active: True
+  [t=183s / 700s] INT probes logged: 182 | DASH rows: 183 | iperf active: True
+  [t=213s / 700s] INT probes logged: 213 | DASH rows: 214 | iperf active: True
+  [t=244s / 700s] INT probes logged: 243 | DASH rows: 244 | iperf active: True
+  [t=274s / 700s] INT probes logged: 274 | DASH rows: 274 | iperf active: True
+  [t=304s / 700s] INT probes logged: 303 | DASH rows: 304 | iperf active: True
+  [t=336s / 700s] INT probes logged: 334 | DASH rows: 335 | iperf active: True
+  [t=368s / 700s] INT probes logged: 367 | DASH rows: 368 | iperf active: True
+  [t=398s / 700s] INT probes logged: 397 | DASH rows: 398 | iperf active: True
+  [t=431s / 700s] INT probes logged: 429 | DASH rows: 430 | iperf active: True
+  [t=463s / 700s] INT probes logged: 462 | DASH rows: 462 | iperf active: True
+  [t=494s / 700s] INT probes logged: 492 | DASH rows: 493 | iperf active: True
+  [t=525s / 700s] INT probes logged: 523 | DASH rows: 523 | iperf active: True
+  [t=558s / 700s] INT probes logged: 556 | DASH rows: 557 | iperf active: True
+  [t=590s / 700s] INT probes logged: 588 | DASH rows: 589 | iperf active: True
+  [t=624s / 700s] INT probes logged: 622 | DASH rows: 623 | iperf active: True
+  [t=656s / 700s] INT probes logged: 654 | DASH rows: 655 | iperf active: True
+  [t=689s / 700s] INT probes logged: 687 | DASH rows: 688 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed20k_eval_3
+STATUS: VALID
+  - Duration: 700.9s, INT probes: 700, DASH rows: 700, Max DASH gap: 5.84s
+-------------------------
+
+[SUCCESS] Run v2_fixed20k_eval_3 is VALID!
+[+] Registry updated for v2_fixed20k_eval_3 (Status: VALID)
+[+] Experiment v2_fixed20k_eval_3 finished.
+
+Finished v2_fixed20k_eval_3: VALID at 2026-10-04T07:34:31-04:00
+==================================================
+Starting v2_fixed30k_eval_1 (fixed30k) at 2026-10-04T07:34:51-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed30k_eval_1
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 163864)
+[+] Video Simulator started (PID 163878)
+[+] iperf3 UDP Client started (PID 163879)
+[+] INT Sender started (PID 163880)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=32s / 700s] INT probes logged: 32 | DASH rows: 33 | iperf active: True
+  [t=62s / 700s] INT probes logged: 62 | DASH rows: 63 | iperf active: True
+  [t=92s / 700s] INT probes logged: 92 | DASH rows: 93 | iperf active: True
+  [t=122s / 700s] INT probes logged: 122 | DASH rows: 122 | iperf active: True
+  [t=152s / 700s] INT probes logged: 152 | DASH rows: 152 | iperf active: True
+  [t=185s / 700s] INT probes logged: 185 | DASH rows: 185 | iperf active: True
+  [t=218s / 700s] INT probes logged: 217 | DASH rows: 218 | iperf active: True
+  [t=250s / 700s] INT probes logged: 250 | DASH rows: 251 | iperf active: True
+  [t=281s / 700s] INT probes logged: 281 | DASH rows: 281 | iperf active: True
+  [t=312s / 700s] INT probes logged: 311 | DASH rows: 311 | iperf active: True
+  [t=342s / 700s] INT probes logged: 342 | DASH rows: 343 | iperf active: True
+  [t=372s / 700s] INT probes logged: 372 | DASH rows: 372 | iperf active: True
+  [t=405s / 700s] INT probes logged: 403 | DASH rows: 404 | iperf active: True
+  [t=436s / 700s] INT probes logged: 435 | DASH rows: 435 | iperf active: True
+  [t=467s / 700s] INT probes logged: 467 | DASH rows: 467 | iperf active: True
+  [t=499s / 700s] INT probes logged: 499 | DASH rows: 499 | iperf active: True
+  [t=529s / 700s] INT probes logged: 529 | DASH rows: 530 | iperf active: True
+  [t=559s / 700s] INT probes logged: 559 | DASH rows: 560 | iperf active: True
+  [t=593s / 700s] INT probes logged: 594 | DASH rows: 594 | iperf active: True
+  [t=625s / 700s] INT probes logged: 625 | DASH rows: 625 | iperf active: True
+  [t=657s / 700s] INT probes logged: 656 | DASH rows: 656 | iperf active: True
+  [t=688s / 700s] INT probes logged: 688 | DASH rows: 688 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed30k_eval_1
+STATUS: VALID
+  - Duration: 699.6s, INT probes: 700, DASH rows: 700, Max DASH gap: 6.69s
+-------------------------
+
+[SUCCESS] Run v2_fixed30k_eval_1 is VALID!
+[+] Registry updated for v2_fixed30k_eval_1 (Status: VALID)
+[+] Experiment v2_fixed30k_eval_1 finished.
+
+Finished v2_fixed30k_eval_1: VALID at 2026-10-04T07:46:48-04:00
+==================================================
+Starting v2_fixed30k_eval_2 (fixed30k) at 2026-10-04T07:47:09-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed30k_eval_2
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 165288)
+[+] Video Simulator started (PID 165303)
+[+] iperf3 UDP Client started (PID 165304)
+[+] INT Sender started (PID 165307)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=33s / 700s] INT probes logged: 33 | DASH rows: 32 | iperf active: True
+  [t=65s / 700s] INT probes logged: 65 | DASH rows: 65 | iperf active: True
+  [t=97s / 700s] INT probes logged: 98 | DASH rows: 98 | iperf active: True
+  [t=127s / 700s] INT probes logged: 127 | DASH rows: 127 | iperf active: True
+  [t=158s / 700s] INT probes logged: 159 | DASH rows: 159 | iperf active: True
+  [t=188s / 700s] INT probes logged: 189 | DASH rows: 189 | iperf active: True
+  [t=219s / 700s] INT probes logged: 220 | DASH rows: 220 | iperf active: True
+  [t=251s / 700s] INT probes logged: 251 | DASH rows: 251 | iperf active: True
+  [t=283s / 700s] INT probes logged: 283 | DASH rows: 283 | iperf active: True
+  [t=315s / 700s] INT probes logged: 315 | DASH rows: 315 | iperf active: True
+  [t=345s / 700s] INT probes logged: 346 | DASH rows: 346 | iperf active: True
+  [t=375s / 700s] INT probes logged: 376 | DASH rows: 376 | iperf active: True
+  [t=406s / 700s] INT probes logged: 406 | DASH rows: 406 | iperf active: True
+  [t=436s / 700s] INT probes logged: 437 | DASH rows: 437 | iperf active: True
+  [t=466s / 700s] INT probes logged: 467 | DASH rows: 467 | iperf active: True
+  [t=496s / 700s] INT probes logged: 497 | DASH rows: 497 | iperf active: True
+  [t=527s / 700s] INT probes logged: 527 | DASH rows: 527 | iperf active: True
+  [t=558s / 700s] INT probes logged: 558 | DASH rows: 558 | iperf active: True
+  [t=589s / 700s] INT probes logged: 590 | DASH rows: 590 | iperf active: True
+  [t=623s / 700s] INT probes logged: 624 | DASH rows: 623 | iperf active: True
+  [t=655s / 700s] INT probes logged: 656 | DASH rows: 656 | iperf active: True
+  [t=687s / 700s] INT probes logged: 687 | DASH rows: 688 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed30k_eval_2
+STATUS: VALID
+  - Duration: 700.0s, INT probes: 700, DASH rows: 700, Max DASH gap: 2.64s
+-------------------------
+
+[SUCCESS] Run v2_fixed30k_eval_2 is VALID!
+[+] Registry updated for v2_fixed30k_eval_2 (Status: VALID)
+[+] Experiment v2_fixed30k_eval_2 finished.
+
+Finished v2_fixed30k_eval_2: VALID at 2026-10-04T07:59:05-04:00
+==================================================
+Starting v2_fixed30k_eval_3 (fixed30k) at 2026-10-04T07:59:25-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed30k_eval_3
+ Policy: fixed30k | Target Delay: 30000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 30000 on switches s1, s2, s3...
+[+] All switch registers verified at 30000 us.
+[+] INT Receiver started (PID 166613)
+[+] Video Simulator started (PID 166628)
+[+] iperf3 UDP Client started (PID 166629)
+[+] INT Sender started (PID 166630)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 29 | DASH rows: 30 | iperf active: True
+  [t=64s / 700s] INT probes logged: 63 | DASH rows: 64 | iperf active: True
+  [t=97s / 700s] INT probes logged: 94 | DASH rows: 95 | iperf active: True
+  [t=129s / 700s] INT probes logged: 128 | DASH rows: 129 | iperf active: True
+  [t=159s / 700s] INT probes logged: 159 | DASH rows: 160 | iperf active: True
+  [t=190s / 700s] INT probes logged: 189 | DASH rows: 190 | iperf active: True
+  [t=222s / 700s] INT probes logged: 221 | DASH rows: 222 | iperf active: True
+  [t=253s / 700s] INT probes logged: 252 | DASH rows: 253 | iperf active: True
+  [t=285s / 700s] INT probes logged: 284 | DASH rows: 285 | iperf active: True
+  [t=315s / 700s] INT probes logged: 315 | DASH rows: 316 | iperf active: True
+  [t=345s / 700s] INT probes logged: 344 | DASH rows: 345 | iperf active: True
+  [t=375s / 700s] INT probes logged: 375 | DASH rows: 376 | iperf active: True
+  [t=406s / 700s] INT probes logged: 405 | DASH rows: 406 | iperf active: True
+  [t=436s / 700s] INT probes logged: 436 | DASH rows: 437 | iperf active: True
+  [t=466s / 700s] INT probes logged: 466 | DASH rows: 467 | iperf active: True
+  [t=498s / 700s] INT probes logged: 497 | DASH rows: 498 | iperf active: True
+  [t=529s / 700s] INT probes logged: 528 | DASH rows: 529 | iperf active: True
+  [t=560s / 700s] INT probes logged: 560 | DASH rows: 561 | iperf active: True
+  [t=595s / 700s] INT probes logged: 594 | DASH rows: 595 | iperf active: True
+  [t=628s / 700s] INT probes logged: 627 | DASH rows: 627 | iperf active: True
+  [t=659s / 700s] INT probes logged: 658 | DASH rows: 659 | iperf active: True
+  [t=691s / 700s] INT probes logged: 690 | DASH rows: 691 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed30k_eval_3
+STATUS: VALID
+  - Duration: 699.7s, INT probes: 700, DASH rows: 700, Max DASH gap: 3.64s
+-------------------------
+
+[SUCCESS] Run v2_fixed30k_eval_3 is VALID!
+[+] Registry updated for v2_fixed30k_eval_3 (Status: VALID)
+[+] Experiment v2_fixed30k_eval_3 finished.
+
+Finished v2_fixed30k_eval_3: VALID at 2026-10-04T08:11:20-04:00
+==================================================
+Starting v2_fixed40k_eval_1 (fixed40k) at 2026-10-04T08:11:40-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed40k_eval_1
+ Policy: fixed40k | Target Delay: 40000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 40000 on switches s1, s2, s3...
+[+] All switch registers verified at 40000 us.
+[+] INT Receiver started (PID 168014)
+[+] Video Simulator started (PID 168029)
+[+] iperf3 UDP Client started (PID 168030)
+[+] INT Sender started (PID 168031)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 30 | DASH rows: 30 | iperf active: True
+  [t=60s / 700s] INT probes logged: 60 | DASH rows: 60 | iperf active: True
+  [t=90s / 700s] INT probes logged: 90 | DASH rows: 90 | iperf active: True
+  [t=120s / 700s] INT probes logged: 120 | DASH rows: 120 | iperf active: True
+  [t=150s / 700s] INT probes logged: 150 | DASH rows: 150 | iperf active: True
+  [t=180s / 700s] INT probes logged: 180 | DASH rows: 180 | iperf active: True
+  [t=212s / 700s] INT probes logged: 211 | DASH rows: 211 | iperf active: True
+  [t=243s / 700s] INT probes logged: 242 | DASH rows: 242 | iperf active: True
+  [t=273s / 700s] INT probes logged: 274 | DASH rows: 274 | iperf active: True
+  [t=305s / 700s] INT probes logged: 304 | DASH rows: 304 | iperf active: True
+  [t=337s / 700s] INT probes logged: 336 | DASH rows: 336 | iperf active: True
+  [t=369s / 700s] INT probes logged: 369 | DASH rows: 369 | iperf active: True
+  [t=401s / 700s] INT probes logged: 400 | DASH rows: 400 | iperf active: True
+  [t=433s / 700s] INT probes logged: 432 | DASH rows: 432 | iperf active: True
+  [t=467s / 700s] INT probes logged: 466 | DASH rows: 466 | iperf active: True
+  [t=499s / 700s] INT probes logged: 499 | DASH rows: 499 | iperf active: True
+  [t=531s / 700s] INT probes logged: 531 | DASH rows: 531 | iperf active: True
+  [t=561s / 700s] INT probes logged: 561 | DASH rows: 561 | iperf active: True
+  [t=592s / 700s] INT probes logged: 591 | DASH rows: 591 | iperf active: True
+  [t=623s / 700s] INT probes logged: 622 | DASH rows: 622 | iperf active: True
+  [t=655s / 700s] INT probes logged: 653 | DASH rows: 654 | iperf active: True
+  [t=687s / 700s] INT probes logged: 686 | DASH rows: 686 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed40k_eval_1
+STATUS: VALID
+  - Duration: 699.7s, INT probes: 700, DASH rows: 700, Max DASH gap: 3.06s
+-------------------------
+
+[SUCCESS] Run v2_fixed40k_eval_1 is VALID!
+[+] Registry updated for v2_fixed40k_eval_1 (Status: VALID)
+[+] Experiment v2_fixed40k_eval_1 finished.
+
+Finished v2_fixed40k_eval_1: VALID at 2026-10-04T08:23:38-04:00
+==================================================
+Starting v2_fixed40k_eval_2 (fixed40k) at 2026-10-04T08:23:58-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed40k_eval_2
+ Policy: fixed40k | Target Delay: 40000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 40000 on switches s1, s2, s3...
+[+] All switch registers verified at 40000 us.
+[+] INT Receiver started (PID 169399)
+[+] Video Simulator started (PID 169413)
+[+] iperf3 UDP Client started (PID 169414)
+[+] INT Sender started (PID 169415)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=31s / 700s] INT probes logged: 28 | DASH rows: 31 | iperf active: True
+  [t=63s / 700s] INT probes logged: 60 | DASH rows: 63 | iperf active: True
+  [t=95s / 700s] INT probes logged: 91 | DASH rows: 94 | iperf active: True
+  [t=126s / 700s] INT probes logged: 123 | DASH rows: 125 | iperf active: True
+  [t=156s / 700s] INT probes logged: 153 | DASH rows: 155 | iperf active: True
+  [t=188s / 700s] INT probes logged: 184 | DASH rows: 186 | iperf active: True
+  [t=219s / 700s] INT probes logged: 215 | DASH rows: 218 | iperf active: True
+  [t=250s / 700s] INT probes logged: 247 | DASH rows: 249 | iperf active: True
+  [t=282s / 700s] INT probes logged: 278 | DASH rows: 281 | iperf active: True
+  [t=312s / 700s] INT probes logged: 310 | DASH rows: 312 | iperf active: True
+  [t=343s / 700s] INT probes logged: 340 | DASH rows: 343 | iperf active: True
+  [t=373s / 700s] INT probes logged: 370 | DASH rows: 373 | iperf active: True
+  [t=403s / 700s] INT probes logged: 401 | DASH rows: 403 | iperf active: True
+  [t=434s / 700s] INT probes logged: 431 | DASH rows: 433 | iperf active: True
+  [t=466s / 700s] INT probes logged: 463 | DASH rows: 466 | iperf active: True
+  [t=500s / 700s] INT probes logged: 496 | DASH rows: 499 | iperf active: True
+  [t=534s / 700s] INT probes logged: 530 | DASH rows: 533 | iperf active: True
+  [t=565s / 700s] INT probes logged: 562 | DASH rows: 564 | iperf active: True
+  [t=596s / 700s] INT probes logged: 593 | DASH rows: 595 | iperf active: True
+  [t=629s / 700s] INT probes logged: 626 | DASH rows: 628 | iperf active: True
+  [t=659s / 700s] INT probes logged: 656 | DASH rows: 659 | iperf active: True
+  [t=690s / 700s] INT probes logged: 687 | DASH rows: 690 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed40k_eval_2
+STATUS: INVALID_DASH_DURATION
+  - DASH maximum inter-sample gap (10.90s) exceeded limit of 8.5s.
+-------------------------
+
+[WARNING] Run v2_fixed40k_eval_2 validation status: INVALID_DASH_DURATION
+[+] Registry updated for v2_fixed40k_eval_2 (Status: INVALID_DASH_DURATION)
+[+] Experiment v2_fixed40k_eval_2 finished.
+
+Finished v2_fixed40k_eval_2: INVALID_DASH_DURATION at 2026-10-04T08:35:59-04:00
+==================================================
+Starting v2_fixed40k_eval_3 (fixed40k) at 2026-10-04T08:36:19-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed40k_eval_3
+ Policy: fixed40k | Target Delay: 40000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 40000 on switches s1, s2, s3...
+[+] All switch registers verified at 40000 us.
+[+] INT Receiver started (PID 170858)
+[+] Video Simulator started (PID 170872)
+[+] iperf3 UDP Client started (PID 170873)
+[+] INT Sender started (PID 170877)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=31s / 700s] INT probes logged: 29 | DASH rows: 30 | iperf active: True
+  [t=62s / 700s] INT probes logged: 61 | DASH rows: 62 | iperf active: True
+  [t=92s / 700s] INT probes logged: 91 | DASH rows: 92 | iperf active: True
+  [t=122s / 700s] INT probes logged: 121 | DASH rows: 122 | iperf active: True
+  [t=153s / 700s] INT probes logged: 151 | DASH rows: 151 | iperf active: True
+  [t=184s / 700s] INT probes logged: 184 | DASH rows: 185 | iperf active: True
+  [t=215s / 700s] INT probes logged: 214 | DASH rows: 215 | iperf active: True
+  [t=247s / 700s] INT probes logged: 246 | DASH rows: 247 | iperf active: True
+  [t=279s / 700s] INT probes logged: 278 | DASH rows: 279 | iperf active: True
+  [t=309s / 700s] INT probes logged: 308 | DASH rows: 309 | iperf active: True
+  [t=339s / 700s] INT probes logged: 339 | DASH rows: 340 | iperf active: True
+  [t=370s / 700s] INT probes logged: 369 | DASH rows: 370 | iperf active: True
+  [t=400s / 700s] INT probes logged: 399 | DASH rows: 400 | iperf active: True
+  [t=430s / 700s] INT probes logged: 429 | DASH rows: 430 | iperf active: True
+  [t=460s / 700s] INT probes logged: 459 | DASH rows: 460 | iperf active: True
+  [t=490s / 700s] INT probes logged: 489 | DASH rows: 490 | iperf active: True
+  [t=521s / 700s] INT probes logged: 520 | DASH rows: 520 | iperf active: True
+  [t=551s / 700s] INT probes logged: 550 | DASH rows: 551 | iperf active: True
+  [t=583s / 700s] INT probes logged: 582 | DASH rows: 583 | iperf active: True
+  [t=615s / 700s] INT probes logged: 614 | DASH rows: 615 | iperf active: True
+  [t=645s / 700s] INT probes logged: 645 | DASH rows: 646 | iperf active: True
+  [t=676s / 700s] INT probes logged: 675 | DASH rows: 676 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed40k_eval_3
+STATUS: VALID
+  - Duration: 699.0s, INT probes: 700, DASH rows: 700, Max DASH gap: 4.56s
+-------------------------
+
+[SUCCESS] Run v2_fixed40k_eval_3 is VALID!
+[+] Registry updated for v2_fixed40k_eval_3 (Status: VALID)
+[+] Experiment v2_fixed40k_eval_3 finished.
+
+Finished v2_fixed40k_eval_3: VALID at 2026-10-04T08:48:20-04:00
+==================================================
+Starting v2_fixed50k_eval_1 (fixed50k) at 2026-10-04T08:48:40-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed50k_eval_1
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 172171)
+[+] Video Simulator started (PID 172185)
+[+] iperf3 UDP Client started (PID 172186)
+[+] INT Sender started (PID 172188)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 26 | DASH rows: 28 | iperf active: True
+  [t=61s / 700s] INT probes logged: 57 | DASH rows: 59 | iperf active: True
+  [t=91s / 700s] INT probes logged: 88 | DASH rows: 90 | iperf active: True
+  [t=121s / 700s] INT probes logged: 118 | DASH rows: 120 | iperf active: True
+  [t=152s / 700s] INT probes logged: 148 | DASH rows: 150 | iperf active: True
+  [t=182s / 700s] INT probes logged: 179 | DASH rows: 181 | iperf active: True
+  [t=212s / 700s] INT probes logged: 209 | DASH rows: 211 | iperf active: True
+  [t=242s / 700s] INT probes logged: 239 | DASH rows: 241 | iperf active: True
+  [t=274s / 700s] INT probes logged: 271 | DASH rows: 273 | iperf active: True
+  [t=305s / 700s] INT probes logged: 302 | DASH rows: 304 | iperf active: True
+  [t=335s / 700s] INT probes logged: 331 | DASH rows: 333 | iperf active: True
+  [t=365s / 700s] INT probes logged: 362 | DASH rows: 364 | iperf active: True
+  [t=396s / 700s] INT probes logged: 392 | DASH rows: 394 | iperf active: True
+  [t=426s / 700s] INT probes logged: 423 | DASH rows: 425 | iperf active: True
+  [t=456s / 700s] INT probes logged: 453 | DASH rows: 455 | iperf active: True
+  [t=486s / 700s] INT probes logged: 483 | DASH rows: 485 | iperf active: True
+  [t=516s / 700s] INT probes logged: 513 | DASH rows: 515 | iperf active: True
+  [t=546s / 700s] INT probes logged: 543 | DASH rows: 545 | iperf active: True
+  [t=577s / 700s] INT probes logged: 574 | DASH rows: 576 | iperf active: True
+  [t=607s / 700s] INT probes logged: 604 | DASH rows: 606 | iperf active: True
+  [t=637s / 700s] INT probes logged: 634 | DASH rows: 636 | iperf active: True
+  [t=668s / 700s] INT probes logged: 665 | DASH rows: 667 | iperf active: True
+  [t=699s / 700s] INT probes logged: 695 | DASH rows: 697 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed50k_eval_1
+STATUS: VALID
+  - Duration: 699.1s, INT probes: 700, DASH rows: 700, Max DASH gap: 3.42s
+-------------------------
+
+[SUCCESS] Run v2_fixed50k_eval_1 is VALID!
+[+] Registry updated for v2_fixed50k_eval_1 (Status: VALID)
+[+] Experiment v2_fixed50k_eval_1 finished.
+
+Finished v2_fixed50k_eval_1: VALID at 2026-10-04T09:00:45-04:00
+==================================================
+Starting v2_fixed50k_eval_2 (fixed50k) at 2026-10-04T09:01:05-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed50k_eval_2
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 173456)
+[+] Video Simulator started (PID 173470)
+[+] iperf3 UDP Client started (PID 173471)
+[+] INT Sender started (PID 173472)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 26 | DASH rows: 30 | iperf active: True
+  [t=60s / 700s] INT probes logged: 56 | DASH rows: 60 | iperf active: True
+  [t=91s / 700s] INT probes logged: 87 | DASH rows: 90 | iperf active: True
+  [t=121s / 700s] INT probes logged: 117 | DASH rows: 121 | iperf active: True
+  [t=151s / 700s] INT probes logged: 147 | DASH rows: 151 | iperf active: True
+  [t=181s / 700s] INT probes logged: 177 | DASH rows: 181 | iperf active: True
+  [t=211s / 700s] INT probes logged: 207 | DASH rows: 211 | iperf active: True
+  [t=242s / 700s] INT probes logged: 238 | DASH rows: 242 | iperf active: True
+  [t=272s / 700s] INT probes logged: 268 | DASH rows: 272 | iperf active: True
+  [t=302s / 700s] INT probes logged: 298 | DASH rows: 302 | iperf active: True
+  [t=332s / 700s] INT probes logged: 328 | DASH rows: 332 | iperf active: True
+  [t=362s / 700s] INT probes logged: 357 | DASH rows: 361 | iperf active: True
+  [t=392s / 700s] INT probes logged: 388 | DASH rows: 392 | iperf active: True
+  [t=422s / 700s] INT probes logged: 418 | DASH rows: 423 | iperf active: True
+  [t=454s / 700s] INT probes logged: 450 | DASH rows: 454 | iperf active: True
+  [t=485s / 700s] INT probes logged: 481 | DASH rows: 485 | iperf active: True
+  [t=515s / 700s] INT probes logged: 510 | DASH rows: 514 | iperf active: True
+  [t=546s / 700s] INT probes logged: 542 | DASH rows: 546 | iperf active: True
+  [t=576s / 700s] INT probes logged: 572 | DASH rows: 576 | iperf active: True
+  [t=607s / 700s] INT probes logged: 603 | DASH rows: 606 | iperf active: True
+  [t=637s / 700s] INT probes logged: 633 | DASH rows: 637 | iperf active: True
+  [t=667s / 700s] INT probes logged: 663 | DASH rows: 667 | iperf active: True
+  [t=697s / 700s] INT probes logged: 693 | DASH rows: 697 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed50k_eval_2
+STATUS: VALID
+  - Duration: 698.9s, INT probes: 700, DASH rows: 700, Max DASH gap: 2.97s
+-------------------------
+
+[SUCCESS] Run v2_fixed50k_eval_2 is VALID!
+[+] Registry updated for v2_fixed50k_eval_2 (Status: VALID)
+[+] Experiment v2_fixed50k_eval_2 finished.
+
+Finished v2_fixed50k_eval_2: VALID at 2026-10-04T09:13:09-04:00
+==================================================
+Starting v2_fixed50k_eval_3 (fixed50k) at 2026-10-04T09:13:29-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_fixed50k_eval_3
+ Policy: fixed50k | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 174601)
+[+] Video Simulator started (PID 174615)
+[+] iperf3 UDP Client started (PID 174616)
+[+] INT Sender started (PID 174617)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 29 | DASH rows: 29 | iperf active: True
+  [t=61s / 700s] INT probes logged: 60 | DASH rows: 60 | iperf active: True
+  [t=93s / 700s] INT probes logged: 91 | DASH rows: 92 | iperf active: True
+  [t=123s / 700s] INT probes logged: 123 | DASH rows: 122 | iperf active: True
+  [t=154s / 700s] INT probes logged: 153 | DASH rows: 153 | iperf active: True
+  [t=184s / 700s] INT probes logged: 183 | DASH rows: 183 | iperf active: True
+  [t=214s / 700s] INT probes logged: 213 | DASH rows: 213 | iperf active: True
+  [t=244s / 700s] INT probes logged: 243 | DASH rows: 243 | iperf active: True
+  [t=275s / 700s] INT probes logged: 274 | DASH rows: 274 | iperf active: True
+  [t=306s / 700s] INT probes logged: 305 | DASH rows: 305 | iperf active: True
+  [t=336s / 700s] INT probes logged: 335 | DASH rows: 335 | iperf active: True
+  [t=366s / 700s] INT probes logged: 366 | DASH rows: 365 | iperf active: True
+  [t=396s / 700s] INT probes logged: 396 | DASH rows: 396 | iperf active: True
+  [t=426s / 700s] INT probes logged: 426 | DASH rows: 426 | iperf active: True
+  [t=457s / 700s] INT probes logged: 456 | DASH rows: 457 | iperf active: True
+  [t=487s / 700s] INT probes logged: 487 | DASH rows: 487 | iperf active: True
+  [t=517s / 700s] INT probes logged: 517 | DASH rows: 517 | iperf active: True
+  [t=552s / 700s] INT probes logged: 551 | DASH rows: 551 | iperf active: True
+  [t=583s / 700s] INT probes logged: 582 | DASH rows: 582 | iperf active: True
+  [t=613s / 700s] INT probes logged: 612 | DASH rows: 612 | iperf active: True
+  [t=644s / 700s] INT probes logged: 643 | DASH rows: 643 | iperf active: True
+  [t=674s / 700s] INT probes logged: 673 | DASH rows: 673 | iperf active: True
+  [t=704s / 700s] INT probes logged: 700 | DASH rows: 700 | iperf active: False
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_fixed50k_eval_3
+STATUS: INVALID_DASH_DURATION
+  - DASH maximum inter-sample gap (14.05s) exceeded limit of 8.5s.
+-------------------------
+
+[WARNING] Run v2_fixed50k_eval_3 validation status: INVALID_DASH_DURATION
+[+] Registry updated for v2_fixed50k_eval_3 (Status: INVALID_DASH_DURATION)
+[+] Experiment v2_fixed50k_eval_3 finished.
+
+Finished v2_fixed50k_eval_3: INVALID_DASH_DURATION at 2026-10-04T09:25:30-04:00
+==================================================
+Starting v2_infer_eval_1 (infer) at 2026-10-04T09:25:50-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_infer_eval_1
+ Policy: infer | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 175861)
+[+] RL Inference Controller started (PID 175875)
+[+] Video Simulator started (PID 175881)
+[+] iperf3 UDP Client started (PID 175883)
+[+] INT Sender started (PID 175884)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 26 | DASH rows: 29 | iperf active: True
+  [t=60s / 700s] INT probes logged: 58 | DASH rows: 60 | iperf active: True
+  [t=91s / 700s] INT probes logged: 88 | DASH rows: 91 | iperf active: True
+  [t=123s / 700s] INT probes logged: 120 | DASH rows: 123 | iperf active: True
+  [t=157s / 700s] INT probes logged: 154 | DASH rows: 157 | iperf active: True
+  [t=190s / 700s] INT probes logged: 187 | DASH rows: 190 | iperf active: True
+  [t=223s / 700s] INT probes logged: 220 | DASH rows: 223 | iperf active: True
+  [t=255s / 700s] INT probes logged: 252 | DASH rows: 254 | iperf active: True
+  [t=287s / 700s] INT probes logged: 285 | DASH rows: 288 | iperf active: True
+  [t=318s / 700s] INT probes logged: 315 | DASH rows: 318 | iperf active: True
+  [t=349s / 700s] INT probes logged: 346 | DASH rows: 348 | iperf active: True
+  [t=381s / 700s] INT probes logged: 378 | DASH rows: 381 | iperf active: True
+  [t=413s / 700s] INT probes logged: 410 | DASH rows: 412 | iperf active: True
+  [t=447s / 700s] INT probes logged: 444 | DASH rows: 447 | iperf active: True
+  [t=479s / 700s] INT probes logged: 476 | DASH rows: 479 | iperf active: True
+  [t=510s / 700s] INT probes logged: 507 | DASH rows: 510 | iperf active: True
+  [t=540s / 700s] INT probes logged: 537 | DASH rows: 540 | iperf active: True
+  [t=573s / 700s] INT probes logged: 570 | DASH rows: 573 | iperf active: True
+  [t=604s / 700s] INT probes logged: 601 | DASH rows: 604 | iperf active: True
+  [t=636s / 700s] INT probes logged: 633 | DASH rows: 636 | iperf active: True
+  [t=667s / 700s] INT probes logged: 664 | DASH rows: 667 | iperf active: True
+  [t=697s / 700s] INT probes logged: 694 | DASH rows: 697 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[WARNING] Controller did not exit in time; cleanup will terminate it.
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_infer_eval_1
+STATUS: INVALID_CONTROLLER_EXIT
+  - Controller log does not end with 'logs saved'.
+-------------------------
+
+[WARNING] Run v2_infer_eval_1 validation status: INVALID_CONTROLLER_EXIT
+[+] Registry updated for v2_infer_eval_1 (Status: INVALID_CONTROLLER_EXIT)
+[+] Experiment v2_infer_eval_1 finished.
+
+Finished v2_infer_eval_1: INVALID_CONTROLLER_EXIT at 2026-10-04T09:38:39-04:00
+==================================================
+Starting v2_infer_eval_2 (infer) at 2026-10-04T09:38:59-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_infer_eval_2
+ Policy: infer | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 179152)
+[+] RL Inference Controller started (PID 179168)
+[+] Video Simulator started (PID 179176)
+[+] iperf3 UDP Client started (PID 179177)
+[+] INT Sender started (PID 179178)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 29 | DASH rows: 30 | iperf active: True
+  [t=60s / 700s] INT probes logged: 59 | DASH rows: 60 | iperf active: True
+  [t=92s / 700s] INT probes logged: 90 | DASH rows: 92 | iperf active: True
+  [t=123s / 700s] INT probes logged: 121 | DASH rows: 122 | iperf active: True
+  [t=155s / 700s] INT probes logged: 153 | DASH rows: 155 | iperf active: True
+  [t=187s / 700s] INT probes logged: 185 | DASH rows: 186 | iperf active: True
+  [t=220s / 700s] INT probes logged: 219 | DASH rows: 220 | iperf active: True
+  [t=251s / 700s] INT probes logged: 249 | DASH rows: 250 | iperf active: True
+  [t=282s / 700s] INT probes logged: 281 | DASH rows: 282 | iperf active: True
+  [t=313s / 700s] INT probes logged: 311 | DASH rows: 313 | iperf active: True
+  [t=344s / 700s] INT probes logged: 342 | DASH rows: 344 | iperf active: True
+  [t=375s / 700s] INT probes logged: 374 | DASH rows: 375 | iperf active: True
+  [t=405s / 700s] INT probes logged: 404 | DASH rows: 405 | iperf active: True
+  [t=435s / 700s] INT probes logged: 434 | DASH rows: 436 | iperf active: True
+  [t=466s / 700s] INT probes logged: 465 | DASH rows: 466 | iperf active: True
+  [t=496s / 700s] INT probes logged: 495 | DASH rows: 496 | iperf active: True
+  [t=527s / 700s] INT probes logged: 526 | DASH rows: 527 | iperf active: True
+  [t=558s / 700s] INT probes logged: 557 | DASH rows: 558 | iperf active: True
+  [t=589s / 700s] INT probes logged: 587 | DASH rows: 588 | iperf active: True
+  [t=621s / 700s] INT probes logged: 619 | DASH rows: 621 | iperf active: True
+  [t=652s / 700s] INT probes logged: 650 | DASH rows: 651 | iperf active: True
+  [t=685s / 700s] INT probes logged: 684 | DASH rows: 685 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[WARNING] Controller did not exit in time; cleanup will terminate it.
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_infer_eval_2
+STATUS: VALID
+  - Duration: 699.7s, INT probes: 700, DASH rows: 700, Max DASH gap: 3.87s
+-------------------------
+
+[SUCCESS] Run v2_infer_eval_2 is VALID!
+[+] Registry updated for v2_infer_eval_2 (Status: VALID)
+[+] Experiment v2_infer_eval_2 finished.
+
+Finished v2_infer_eval_2: VALID at 2026-10-04T09:51:46-04:00
+==================================================
+Starting v2_infer_eval_3 (infer) at 2026-10-04T09:52:06-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_infer_eval_3
+ Policy: infer | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 182347)
+[+] RL Inference Controller started (PID 182362)
+[+] Video Simulator started (PID 182372)
+[+] iperf3 UDP Client started (PID 182373)
+[+] INT Sender started (PID 182374)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 27 | DASH rows: 29 | iperf active: True
+  [t=61s / 700s] INT probes logged: 60 | DASH rows: 62 | iperf active: True
+  [t=91s / 700s] INT probes logged: 90 | DASH rows: 91 | iperf active: True
+  [t=122s / 700s] INT probes logged: 120 | DASH rows: 122 | iperf active: True
+  [t=153s / 700s] INT probes logged: 152 | DASH rows: 154 | iperf active: True
+  [t=185s / 700s] INT probes logged: 179 | DASH rows: 181 | iperf active: True
+  [t=215s / 700s] INT probes logged: 214 | DASH rows: 216 | iperf active: True
+  [t=245s / 700s] INT probes logged: 244 | DASH rows: 246 | iperf active: True
+  [t=276s / 700s] INT probes logged: 274 | DASH rows: 276 | iperf active: True
+  [t=306s / 700s] INT probes logged: 305 | DASH rows: 305 | iperf active: True
+  [t=337s / 700s] INT probes logged: 336 | DASH rows: 336 | iperf active: True
+  [t=367s / 700s] INT probes logged: 366 | DASH rows: 367 | iperf active: True
+  [t=397s / 700s] INT probes logged: 396 | DASH rows: 397 | iperf active: True
+  [t=428s / 700s] INT probes logged: 426 | DASH rows: 427 | iperf active: True
+  [t=458s / 700s] INT probes logged: 457 | DASH rows: 459 | iperf active: True
+  [t=488s / 700s] INT probes logged: 487 | DASH rows: 489 | iperf active: True
+  [t=519s / 700s] INT probes logged: 517 | DASH rows: 519 | iperf active: True
+  [t=549s / 700s] INT probes logged: 547 | DASH rows: 549 | iperf active: True
+  [t=579s / 700s] INT probes logged: 578 | DASH rows: 580 | iperf active: True
+  [t=609s / 700s] INT probes logged: 608 | DASH rows: 610 | iperf active: True
+  [t=639s / 700s] INT probes logged: 638 | DASH rows: 640 | iperf active: True
+  [t=669s / 700s] INT probes logged: 668 | DASH rows: 670 | iperf active: True
+  [t=700s / 700s] INT probes logged: 699 | DASH rows: 700 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[WARNING] Controller did not exit in time; cleanup will terminate it.
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_infer_eval_3
+STATUS: INVALID_CONTROLLER_EXIT
+  - Controller log does not end with 'logs saved'.
+-------------------------
+
+[WARNING] Run v2_infer_eval_3 validation status: INVALID_CONTROLLER_EXIT
+[+] Registry updated for v2_infer_eval_3 (Status: INVALID_CONTROLLER_EXIT)
+[+] Experiment v2_infer_eval_3 finished.
+
+Finished v2_infer_eval_3: INVALID_CONTROLLER_EXIT at 2026-10-04T10:04:54-04:00
+==================================================
+Starting v2_rule_eval_1 (rule) at 2026-10-04T10:05:14-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_rule_eval_1
+ Policy: rule | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 185075)
+[+] Rule-Based Controller started (PID 185090)
+[+] Video Simulator started (PID 185101)
+[+] iperf3 UDP Client started (PID 185102)
+[+] INT Sender started (PID 185104)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 24 | DASH rows: 28 | iperf active: True
+  [t=60s / 700s] INT probes logged: 54 | DASH rows: 58 | iperf active: True
+  [t=91s / 700s] INT probes logged: 85 | DASH rows: 88 | iperf active: True
+  [t=121s / 700s] INT probes logged: 116 | DASH rows: 119 | iperf active: True
+  [t=152s / 700s] INT probes logged: 146 | DASH rows: 149 | iperf active: True
+  [t=182s / 700s] INT probes logged: 176 | DASH rows: 180 | iperf active: True
+  [t=212s / 700s] INT probes logged: 206 | DASH rows: 210 | iperf active: True
+  [t=242s / 700s] INT probes logged: 236 | DASH rows: 240 | iperf active: True
+  [t=272s / 700s] INT probes logged: 267 | DASH rows: 270 | iperf active: True
+  [t=302s / 700s] INT probes logged: 297 | DASH rows: 300 | iperf active: True
+  [t=332s / 700s] INT probes logged: 327 | DASH rows: 330 | iperf active: True
+  [t=363s / 700s] INT probes logged: 357 | DASH rows: 361 | iperf active: True
+  [t=395s / 700s] INT probes logged: 388 | DASH rows: 391 | iperf active: True
+  [t=427s / 700s] INT probes logged: 420 | DASH rows: 423 | iperf active: True
+  [t=460s / 700s] INT probes logged: 453 | DASH rows: 457 | iperf active: True
+  [t=492s / 700s] INT probes logged: 486 | DASH rows: 490 | iperf active: True
+  [t=522s / 700s] INT probes logged: 516 | DASH rows: 520 | iperf active: True
+  [t=554s / 700s] INT probes logged: 547 | DASH rows: 551 | iperf active: True
+  [t=586s / 700s] INT probes logged: 580 | DASH rows: 583 | iperf active: True
+  [t=619s / 700s] INT probes logged: 612 | DASH rows: 616 | iperf active: True
+  [t=653s / 700s] INT probes logged: 637 | DASH rows: 634 | iperf active: True
+  [t=685s / 700s] INT probes logged: 678 | DASH rows: 682 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_rule_eval_1
+STATUS: INVALID_DASH_DURATION
+  - DASH maximum inter-sample gap (33.05s) exceeded limit of 8.5s.
+-------------------------
+
+[WARNING] Run v2_rule_eval_1 validation status: INVALID_DASH_DURATION
+[+] Registry updated for v2_rule_eval_1 (Status: INVALID_DASH_DURATION)
+[+] Experiment v2_rule_eval_1 finished.
+
+Finished v2_rule_eval_1: INVALID_DASH_DURATION at 2026-10-04T10:17:43-04:00
+==================================================
+Starting v2_rule_eval_2 (rule) at 2026-10-04T10:18:03-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_rule_eval_2
+ Policy: rule | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 186475)
+[+] Rule-Based Controller started (PID 186490)
+[+] Video Simulator started (PID 186509)
+[+] iperf3 UDP Client started (PID 186510)
+[+] INT Sender started (PID 186512)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 30 | DASH rows: 31 | iperf active: True
+  [t=60s / 700s] INT probes logged: 60 | DASH rows: 61 | iperf active: True
+  [t=90s / 700s] INT probes logged: 90 | DASH rows: 91 | iperf active: True
+  [t=120s / 700s] INT probes logged: 121 | DASH rows: 121 | iperf active: True
+  [t=150s / 700s] INT probes logged: 151 | DASH rows: 151 | iperf active: True
+  [t=182s / 700s] INT probes logged: 181 | DASH rows: 182 | iperf active: True
+  [t=217s / 700s] INT probes logged: 216 | DASH rows: 216 | iperf active: True
+  [t=248s / 700s] INT probes logged: 248 | DASH rows: 249 | iperf active: True
+  [t=280s / 700s] INT probes logged: 279 | DASH rows: 280 | iperf active: True
+  [t=310s / 700s] INT probes logged: 310 | DASH rows: 311 | iperf active: True
+  [t=342s / 700s] INT probes logged: 341 | DASH rows: 342 | iperf active: True
+  [t=374s / 700s] INT probes logged: 373 | DASH rows: 374 | iperf active: True
+  [t=407s / 700s] INT probes logged: 406 | DASH rows: 407 | iperf active: True
+  [t=438s / 700s] INT probes logged: 439 | DASH rows: 439 | iperf active: True
+  [t=469s / 700s] INT probes logged: 468 | DASH rows: 469 | iperf active: True
+  [t=501s / 700s] INT probes logged: 501 | DASH rows: 501 | iperf active: True
+  [t=532s / 700s] INT probes logged: 532 | DASH rows: 533 | iperf active: True
+  [t=562s / 700s] INT probes logged: 562 | DASH rows: 563 | iperf active: True
+  [t=592s / 700s] INT probes logged: 592 | DASH rows: 593 | iperf active: True
+  [t=622s / 700s] INT probes logged: 623 | DASH rows: 623 | iperf active: True
+  [t=653s / 700s] INT probes logged: 653 | DASH rows: 653 | iperf active: True
+  [t=686s / 700s] INT probes logged: 685 | DASH rows: 686 | iperf active: True
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_rule_eval_2
+STATUS: VALID
+  - Duration: 699.6s, INT probes: 700, DASH rows: 700, Max DASH gap: 3.64s
+-------------------------
+
+[SUCCESS] Run v2_rule_eval_2 is VALID!
+[+] Registry updated for v2_rule_eval_2 (Status: VALID)
+[+] Experiment v2_rule_eval_2 finished.
+
+Finished v2_rule_eval_2: VALID at 2026-10-04T10:30:17-04:00
+==================================================
+Starting v2_rule_eval_3 (rule) at 2026-10-04T10:30:37-04:00
+==================================================
+
+==================================================
+ Starting Experiment: v2_rule_eval_3
+ Policy: rule | Target Delay: 50000 us | Duration: 700s | Load: 500 kbps
+==================================================
+
+[+] iperf3 server active in h4 namespace.
+[*] Setting switch targetDelay_reg to 50000 on switches s1, s2, s3...
+[+] All switch registers verified at 50000 us.
+[+] INT Receiver started (PID 187874)
+[+] Rule-Based Controller started (PID 187889)
+[+] Video Simulator started (PID 187908)
+[+] iperf3 UDP Client started (PID 187909)
+[+] INT Sender started (PID 187910)
+
+[*] Experiment running for 700 seconds... Monitoring progress:
+  [t=30s / 700s] INT probes logged: 30 | DASH rows: 31 | iperf active: True
+  [t=60s / 700s] INT probes logged: 60 | DASH rows: 61 | iperf active: True
+  [t=90s / 700s] INT probes logged: 90 | DASH rows: 91 | iperf active: True
+  [t=120s / 700s] INT probes logged: 121 | DASH rows: 121 | iperf active: True
+  [t=151s / 700s] INT probes logged: 151 | DASH rows: 151 | iperf active: True
+  [t=181s / 700s] INT probes logged: 181 | DASH rows: 181 | iperf active: True
+  [t=211s / 700s] INT probes logged: 211 | DASH rows: 211 | iperf active: True
+  [t=243s / 700s] INT probes logged: 243 | DASH rows: 242 | iperf active: True
+  [t=273s / 700s] INT probes logged: 274 | DASH rows: 274 | iperf active: True
+  [t=303s / 700s] INT probes logged: 304 | DASH rows: 304 | iperf active: True
+  [t=333s / 700s] INT probes logged: 334 | DASH rows: 334 | iperf active: True
+  [t=363s / 700s] INT probes logged: 364 | DASH rows: 364 | iperf active: True
+  [t=393s / 700s] INT probes logged: 394 | DASH rows: 394 | iperf active: True
+  [t=423s / 700s] INT probes logged: 424 | DASH rows: 424 | iperf active: True
+  [t=454s / 700s] INT probes logged: 454 | DASH rows: 454 | iperf active: True
+  [t=484s / 700s] INT probes logged: 484 | DASH rows: 484 | iperf active: True
+  [t=515s / 700s] INT probes logged: 516 | DASH rows: 516 | iperf active: True
+  [t=545s / 700s] INT probes logged: 546 | DASH rows: 546 | iperf active: True
+  [t=575s / 700s] INT probes logged: 576 | DASH rows: 576 | iperf active: True
+  [t=605s / 700s] INT probes logged: 606 | DASH rows: 606 | iperf active: True
+  [t=636s / 700s] INT probes logged: 636 | DASH rows: 636 | iperf active: True
+  [t=671s / 700s] INT probes logged: 671 | DASH rows: 670 | iperf active: True
+  [t=701s / 700s] INT probes logged: 700 | DASH rows: 700 | iperf active: False
+
+[*] Nominal duration reached. Allowing sources to finish and logs to flush...
+[*] Waiting for controller to save logs...
+[+] Processes cleanly terminated.
+
+--- Validation Output ---
+RUN_ID: v2_rule_eval_3
+STATUS: VALID
+  - Duration: 699.0s, INT probes: 700, DASH rows: 700, Max DASH gap: 5.00s
+-------------------------
+
+[SUCCESS] Run v2_rule_eval_3 is VALID!
+[+] Registry updated for v2_rule_eval_3 (Status: VALID)
+[+] Experiment v2_rule_eval_3 finished.
+
+Finished v2_rule_eval_3: VALID at 2026-10-04T10:42:50-04:00
+==================================================
+[+] Campaign-v2 batch complete at 2026-10-04T10:43:10-04:00

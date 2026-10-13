@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\small
+\caption{Congestion Loss Breakdown for Excluded High-Load Run (\texttt{mech\_1485k\_rep1})}
+\label{tab:highload_taildrop}
+\begin{tabularx}{\textwidth}{lrcX}
+\toprule
+\textbf{Measurement Metric} & \textbf{Count (pkts)} & \textbf{Percentage} & \textbf{Physical Interpretation \& Diagnosis} \\
+\midrule
+\textbf{Total Sent by Sender} & 37,884 & 100.0\% & Continuous 1.48\,Mbps unpaced UDP stream ($t=300$\,s). \\
+\textbf{Total Received at Host $h_4$} & 30,194 & 79.7\% & Packets traversing all three switches without loss. \\
+\textbf{Total Packets Lost in Transit} & 7,690 & 20.3\% & Cumulative dropped packets observed by receiver socket. \\
+\midrule
+\textbf{Switch 2 AQM Drops} & 1,019 & 13.3\% & Packets intentionally dropped by P4 AQM threshold trigger. \\
+\textbf{Switch Buffer Tail-Drops} & \textbf{6,671} & \textbf{86.7\%} & Packets dropped due to buffer overflow before egress AQM. \\
+\bottomrule
+\end{tabularx}
+\end{table}

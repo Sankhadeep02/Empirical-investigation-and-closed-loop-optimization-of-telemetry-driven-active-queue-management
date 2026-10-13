@@ -1,0 +1,5 @@
+run_id,observations,target_delay_us,load,description,hop1_qdepth_median,hop2_qdepth_median,hop3_qdepth_median,hop3_qdepth_p95,total_deq_median,total_deq_p95,buffer_median_s,buffer_mean_s,fps_median,fps_mean,bitrate_median_kbps,bitrate_mean_kbps,top_tier_percent,stalled_percent
+9,1800,80000,none,"Baseline; register remained zero, so P4 used 80 ms fallback",0.0,0.0,0.0,0,637.0,2314,64.0,63.54,30.0,30,1040.0,1040,100.0,0.0
+10,229,20000,10 Mbps UDP h1-to-h2,Congested; strict 20 ms AQM target,0,0,8,63,36025,311723,0.0,11.19,0,7.34,0,254.32,24.45,75.55
+11,300,50000,none,No-load reference; explicit 50 ms AQM target,0.0,0.0,0.0,0,919.5,3919,63.035,53.69,30.0,30,1040.0,1040,100.0,0.0
+12,227,50000,10 Mbps UDP h1-to-h2,Congested; moderate 50 ms AQM target,0,0,14,63,46670,370142,0.0,7.75,0,5.6,0,190.62,18.06,81.06

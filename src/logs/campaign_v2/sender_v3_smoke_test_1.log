@@ -1,0 +1,10 @@
+[1/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776712.882 finished=1791776712.922 sendp_ms=40.3 lateness_ms=41.0
+[2/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776713.882 finished=1791776713.885 sendp_ms=3.0 lateness_ms=4.3
+[3/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776714.884 finished=1791776714.893 sendp_ms=9.1 lateness_ms=11.7
+[4/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776715.885 finished=1791776715.890 sendp_ms=5.0 lateness_ms=8.4
+[5/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776716.887 finished=1791776716.897 sendp_ms=10.2 lateness_ms=16.4
+[6/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776717.899 finished=1791776717.919 sendp_ms=20.4 lateness_ms=38.2
+[7/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776718.890 finished=1791776718.894 sendp_ms=3.5 lateness_ms=12.5
+[8/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776719.933 finished=1791776719.946 sendp_ms=13.2 lateness_ms=65.3
+[9/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776720.886 finished=1791776720.907 sendp_ms=21.0 lateness_ms=26.2
+[10/10] sent INT probe 10.0.0.1 -> 10.0.0.4 started=1791776721.886 finished=1791776721.887 sendp_ms=0.9 lateness_ms=6.0
